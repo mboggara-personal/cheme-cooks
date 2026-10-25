@@ -693,6 +693,19 @@ ul.tchk .linkbtn{font-size:13px}
 .pmiss{font-size:12px;color:var(--chili)}
 .shi.have{opacity:.55}.ihave{color:var(--veg);font-size:11px}
 @media (max-width:760px){ .pgrid{grid-template-columns:1fr} .plist{max-height:none} .igrid{grid-template-columns:1fr} }
+
+/* ---- kids lab ---- */
+.kbar{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:13px}.kbar .bar{flex:1;height:8px;border-radius:4px;background:var(--panel-2);overflow:hidden}.kbar .bar i{display:block;height:100%;background:var(--turmeric)}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.kcard{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:14px;padding:12px;cursor:pointer;font:inherit}
+.kcard:hover{box-shadow:var(--shadow)}.kcard b{font-family:var(--f-display);font-weight:400;font-size:18px}.kcard small{color:var(--ink-2);font-size:13px}
+.kcard.done{border-color:var(--veg)}.kstamp{position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;color:var(--veg)}
+.kmeta{font-size:10.5px;color:var(--muted);letter-spacing:.03em}
+.kstep{display:grid;grid-template-columns:34px 1fr;gap:12px;margin:12px 0;align-items:start}
+.kn{width:30px;height:30px;border-radius:50%;background:var(--turmeric);color:#1b1404;display:grid;place-items:center;font-weight:700}
+.kstep h3{margin:2px 0 6px;font-size:15px}.kstep p{margin:0 0 6px;line-height:1.5}.kstep ul,.kstep ol{margin:0 0 8px;padding-left:20px;line-height:1.6}
+.kopts{display:flex;flex-wrap:wrap;gap:6px}.kopt.right{background:var(--veg);color:#fff;border-color:var(--veg)}.kopt.wrong{text-decoration:line-through;opacity:.6}
+.kres{font-weight:700;margin-top:8px!important}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -723,6 +736,7 @@ ul.tchk .linkbtn{font-size:13px}
     <div class="tools">
       <button class="tbtn play" id="bPlay" title="Guess the origin (G)"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="6.5"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".8" fill="currentColor"/></svg><span class="lbl">Guess origin</span></button>
       <button class="tbtn" id="bLab" title="ChemE concept index and labs"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1.5h4M6.8 1.5v4.5L2.6 12.6A1.3 1.3 0 0 0 3.7 14.5h8.6a1.3 1.3 0 0 0 1.1-1.9L9.2 6V1.5"/><path d="M4.2 10h7.6"/></svg><span class="lbl">ChemE</span></button>
+      <button class="tbtn" id="bKids" title="Kitchen science for kids"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="2"/><ellipse cx="8" cy="8" rx="7" ry="2.8"/><ellipse cx="8" cy="8" rx="7" ry="2.8" transform="rotate(60 8 8)"/><ellipse cx="8" cy="8" rx="7" ry="2.8" transform="rotate(120 8 8)"/></svg><span class="lbl">Kids lab</span></button>
       <button class="tbtn" id="bTrails" title="Food trails"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="3.5" cy="12.5" r="1.8"/><circle cx="12.5" cy="3.5" r="1.8"/><path d="M5 11c3-1 1-5 4-6.5" stroke-dasharray="2 2"/></svg><span class="lbl">Trails</span></button>
       <button class="tbtn" id="bSurprise" title="Surprise me"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><circle cx="5" cy="5" r="1" fill="currentColor"/><circle cx="11" cy="11" r="1" fill="currentColor"/><circle cx="8" cy="8" r="1" fill="currentColor"/></svg><span class="lbl">Surprise</span></button>
       <button class="tbtn" id="bThali" title="Your thali"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.8"/><circle cx="5.2" cy="6" r="1.7"/><circle cx="10.8" cy="6" r="1.7"/><circle cx="8" cy="10.8" r="1.7"/></svg><span class="lbl">Thali</span><span class="ct" id="thaliCt">0</span></button>
