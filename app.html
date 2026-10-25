@@ -106,6 +106,8 @@ main{padding-block:14px 40px}
 .state{stroke:var(--state-line);stroke-width:.7;vector-effect:non-scaling-stroke;transition:fill .15s}
 .reg-North{fill:var(--r-north)}.reg-West{fill:var(--r-west)}.reg-Central{fill:var(--r-central)}.reg-East{fill:var(--r-east)}.reg-Northeast{fill:var(--r-northeast)}.reg-South{fill:var(--r-south)}.reg-none{fill:var(--land)}
 .state:hover{fill:var(--land-hover)}
+.land{fill:var(--land);stroke:none}.mapnote{font-size:10.5px;color:var(--muted)}
+.natb{fill:none;stroke:var(--ink-2);stroke-width:1.1;vector-effect:non-scaling-stroke;pointer-events:none}
 .state.sel{fill:var(--turmeric-soft);stroke:var(--turmeric);stroke-width:1.4}
 .grat{fill:none;stroke:var(--rule);stroke-width:.6;stroke-dasharray:2 4;vector-effect:non-scaling-stroke}
 .grat-l{font-family:var(--f-mono);font-size:10px;fill:var(--muted)}
@@ -760,7 +762,7 @@ ul.tchk .linkbtn{font-size:13px}
       </div>
       <div class="legend" id="legend">
         <span><i style="background:var(--veg)"></i>Veg</span><span><i style="background:var(--nonveg)"></i>Non-veg</span><span><i style="background:var(--turmeric)"></i>Both</span>
-        <span class="scalebar mono"><span id="sbar" style="width:60px"></span><em id="slab" style="font-style:normal">500 km</em></span>
+        <span class="mapnote">Boundaries as per Survey of India · simplified</span><span class="scalebar mono"><span id="sbar" style="width:60px"></span><em id="slab" style="font-style:normal">500 km</em></span>
       </div>
       <div class="tip" id="tip" hidden></div>
       <div class="pop" id="pop" hidden></div>
@@ -789,7 +791,7 @@ ul.tchk .linkbtn{font-size:13px}
   <section id="planView" hidden></section>
   <section id="pantryView" hidden></section>
   <footer>
-    <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map boundaries: DataMeet India (CC BY 2.5 IN), simplified.
+    <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map: external boundaries of India as per the Survey of India (official data via DataMeet, CC BY-SA 2.5); state boundaries from DataMeet (CC BY 2.5 IN). Simplified for display, not to scale. <br><b>Licence.</b> Code <a href="https://github.com/mboggara-personal/cheme-cooks/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>; recipes, histories, sketches and other content <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. <a href="https://github.com/mboggara-personal/cheme-cooks" target="_blank" rel="noopener">Source on GitHub</a>.
   </footer>
 </main>
 
@@ -806,6 +808,7 @@ ul.tchk .linkbtn{font-size:13px}
 /*DATA*/
 /*HIST*/
 const INDIA_TOPO = /*TOPO*/;
+const INDIA_SOI = /*SOI*/;
 // Drop finished images here later, e.g. IMAGES["butter-chicken"] = "images/butter-chicken.webp"
 const IMAGES = {};
 </script>

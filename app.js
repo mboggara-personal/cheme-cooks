@@ -450,7 +450,9 @@ $("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards")
 /* ================= map ================= */
 const svg = d3.select("#map"), W=800, H=900;
 const india = topojson.feature(INDIA_TOPO, INDIA_TOPO.objects[Object.keys(INDIA_TOPO.objects)[0]]);
-const proj = d3.geoMercator().fitExtent([[24,24],[W-24,H-24]], india);
+/* India's external boundary as per Survey of India (DataMeet's india-soi.geojson); states are clipped to it and it is drawn on top */
+const soi = topojson.feature(INDIA_SOI, INDIA_SOI.objects.India);
+const proj = d3.geoMercator().fitExtent([[24,24],[W-24,H-24]], soi);
 const gpath = d3.geoPath(proj);
 const root = svg.append("g");
 const RVAR = {North:"--r-north",West:"--r-west",Central:"--r-central",East:"--r-east",Northeast:"--r-northeast",South:"--r-south"};
@@ -459,11 +461,14 @@ const grat = root.append("g");
 for (let lon=70; lon<=95; lon+=5) grat.append("path").attr("class","grat").attr("d",gpath({type:"LineString",coordinates:d3.range(5,38.1,.5).map(l=>[lon,l])}));
 for (let lat=10; lat<=35; lat+=5) grat.append("path").attr("class","grat").attr("d",gpath({type:"LineString",coordinates:d3.range(66,99.1,.5).map(l=>[l,lat])}));
 const gratL = svg.append("g");
-const states = root.append("g").selectAll("path").data(india.features).join("path")
+svg.append("defs").append("clipPath").attr("id","indClip").append("path").attr("d",gpath(soi));
+root.append("path").attr("class","land").attr("d",gpath(soi));
+const states = root.append("g").attr("clip-path","url(#indClip)").selectAll("path").data(india.features).join("path")
   .attr("class","state").attr("d",gpath)
   .attr("class", f => "state reg-" + (STATE_REGION[f.properties.name]||"none"))
   .on("mouseenter",(e,f)=>readout(f.properties.name)).on("mouseleave",()=>readout(null))
   .on("click",(e,f)=>{ if(game) return; const n=f.properties.name; setState(F.state===n?null:n); applyFilters(); });
+root.append("path").attr("class","natb").attr("d",gpath(soi));
 const pinsG = svg.append("g"), gameG = svg.append("g");
 let T = d3.zoomIdentity;
 const zoom = d3.zoom().scaleExtent([1,9]).translateExtent([[-100,-100],[W+100,H+100]])

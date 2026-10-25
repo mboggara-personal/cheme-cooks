@@ -3,3 +3,6 @@ india_telengana.geojson
 *.tgz
 *.png
 prompts/__pycache__/
+food-atlas.html
+cheme-cooks-atlas.html
+images/src/
