@@ -2,7 +2,7 @@
 const WK = t => ["Wikipedia: " + t.replace(/_/g," ").replace(/\(.*\)/,"").trim(), "https://en.wikipedia.org/wiki/" + t];   // W is the map width inside this scope
 const DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"], DAYL=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const SLOTS=["breakfast","lunch","snack","dinner"];
-const PLAN = store.plan = Object.assign({people:2, wd:45, we:90, burners:2, veg:false, snacks:false,
+const PLAN = store.plan = Object.assign({people:2, wd:45, we:90, burners:2, veg:false, snacks:false, kitchenT:24,
   serve:{breakfast:"08:00",lunch:"13:00",snack:"16:30",dinner:"19:30"}, days:null}, store.plan||{});
 if(!PLAN.days) PLAN.days=DAYS.map(()=>({breakfast:[],lunch:[],snack:[],dinner:[]}));
 /* plain rice and phulka: everyday staples the atlas doesn't list as dishes, used only by the planner */
@@ -28,6 +28,8 @@ const RES_OF={pot:"burner",kadai:"burner",tawa:"burner",cooker:"burner",steamer:
 const SCALE_EQ=new Set(["kadai","pin","tawa","bowl","grinder"]);   // work that grows with batch size
 const LONG=120;                                                     // waits longer than this become advance prep
 const OPS_CACHE={};
+/* recipes assume an Indian kitchen around 28 °C; ferments slow down in a cooler one (square-root rule, as in the fermentation lab) */
+const fermFactor = () => Math.max(0.5, Math.min(3, Math.pow((28-5)/Math.max(6,(PLAN.kitchenT||24)-5),2)));
 function opsOf(d, f=1){
   const key=d.id+"|"+f.toFixed(2); if(OPS_CACHE[key]) return OPS_CACHE[key];
   const segs=parseTime(d.time);
@@ -47,9 +49,10 @@ function opsOf(d, f=1){
   const left=coreT-ex, Wt=non.reduce((a,s)=>a+s.t.length,0)||1;
   non.forEach(s=>{ s.dur = left>2*non.length ? Math.max(2,left*s.t.length/Wt) : 3; });
   const ops=[];
-  waits.filter(w=>w.pre).forEach(w=>ops.push({d,kind:"wait",label:cap(w.lab),text:`${cap(w.lab)}: get it started`,act:3,pas:w.mins,res:null,eq:"rest"}));
+  const ff=w=>/ferment|rise/i.test(w)?fermFactor():1;
+  waits.filter(w=>w.pre).forEach(w=>ops.push({d,kind:"wait",label:cap(w.lab),text:`${cap(w.lab)}: get it started`,act:3,pas:w.mins*ff(w.lab),res:null,eq:"rest"}));
   steps.forEach(s=>{ let act=Math.min(s.dur,180), pas=0;
-    if(s.wait){ ops.push({d,kind:"wait",i:s.i,label:`Step ${s.i+1}`,text:s.t,act:2,pas:s.dur,res:null,eq:"rest"}); return; }
+    if(s.wait){ ops.push({d,kind:"wait",i:s.i,label:`Step ${s.i+1}`,text:s.t,act:2,pas:s.dur*ff(s.t),res:null,eq:"rest"}); return; }
     const waitish = /\b(leave|rest|marinat\w*|soak|ferment|cool|chill|set aside|refrigerat\w*|under a weight|to set)\b/i.test(s.t);
     const passive = PASSIVE_EQ.has(s.eq) || (/simmer|cover|slow|until tender|whistles?|bake|low heat|on low|\bdum\b|sealed|coals/i.test(s.t) && s.dur>=10);
     if(waitish && s.dur>=5){ act=2; pas=s.dur-2; }
@@ -153,6 +156,7 @@ function renderPlan(){
     <label>People <span class="srv"><button class="srvb" data-pp="-1" aria-label="Fewer people">−</button><b class="mono">${PLAN.people}</b><button class="srvb" data-pp="1" aria-label="More people">+</button></span></label>
     <label>Hands-on, weekdays <select id="pWd">${opt(PLAN.wd,[20,30,45,60,90])}</select></label>
     <label>Weekends <select id="pWe">${opt(PLAN.we,[30,45,60,90,120,180])}</select></label>
+    <label title="Ferments (idli, dosa, dhokla batters) slow down in a cool kitchen">Kitchen <select id="pKt">${[16,18,20,22,24,26,28,30,32].map(t=>`<option value="${t}" ${PLAN.kitchenT===t?"selected":""}>${t} °C / ${Math.round(t*9/5+32)} °F</option>`).join("")}</select></label>
     <label>Burners <select id="pBu">${[1,2,3,4].map(n=>`<option ${PLAN.burners===n?"selected":""}>${n}</option>`).join("")}</select></label>
     <label class="chip" style="cursor:pointer"><input type="checkbox" id="pVeg" ${PLAN.veg?"checked":""}> Veg only</label>
     <label class="chip" style="cursor:pointer"><input type="checkbox" id="pSn" ${PLAN.snacks?"checked":""}> Snacks</label>
@@ -183,7 +187,7 @@ function wirePlan(){
     else return;
     save(); renderPlan(); });
   el.addEventListener("change",e=>{ const t=e.target;
-    if(t.id==="pWd") PLAN.wd=+t.value; else if(t.id==="pWe") PLAN.we=+t.value; else if(t.id==="pBu") PLAN.burners=+t.value;
+    if(t.id==="pWd") PLAN.wd=+t.value; else if(t.id==="pWe") PLAN.we=+t.value; else if(t.id==="pBu") PLAN.burners=+t.value; else if(t.id==="pKt"){ PLAN.kitchenT=+t.value; for(const k in OPS_CACHE) delete OPS_CACHE[k]; }
     else if(t.id==="pVeg") PLAN.veg=t.checked; else if(t.id==="pSn") PLAN.snacks=t.checked; else return; save(); renderPlan(); });
 }
 
@@ -282,7 +286,7 @@ function openDay(i, sl){
     ${gantt(S)}
     <div class="pbn"><b>${BN[0]}.</b> ${BN[1]}</div>
     <div class="cookdone"><button class="btn acc" id="pCookMeal">Cook this meal, step by step</button><button class="btn ghost" id="pDayBack">Back to the week</button></div>
-    <p class="note">Hover a bar for the step. Times are estimated from each recipe's step times and its total time; scaled for ${PLAN.people} people (frying, rolling and chopping take longer in bigger batches; simmering doesn't). Serving times and burners are set in the plan view.</p>`);
+    <p class="note">Hover a bar for the step. Times are estimated from each recipe's step times and its total time; scaled for ${PLAN.people} people (frying, rolling and chopping take longer in bigger batches; simmering doesn't). Serving times, burners and kitchen temperature (${PLAN.kitchenT} °C, so ferments take ${fermFactor().toFixed(1)}× the recipe's time) are set in the plan view.</p>`);
   $$("#mb [data-dsl]").forEach(b=>b.onclick=()=>openDay(i,b.dataset.dsl));
   $("#pDayBack").onclick=()=>closeModal();
   $("#pCookMeal").onclick=()=>{ closeModal(); openMealCook(S, `${DAYL[i]} ${sl}`); };

@@ -1354,7 +1354,7 @@ function isEng(){ return (store.depth||"eng")==="eng"; }
 function paneCheme(d){
   const key=DEEP_BY_DISH[d.id];
   if(!key){
-    return `<div class="lockban"><svg width="34" height="34" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 7h10M15 7v8L8.5 26.5A3 3 0 0 0 11 31h14a3 3 0 0 0 2.5-4.5L21 15V7"/><path d="M11 23h14"/></svg><div><b>Full deep dive coming</b><span>Six process deep dives are live so far, covering idli, masala dosa, rajma, jalebi, petha, khar, samosa, medu vada, shrikhand and rosogolla. Here are the core concepts in this recipe:</span></div></div>
+    return `<div class="lockban"><svg width="34" height="34" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 7h10M15 7v8L8.5 26.5A3 3 0 0 0 11 31h14a3 3 0 0 0 2.5-4.5L21 15V7"/><path d="M11 23h14"/></svg><div><b>No deep dive for this dish yet</b><span>${Object.keys(DEEP).length} process deep dives with interactive labs are live, covering ${Object.keys(DEEP_BY_DISH).length} dishes (see the concept index). Here are the core concepts in this recipe:</span></div></div>
      ${d.cheme.map(k=>`<div class="concept"><b>${esc(CHEME[k][0])}</b><p>${esc(CHEME[k][1])}</p><button class="linkbtn" data-concept="${k}">See all ${DISHES.filter(x=>x.cheme.includes(k)).length} dishes with ${esc(CHEME[k][0].toLowerCase())} →</button></div>`).join("")}
      <p><button class="btn ghost" data-cindex="1">Open the concept index</button></p>`;
   }
@@ -1371,7 +1371,7 @@ function paneCheme(d){
    <h3>Mass and energy balance</h3><table class="pts bal">${D.balance.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</table>
    <h3>Troubleshooting from first principles</h3><div class="trbl">${D.trouble.map(t=>`<div><b>${esc(t[0])}</b><p>${esc(t[1])}</p></div>`).join("")}</div>
    <h3>Plant-scale twin</h3><div class="concept"><b>${esc(D.twin[0])}</b><p>${esc(D.twin[1])}</p></div>
-   <p class="note">The step-by-step overlay is on the Recipe tab and in cook mode: each step shows its unit operation${eng?" and governing relation":""}.</p>
+   ${Object.keys(D.overlay||{}).length?`<p class="note">The step-by-step overlay is on the Recipe tab and in cook mode: each step shows its unit operation${eng?" and governing relation":""}.</p>`:""}
    <h3>Sources</h3>${srcList(D.src.map(s=>DS[s]))}`;
 }
 function wireCheme(d){
@@ -1467,5 +1467,5 @@ const h=(location.hash||"").slice(1);
 setView(["cards","map","plan","pantry"].includes(h)?h:store.view, false);
 applyFilters(); drawGratLabels();
 if (byId[h]) { const d=byId[h]; setTimeout(()=>{ flyTo(d); openDish(h,{noFocus:true}); }, 60); }
-window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime};
+window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime,LABS,DEEP};
 })();
