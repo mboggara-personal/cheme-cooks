@@ -1,0 +1,1 @@
+const IMAGES = {"butter-chicken": "images/butter-chicken.webp", "dal-makhani": "images/dal-makhani.webp"};

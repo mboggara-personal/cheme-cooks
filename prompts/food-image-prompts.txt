@@ -1,0 +1,1455 @@
+
+
+BATCH 1 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: skyu.png
+Skyu (Ladakhi dough-cap stew), a dish from Leh, Ladakh, India.
+Serving: a deep ceramic bowl. Key details: thick stew of small thumb-pressed wheat-dough caps, cubes of potato and turnip and wilted spinach in a light, slightly cloudy broth. Nearby, slightly out of focus: a small heap of flour and a wooden spoon.
+
+2. File name: rogan-josh.png
+Rogan Josh (Kashmiri Pandit style), a dish from Srinagar, Jammu & Kashmir, India.
+Serving: a ceramic bowl. Key details: bone-in mutton pieces in a thin, glossy brick-red gravy with a layer of red oil on the surface. Nearby, slightly out of focus: whole dried red chillies and a small bowl of yogurt.
+
+3. File name: rajma-chawal.png
+Rajma Chawal (Kidney beans with rice), a dish from Jammu, Jammu & Kashmir, India.
+Serving: a steel plate. Key details: thick, glossy dark-red kidney bean curry beside a mound of fluffy white basmati rice, a few raw onion slices and a lemon wedge. Nearby, slightly out of focus: a sprig of coriander.
+
+4. File name: chana-madra.png
+Chana Madra (Chickpeas in spiced yogurt), a dish from Chamba, Himachal Pradesh, India.
+Serving: a brass katori. Key details: whole chickpeas in a creamy pale-yellow yogurt gravy with a drizzle of ghee and a few cashews. Nearby, slightly out of focus: green cardamom pods and a cinnamon stick.
+
+5. File name: lassi.png
+Lassi (Whisked sweet yogurt drink), a drink from Amritsar, Punjab, India.
+Serving: a clay kulhar. Key details: thick, frothy white sweet yogurt drink with a layer of cream on top. Nearby, slightly out of focus: a wooden churner.
+
+6. File name: aloo-paratha.png
+Aloo Paratha (Potato-stuffed flatbread), a dish from Amritsar, Punjab, India.
+Serving: a steel plate. Key details: two golden-brown stuffed flatbreads with charred spots, a knob of white butter melting on top, small bowls of curd and mango pickle. Nearby, slightly out of focus: a cast-iron tawa.
+
+7. File name: amritsari-kulcha.png
+Amritsari Kulcha (Stuffed tandoor bread), a dish from Amritsar, Punjab, India.
+Serving: a steel plate. Key details: a crisp, layered round stuffed bread with a blistered top and coriander leaves pressed in, brushed with butter, beside a bowl of dark chickpea curry, sliced onions and green chutney. Nearby, slightly out of focus: a lump of butter on a small dish.
+
+8. File name: sarson-saag.png
+Sarson da Saag & Makki di Roti (Mustard greens with cornmeal flatbread), a dish from Jalandhar, Punjab, India.
+Serving: a steel plate. Key details: a bowl of thick dark-green mustard-greens purée topped with white butter, two yellow cornmeal flatbreads, a piece of jaggery and raw onion. Nearby, slightly out of focus: a few yellow mustard flowers.
+
+============================================================
+
+BATCH 2 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: gajar-halwa.png
+Gajar ka Halwa (Slow-cooked carrot pudding), a dish from Ludhiana, Punjab, India.
+Serving: a brass bowl. Key details: glossy deep orange-red grated carrot pudding topped with slivered almonds and pistachios. Nearby, slightly out of focus: a few whole red carrots and cardamom pods.
+
+2. File name: kafuli.png
+Kafuli (Spinach and fenugreek curry), a dish from Garhwal (Pauri), Uttarakhand, India.
+Serving: a small black iron kadai. Key details: thick, smooth deep-green spinach and fenugreek curry with a drizzle of mustard oil. Nearby, slightly out of focus: a bowl of steamed rice and a dark finger-millet roti.
+
+3. File name: bajre-khichdi.png
+Bajre ki Khichdi (Pearl millet and moong porridge), a dish from Rohtak, Haryana, India.
+Serving: a clay bowl. Key details: soft grey-brown pearl millet and yellow moong porridge with a pool of melted ghee on top. Nearby, slightly out of focus: a steel glass of buttermilk and scattered millet grains.
+
+4. File name: jalebi.png
+Jalebi (Fermented batter spirals in syrup), a dish from Chandni Chowk, Delhi, India.
+Serving: a steel plate. Key details: a stack of bright orange crisp spirals glistening with sugar syrup. Nearby, slightly out of focus: a small pan of syrup and saffron strands.
+
+5. File name: shikanji.png
+Shikanji (Spiced lemonade), a drink from Red Fort, Delhi, India.
+Serving: a tall glass. Key details: cloudy pale lemon drink over ice with mint leaves, a lemon slice and a sprinkle of roasted cumin on top. Nearby, slightly out of focus: halved lemons.
+
+6. File name: nihari.png
+Nihari (Slow-cooked breakfast stew), a dish from Matia Mahal, Old Delhi, India.
+Serving: a deep bowl. Key details: slow-cooked mutton shank in a thick, glossy red-brown gravy with a sheen of oil, topped with ginger juliennes, fried onions, green chilli and coriander, with a lemon wedge. Nearby, slightly out of focus: a round khameeri roti.
+
+7. File name: butter-chicken.png
+Butter Chicken (Murgh Makhani), a dish from Daryaganj, Delhi, India.
+Serving: a copper-rimmed bowl. Key details: charred chicken pieces in a smooth, velvety orange tomato-butter gravy with a swirl of cream and crushed dried fenugreek leaves. Nearby, slightly out of focus: a folded naan.
+
+8. File name: dal-makhani.png
+Dal Makhani (Slow-cooked black lentils with butter), a dish from Daryaganj, Delhi, India.
+Serving: a copper bowl. Key details: very creamy, dark brown-black lentil curry with a swirl of cream and a cube of butter melting on top. Nearby, slightly out of focus: a folded naan.
+
+============================================================
+
+BATCH 3 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: chole-bhature.png
+Chole Bhature (Chhole Bhature), a dish from Paharganj, Delhi, India.
+Serving: a steel plate. Key details: two large puffed golden fried breads beside a bowl of dark, spiced chickpea curry with onion rings, a green chilli and pickle. Nearby, slightly out of focus: a halved lemon.
+
+2. File name: samosa.png
+Samosa (Spiced potato pastry), a dish from Mehrauli, Delhi, India.
+Serving: a steel plate. Key details: three triangular golden blistered pastries, one broken open to show the spiced potato and pea filling, with small bowls of green mint chutney and dark tamarind chutney. Nearby, slightly out of focus: a few green chillies.
+
+3. File name: agra-petha.png
+Agra Petha (Candied ash gourd), a dish from Agra, Uttar Pradesh, India.
+Serving: a small plate. Key details: translucent, glassy ivory cubes of candied ash gourd with a fine crystalline sugar surface. Nearby, slightly out of focus: a slice of pale-green ash gourd.
+
+4. File name: chaas.png
+Masala Chaas (Spiced buttermilk), a drink from Jaisalmer, Rajasthan, India.
+Serving: a steel tumbler. Key details: thin, frothy white spiced buttermilk flecked with coriander and cumin, a few curry leaves floating. Nearby, slightly out of focus: a small bowl of yogurt.
+
+5. File name: lucknowi-biryani.png
+Lucknowi Biryani (Awadhi dum biryani), a dish from Chowk, Lucknow, Uttar Pradesh, India.
+Serving: a copper degh (cauldron) with its dough seal broken open. Key details: delicate long-grain basmati, mostly white with saffron-yellow grains, tender mutton pieces and fried onions. Nearby, slightly out of focus: a small bowl of raita.
+
+6. File name: galouti-kebab.png
+Galouti Kebab (Melt-in-the-mouth kebab), a dish from Aminabad, Lucknow, Uttar Pradesh, India.
+Serving: a plate. Key details: small round, very soft brown pan-fried mince patties with slightly crisp edges, on small flaky parathas, with onion rings, mint chutney and lemon. Nearby, slightly out of focus: a pinch of saffron.
+
+7. File name: aam-panna.png
+Aam Panna (Raw mango cooler), a drink from Lucknow, Uttar Pradesh, India.
+Serving: a glass. Key details: pale yellow-green opaque raw-mango drink over ice with mint leaves. Nearby, slightly out of focus: two green raw mangoes.
+
+8. File name: pyaaz-kachori.png
+Pyaaz Kachori (Onion-filled flaky pastry), a dish from Jodhpur, Rajasthan, India.
+Serving: a plate. Key details: round, flaky, puffed golden fried pastries, one broken open to show the spiced onion filling, with tamarind chutney. Nearby, slightly out of focus: a whole onion.
+
+============================================================
+
+BATCH 4 (North / Central / West)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: golgappa.png
+Golgappa (Pani puri, phuchka), a dish from Varanasi, Uttar Pradesh, India.
+Serving: a plate. Key details: small hollow crisp golden puris, one filled with potato and chickpeas, beside a small steel jug of green spiced water and a bowl of tamarind chutney. Nearby, slightly out of focus: fresh mint leaves.
+
+2. File name: thandai.png
+Thandai (Spiced nut and saffron milk), a drink from Varanasi, Uttar Pradesh, India.
+Serving: a glass. Key details: creamy pale-saffron milk drink topped with a few rose petals, pistachio slivers and saffron strands. Nearby, slightly out of focus: fennel seeds and almonds.
+
+3. File name: dal-baati.png
+Dal Baati (Baked wheat rolls with mixed dal), a dish from Udaipur (Mewar), Rajasthan, India.
+Serving: a brass thali. Key details: cracked golden baked wheat balls soaked in ghee beside a bowl of thick yellow mixed-lentil dal. Nearby, slightly out of focus: a small pot of ghee.
+
+4. File name: indori-poha.png
+Indori Poha (Steamed flattened rice), a dish from Indore, Madhya Pradesh, India.
+Serving: a plate. Key details: fluffy yellow flattened rice with peanuts, topped with fine yellow sev, chopped onion and coriander, with a small jalebi on the side. Nearby, slightly out of focus: a lemon wedge.
+
+5. File name: fara.png
+Fara (Steamed rice dumplings), a dish from Raipur, Chhattisgarh, India.
+Serving: a plate. Key details: glossy white finger-shaped steamed rice dumplings tossed with mustard seeds, sesame, curry leaves and green chillies. Nearby, slightly out of focus: a small bowl of green chutney.
+
+6. File name: thepla.png
+Methi Thepla (Fenugreek flatbread), a dish from Ahmedabad, Gujarat, India.
+Serving: a plate. Key details: a stack of thin, soft flatbreads flecked with green fenugreek, with small bowls of curd and pickle. Nearby, slightly out of focus: a bunch of fresh fenugreek.
+
+7. File name: khaman.png
+Khaman (Steamed gram-flour sponge), a dish from Ahmedabad, Gujarat, India.
+Serving: a plate. Key details: bright yellow spongy square cakes topped with mustard seeds, curry leaves, green chillies, grated coconut and coriander. Nearby, slightly out of focus: a fried green chilli.
+
+8. File name: dabeli.png
+Dabeli (Kutchi spiced-potato bun), a dish from Mandvi, Kutch, Gujarat, India.
+Serving: a plate. Key details: a soft bun stuffed with red-spiced potato, pomegranate seeds and masala peanuts, its edges rolled in fine sev, toasted in butter. Nearby, slightly out of focus: a small bowl of pomegranate seeds.
+
+============================================================
+
+BATCH 5 (West)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: dal-dhokli.png
+Dal Dhokli (Spiced wheat pieces in sweet-sour dal), a dish from Vadodara, Gujarat, India.
+Serving: a bowl. Key details: yellow sweet-sour lentil soup with diamond-shaped wheat pieces, peanuts and curry leaves. Nearby, slightly out of focus: a lemon wedge.
+
+2. File name: undhiyu.png
+Undhiyu (Upside-down winter vegetable pot), a dish from Surat, Gujarat, India.
+Serving: a clay pot. Key details: mixed winter vegetables (flat beans, purple yam, baby brinjals, small potatoes) with fried fenugreek dumplings in a green coconut masala. Nearby, slightly out of focus: a few puris.
+
+3. File name: vada-pav.png
+Vada Pav (Mumbai potato fritter burger), a dish from Dadar, Mumbai, Maharashtra, India.
+Serving: a plate. Key details: a soft pav bun with a golden gram-flour-coated potato fritter inside, red dry garlic chutney and green chutney, with a fried green chilli. Nearby, slightly out of focus: a newspaper-lined tray.
+
+4. File name: pav-bhaji.png
+Pav Bhaji (Mashed vegetable curry with buttered rolls), a dish from Kalbadevi, Mumbai, Maharashtra, India.
+Serving: a plate. Key details: thick red-orange mashed vegetable curry topped with butter, chopped onion and coriander, with two butter-toasted buns and a lemon wedge. Nearby, slightly out of focus: a large flat tawa.
+
+5. File name: dhansak.png
+Dhansak (Parsi lentil and mutton stew), a dish from Fort, Mumbai, Maharashtra, India.
+Serving: a plate. Key details: a bowl of thick brown lentil and mutton stew beside brown caramelised rice. Nearby, slightly out of focus: a few sliced onions.
+
+6. File name: modak.png
+Ukadiche Modak (Steamed coconut-jaggery dumplings), a dish from Pune, Maharashtra, India.
+Serving: a plate lined with a banana leaf. Key details: pleated white steamed teardrop-shaped dumplings with pointed tops and a small spoon of ghee. Nearby, slightly out of focus: grated coconut and jaggery.
+
+7. File name: puran-poli.png
+Puran Poli (Sweet lentil-stuffed flatbread), a dish from Pune, Maharashtra, India.
+Serving: a plate. Key details: thin golden flatbreads with brown spots, filled with sweet lentil, with a spoon of ghee on top. Nearby, slightly out of focus: a small bowl of ghee.
+
+8. File name: shrikhand.png
+Shrikhand (Strained sweet yogurt), a dish from Pune, Maharashtra, India.
+Serving: a bowl. Key details: thick, smooth pale saffron-yellow strained yogurt dessert topped with pistachio slivers. Nearby, slightly out of focus: green cardamom and saffron strands.
+
+============================================================
+
+BATCH 6 (West / East)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: sol-kadhi.png
+Sol Kadhi (Kokum and coconut milk drink), a drink from Ratnagiri, Maharashtra, India.
+Serving: a glass. Key details: pale pink-purple coconut and kokum drink garnished with coriander. Nearby, slightly out of focus: dried dark-purple kokum skins.
+
+2. File name: misal-pav.png
+Misal Pav (Kolhapuri sprout curry), a dish from Kolhapur, Maharashtra, India.
+Serving: a bowl. Key details: sprouted moth bean curry under a fiery red, oil-topped gravy, topped with crunchy farsan, chopped onion and coriander, with pav on the side. Nearby, slightly out of focus: a lemon wedge.
+
+3. File name: bebinca.png
+Bebinca (Goan layered coconut cake), a dish from Panaji, Goa, India.
+Serving: a plate. Key details: a slice of layered cake showing many thin alternating brown and golden stripes. Nearby, slightly out of focus: a halved coconut.
+
+4. File name: goan-fish-curry.png
+Goan Fish Curry (Xitt kodi), a dish from Margao, Goa, India.
+Serving: a bowl. Key details: orange coconut fish curry with kingfish steaks and green chillies. Nearby, slightly out of focus: a plate of rice.
+
+5. File name: thekua.png
+Thekua (Jaggery-wheat cookies), a dish from Patna, Bihar, India.
+Serving: a plate. Key details: deep-brown crisp jaggery-wheat cookies with intricate patterns pressed in by a carved wooden mould. Nearby, slightly out of focus: the wooden mould and a piece of jaggery.
+
+6. File name: litti-chokha.png
+Litti Chokha (Sattu-stuffed baked wheat balls), a dish from Buxar (Bhojpur region), Bihar, India.
+Serving: a plate. Key details: round baked wheat balls with charred spots, one cracked open to show the sattu filling, glistening with ghee, beside a bowl of smoky mashed brinjal, tomato and potato. Nearby, slightly out of focus: a charred whole brinjal.
+
+7. File name: mishti-doi.png
+Mishti Doi (Sweet set yogurt), a dish from Nabadwip, West Bengal, India.
+Serving: an unglazed earthen pot. Key details: set, caramel-brown sweet yogurt with a smooth glossy top and one spoonful scooped out. Nearby, slightly out of focus: a lump of date-palm jaggery.
+
+8. File name: dhuska.png
+Dhuska (Fried rice and chana dal bread), a dish from Ranchi, Jharkhand, India.
+Serving: a plate. Key details: round, puffed golden-brown fried rice-and-lentil breads beside a bowl of green coriander chutney. Nearby, slightly out of focus: soaked rice and chana dal in a small bowl.
+
+============================================================
+
+BATCH 7 (East)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: kosha-mangsho.png
+Kosha Mangsho (Slow-fried Bengali mutton), a dish from Shyambazar, Kolkata, West Bengal, India.
+Serving: a bowl. Key details: dark brown, thick, oily mutton curry clinging to bone-in pieces. Nearby, slightly out of focus: a stack of puffed luchi.
+
+2. File name: rosogolla.png
+Rosogolla (Rasagola), a dish from Bagbazar, Kolkata, West Bengal, India.
+Serving: a glass bowl. Key details: white, spongy round balls sitting in clear sugar syrup. Nearby, slightly out of focus: a small steel spoon.
+
+3. File name: shorshe-ilish.png
+Shorshe Ilish (Hilsa in mustard), a dish from Kolkata, West Bengal, India.
+Serving: a bowl. Key details: silvery hilsa steaks in a bright yellow mustard gravy with green chillies and a sheen of mustard oil. Nearby, slightly out of focus: a plate of white rice.
+
+4. File name: sandesh.png
+Sandesh (Fresh chhena fudge), a dish from Kolkata, West Bengal, India.
+Serving: a plate. Key details: small pale-ivory round sweets with pressed patterns, topped with pistachio slivers. Nearby, slightly out of focus: a carved wooden sweet mould.
+
+5. File name: kathi-roll.png
+Kathi Roll (Egg paratha kebab roll), a dish from Nizam's, Kolkata, West Bengal, India.
+Serving: a paper wrap. Key details: a flaky paratha roll with a visible layer of egg, filled with charred chicken kebab pieces, sliced onions and green chillies, half unwrapped. Nearby, slightly out of focus: a lemon wedge.
+
+6. File name: macher-jhol.png
+Macher Jhol (Bengali fish curry), a dish from Kolkata, West Bengal, India.
+Serving: a bowl. Key details: thin, light turmeric-orange fish curry with two fried rohu steaks, potato wedges and slit green chillies. Nearby, slightly out of focus: a plate of white rice.
+
+7. File name: chhena-poda.png
+Chhena Poda (Odisha's baked cheese cake), a dish from Dasapalla (Nayagarh district), Odisha, India.
+Serving: a plate lined with a sal leaf. Key details: a wedge of baked cheese cake with a dark caramelised crust and a pale golden interior. Nearby, slightly out of focus: a few cashews and raisins.
+
+8. File name: dalma.png
+Dalma (Temple dal with vegetables), a dish from Puri, Odisha, India.
+Serving: a bowl. Key details: yellow lentil dal with chunks of pumpkin, raw banana and brinjal, topped with grated coconut and roasted cumin. Nearby, slightly out of focus: a small bowl of ghee.
+
+============================================================
+
+BATCH 8 (Northeast)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: zan.png
+Zan (Monpa finger millet porridge), a dish from Tawang, Arunachal Pradesh, India.
+Serving: a bowl. Key details: thick, dark brown finger-millet porridge with peas, carrot and spinach and a knob of butter melting on top. Nearby, slightly out of focus: a small bowl of finger-millet flour.
+
+2. File name: masala-chai.png
+Masala Chai (Spiced milk tea), a drink from Dibrugarh, Assam, India.
+Serving: a clay kulhar. Key details: milky tan spiced tea with a light froth. Nearby, slightly out of focus: fresh ginger, green cardamom and loose tea leaves.
+
+3. File name: thukpa.png
+Thukpa (Himalayan noodle soup), a dish from Gangtok, Sikkim, India.
+Serving: a deep bowl. Key details: noodle soup with a clear broth, wheat noodles, thin chicken slices, carrot, cabbage, spinach and spring onion. Nearby, slightly out of focus: chopsticks.
+
+4. File name: momos.png
+Chicken Momos (Steamed dumplings), a dish from Gangtok, Sikkim, India.
+Serving: an open bamboo steamer. Key details: pleated white steamed dumplings, one bitten to show the chicken filling, with a small bowl of red tomato-chilli chutney. Nearby, slightly out of focus: chopsticks.
+
+5. File name: khar.png
+Khar (Assamese raw papaya in alkaline water), a dish from Jorhat, Assam, India.
+Serving: a bowl. Key details: soft, pale green-yellow stew of raw papaya and yellow moong dal, simple and rustic. Nearby, slightly out of focus: a plate of rice on banana leaf.
+
+6. File name: til-pitha.png
+Til Pitha (Sesame-jaggery rice rolls), a dish from Guwahati, Assam, India.
+Serving: a plate. Key details: thin, cigar-shaped white rice rolls with black sesame and jaggery filling visible at the ends. Nearby, slightly out of focus: a small heap of black sesame seeds.
+
+7. File name: masor-tenga.png
+Masor Tenga (Assamese sour fish curry), a dish from Guwahati, Assam, India.
+Serving: a bowl. Key details: light, tangy red tomato fish curry with two fried rohu steaks and fresh coriander. Nearby, slightly out of focus: a lemon.
+
+8. File name: chakhao-kheer.png
+Chak-hao Kheer (Manipuri black rice pudding), a dish from Imphal, Manipur, India.
+Serving: a bowl. Key details: deep purple black-rice pudding topped with cashews and raisins. Nearby, slightly out of focus: a few grains of black rice.
+
+============================================================
+
+BATCH 9 (Northeast / South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: eromba.png
+Eromba (Manipuri mashed vegetables with chilli), a dish from Imphal, Manipur, India.
+Serving: a bowl. Key details: coarse mash of potato and green beans speckled with red chilli and chopped herbs. Nearby, slightly out of focus: dried red chillies.
+
+2. File name: mosdeng.png
+Mosdeng (Tripuri roasted tomato relish), a dish from Agartala, Tripura, India.
+Serving: a small bowl. Key details: coarse, rustic red relish of charred tomato and chilli with raw onion and coriander. Nearby, slightly out of focus: a plate of rice.
+
+3. File name: bai.png
+Bai (Mizo vegetable stew), a dish from Aizawl, Mizoram, India.
+Serving: a bowl. Key details: light, clear green-tinged vegetable broth with pumpkin cubes, green beans, bamboo shoot slices and wilted greens. Nearby, slightly out of focus: a plate of rice.
+
+4. File name: idli.png
+Idli (Steamed fermented rice cakes), a dish from Kalyani (Basavakalyan), Karnataka, India.
+Serving: a steel plate. Key details: four soft, white, round steamed rice cakes with coconut chutney and sambar in small steel bowls. Nearby, slightly out of focus: an idli steamer stand.
+
+5. File name: hyderabadi-biryani.png
+Hyderabadi Chicken Biryani (Kacchi dum biryani), a dish from Hyderabad, Telangana, India.
+Serving: a handi. Key details: long-grain basmati with saffron-orange and white grains layered over chicken, with fried onions and mint. Nearby, slightly out of focus: a small bowl of raita.
+
+6. File name: haleem.png
+Hyderabadi Haleem (Pounded wheat, lentil and meat stew), a dish from Hyderabad, Telangana, India.
+Serving: a bowl. Key details: thick, smooth, stringy brown wheat-and-meat paste topped with fried onions, mint, coriander, ginger and a lemon wedge. Nearby, slightly out of focus: a wooden masher.
+
+7. File name: pesarattu.png
+Pesarattu (Green moong crepe), a dish from Rajahmundry (Godavari delta), Andhra Pradesh, India.
+Serving: a plate. Key details: a thin green moong-bean crepe sprinkled with chopped onion and coriander, with ginger chutney. Nearby, slightly out of focus: green moong beans.
+
+8. File name: chicken-ghee-roast.png
+Chicken Ghee Roast (Kundapur style), a dish from Kundapur, Karnataka, India.
+Serving: a bowl. Key details: bright red, thick, glossy roast masala coating chicken pieces, with a sheen of ghee and curry leaves. Nearby, slightly out of focus: soft white rice crepes (neer dosa).
+
+============================================================
+
+BATCH 10 (South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: masala-dosa.png
+Masala Dosa (Fermented rice crepe with potato), a dish from Udupi, Karnataka, India.
+Serving: a steel plate on a banana leaf. Key details: a thin, crisp golden folded crepe with spiced yellow potato filling peeking out, with coconut chutney and sambar in small steel bowls. Nearby, slightly out of focus: a cast-iron tawa.
+
+2. File name: filter-coffee.png
+Filter Coffee (South Indian drip coffee), a drink from Chikmagalur, Karnataka, India.
+Serving: a steel tumbler set in a steel davara (deep saucer). Key details: frothy light-brown coffee with milk, foam spilling slightly over the rim. Nearby, slightly out of focus: a South Indian coffee filter.
+
+3. File name: ven-pongal.png
+Ven Pongal (Savoury rice and moong porridge), a dish from Chennai, Tamil Nadu, India.
+Serving: a banana leaf. Key details: soft, creamy rice and moong mash with black pepper, cumin, cashews and ghee. Nearby, slightly out of focus: a small bowl of coconut chutney.
+
+4. File name: chicken-65.png
+Chicken 65 (Chennai fried chicken), a dish from Buhari Hotel, Chennai, Tamil Nadu, India.
+Serving: a plate. Key details: deep-red crispy fried chicken bites tossed with curry leaves and slit green chillies. Nearby, slightly out of focus: a lemon wedge.
+
+5. File name: rasam.png
+Rasam (Pepper-tamarind broth), a dish from Chennai, Tamil Nadu, India.
+Serving: a small bowl. Key details: thin, clear red-orange pepper-tamarind broth with tomato pieces, curry leaves and coriander. Nearby, slightly out of focus: black peppercorns and garlic.
+
+6. File name: medu-vada.png
+Medu Vada (Soft urad dal doughnuts), a dish from Maddur, Karnataka, India.
+Serving: a plate. Key details: golden, doughnut-shaped fried lentil fritters with a crisp exterior. Nearby, slightly out of focus: small bowls of coconut chutney and sambar.
+
+7. File name: pandi-curry.png
+Pandi Curry (Kodava pork curry), a dish from Madikeri (Coorg), Karnataka, India.
+Serving: a bowl. Key details: very dark, almost black, glossy pork curry with pieces of fat. Nearby, slightly out of focus: white steamed rice balls.
+
+8. File name: mysore-pak.png
+Mysore Pak (Gram-flour and ghee fudge), a dish from Mysuru Palace, Karnataka, India.
+Serving: a plate. Key details: golden porous squares of gram-flour and ghee fudge with a honeycomb texture. Nearby, slightly out of focus: a small pot of ghee.
+
+============================================================
+
+BATCH 11 (South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: bisi-bele-bath.png
+Bisi Bele Bath (Hot lentil rice), a dish from Mysuru, Karnataka, India.
+Serving: a bowl. Key details: brown-orange spiced lentil-rice porridge with vegetables, topped with fried cashews and ghee. Nearby, slightly out of focus: a small bowl of crunchy boondi.
+
+2. File name: fish-assad.png
+Fish Assad (Pondicherry Creole coconut fish curry), a dish from Puducherry, India.
+Serving: a bowl. Key details: pale golden coconut-milk fish curry with seer fish steaks, curry leaves and a star anise. Nearby, slightly out of focus: a lime half.
+
+3. File name: thalassery-biryani.png
+Thalassery Biryani (Malabar chicken biryani), a dish from Thalassery, Kerala, India.
+Serving: a plate. Key details: small-grained fragrant rice, glossy with ghee, over chicken masala, topped with fried onions, cashews and raisins. Nearby, slightly out of focus: a small bowl of raita.
+
+4. File name: sambar.png
+Sambar (Tamarind lentil stew), a dish from Thanjavur, Tamil Nadu, India.
+Serving: a bowl. Key details: tangy orange-brown lentil stew with drumstick pieces, brinjal and shallots, topped with mustard seeds and curry leaves. Nearby, slightly out of focus: a plate of rice.
+
+5. File name: mas-podichathu.png
+Mas Podichathu (Dried tuna with coconut), a dish from Kavaratti, Lakshadweep, India.
+Serving: a plate. Key details: a dry, flaky mix of shredded smoked tuna with grated coconut, curry leaves and shallots. Nearby, slightly out of focus: a plate of rice.
+
+6. File name: avial.png
+Avial (Vegetables in coconut and yogurt), a dish from Thrissur, Kerala, India.
+Serving: a banana leaf. Key details: mixed vegetable batons in a white coconut-yogurt coating with curry leaves and a sheen of coconut oil. Nearby, slightly out of focus: a halved coconut.
+
+7. File name: chettinad-chicken.png
+Chettinad Chicken (Kozhi Chettinad), a dish from Karaikudi, Tamil Nadu, India.
+Serving: a bowl. Key details: dark brown, thick roasted-spice chicken curry with oil on top and curry leaves. Nearby, slightly out of focus: whole spices: star anise, black pepper, dried chillies.
+
+8. File name: appam-stew.png
+Appam & Stew (Palappam with ishtu), a dish from Kochi, Kerala, India.
+Serving: a plate. Key details: a bowl-shaped lacy rice hopper with thin crisp edges and a soft, spongy centre, beside a bowl of white coconut vegetable stew. Nearby, slightly out of focus: a small appam pan.
+
+============================================================
+
+BATCH 12 (South)
+
+Please create 2 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: palpayasam.png
+Palpayasam (Slow-cooked rice and milk pudding), a dish from Ambalappuzha, Kerala, India.
+Serving: a bowl. Key details: pale pink-beige creamy rice and milk pudding. Nearby, slightly out of focus: a brass ladle.
+
+2. File name: puttu-kadala.png
+Puttu & Kadala Curry (Steamed rice cylinders with black chickpea curry), a dish from Thiruvananthapuram, Kerala, India.
+Serving: a plate. Key details: white steamed rice-and-coconut cylinders with visible coconut layers, beside a bowl of dark brown black-chickpea curry. Nearby, slightly out of focus: a puttu steamer.
+
+============================================================
+
+BATCH 13 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: gur-gur-cha.png
+Gur Gur Cha (Ladakhi butter tea), a drink from Leh, Ladakh, India.
+Serving: a small wooden bowl. Key details: pale, frothy, creamy tea. Nearby, slightly out of focus: a tall wooden butter-tea churn.
+
+2. File name: nadru-yakhni.png
+Nadru Yakhni (Lotus stem in yogurt gravy), a dish from Srinagar (Dal Lake), Jammu & Kashmir, India.
+Serving: a copper bowl. Key details: diagonal slices of lotus stem with their lacy holes showing, in a smooth, pale cream yogurt gravy with dried mint. Nearby, slightly out of focus: whole lotus stems and green cardamom.
+
+3. File name: kahwa.png
+Kashmiri Kahwa (Saffron green tea), a drink from Srinagar, Jammu & Kashmir, India.
+Serving: two small glass cups. Key details: clear golden-amber tea with saffron strands and slivered almonds floating. Nearby, slightly out of focus: a brass samovar.
+
+4. File name: siddu.png
+Siddu (Steamed yeasted bun with walnut-poppy filling), a dish from Shimla (Mahasu), Himachal Pradesh, India.
+Serving: a steel plate. Key details: two large oval steamed wheat buns, one split open to show a walnut and poppy-seed filling, drenched in melted ghee. Nearby, slightly out of focus: a small bowl of green chutney and whole walnuts.
+
+5. File name: palak-paneer.png
+Palak Paneer (Paneer in spinach purée), a dish from Patiala, Punjab, India.
+Serving: a copper-rimmed bowl. Key details: white paneer cubes in a smooth, vivid green spinach purée with a swirl of cream. Nearby, slightly out of focus: a folded roti.
+
+6. File name: bal-mithai.png
+Bal Mithai (Almora's khoya fudge with sugar balls), a dish from Almora, Uttarakhand, India.
+Serving: a paper-lined box. Key details: dark chocolate-brown fudge bars completely coated with tiny white sugar balls. Nearby, slightly out of focus: a few loose white sugar balls.
+
+7. File name: aloo-ke-gutke.png
+Aloo ke Gutke (Kumaoni spiced potatoes), a dish from Nainital (Kumaon), Uttarakhand, India.
+Serving: a steel plate. Key details: golden cubed potatoes, crusty in patches, with whole fried red chillies and plenty of chopped coriander. Nearby, slightly out of focus: a glass of tea.
+
+8. File name: kanji.png
+Kanji (Fermented black-carrot drink), a drink from Meerut, Uttar Pradesh, India.
+Serving: two tall glasses. Key details: a deep purple-magenta fermented drink with black carrot sticks. Nearby, slightly out of focus: a glass jar of kanji with carrots and mustard seeds.
+
+============================================================
+
+BATCH 14 (North / Central)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: kadhi-pakora.png
+Kadhi Pakora (Yogurt-gram flour curry with fritters), a dish from Rohtak, Haryana, India.
+Serving: a steel bowl. Key details: bright yellow, glossy yogurt and gram-flour curry with soft onion fritters, topped with red chilli-ghee tadka. Nearby, slightly out of focus: a plate of steamed rice.
+
+2. File name: ker-sangri.png
+Ker Sangri (Desert berries and beans), a dish from Bikaner, Rajasthan, India.
+Serving: a steel bowl. Key details: a dry stir-fry of dark brown dried berries and long thin twisted desert beans, coated in spices. Nearby, slightly out of focus: a millet roti and a few dried red chillies.
+
+3. File name: bedmi-poori.png
+Bedmi Poori (Urad-dal stuffed puri), a dish from Vrindavan (Braj), Uttar Pradesh, India.
+Serving: a steel plate. Key details: puffed, crisp golden urad-dal stuffed puris beside a bowl of thin, spicy potato curry. Nearby, slightly out of focus: a small bowl of pickle.
+
+4. File name: mathura-peda.png
+Mathura Peda (Browned khoya sweet), a dish from Mathura, Uttar Pradesh, India.
+Serving: a leaf-lined plate. Key details: round, slightly flattened caramel-brown milk sweets rolled in sugar. Nearby, slightly out of focus: a small brass Krishna-offering bowl.
+
+5. File name: ghewar.png
+Ghewar (Honeycomb disc sweet for Teej), a dish from Jaipur, Rajasthan, India.
+Serving: a round tray. Key details: a golden, lacy honeycomb disc sweet topped with creamy rabri and pistachios. Nearby, slightly out of focus: a stack of plain ghewar discs.
+
+6. File name: laal-maas.png
+Laal Maas (Rajasthani red mutton curry), a dish from Jodhpur, Rajasthan, India.
+Serving: a clay handi. Key details: bone-in mutton in a fiery, deep-red, oily gravy. Nearby, slightly out of focus: whole dried Mathania red chillies and a millet roti.
+
+7. File name: dal-bafla.png
+Dal Bafla (Boiled-then-baked wheat balls with dal), a dish from Ujjain (Malwa), Madhya Pradesh, India.
+Serving: a steel thali. Key details: three round, golden, cracked wheat dough balls, one broken open and soaked in ghee, beside a bowl of yellow dal, green chutney and a small bowl of ghee. Nearby, slightly out of focus: a lump of wheat dough.
+
+8. File name: bhutte-ka-kees.png
+Bhutte ka Kees (Grated corn cooked in milk), a dish from Indore, Madhya Pradesh, India.
+Serving: a small leaf bowl. Key details: soft, pale-yellow grated corn cooked in milk, topped with grated coconut, chopped coriander and a lemon wedge. Nearby, slightly out of focus: two fresh corn cobs with husks.
+
+============================================================
+
+BATCH 15 (Central / West / East)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: chila.png
+Chila (Chhattisgarhi rice-flour pancake), a dish from Raipur, Chhattisgarh, India.
+Serving: a steel plate. Key details: two thin, off-white rice-flour pancakes with lacy golden spots, speckled with onion and coriander, beside a small bowl of rustic red tomato-chilli chutney. Nearby, slightly out of focus: a bowl of rice flour.
+
+2. File name: handvo.png
+Handvo (Fermented rice-lentil vegetable cake), a dish from Vadodara, Gujarat, India.
+Serving: a plate. Key details: golden-brown wedges of savoury cake with a crisp sesame crust and a soft, speckled vegetable interior. Nearby, slightly out of focus: a bowl of green chutney.
+
+3. File name: khandvi.png
+Khandvi (Rolled gram-flour ribbons), a dish from Surat, Gujarat, India.
+Serving: a steel plate. Key details: tight, pale-yellow rolled ribbons of gram flour topped with mustard seeds, sesame, grated coconut and coriander. Nearby, slightly out of focus: a sprig of curry leaves.
+
+4. File name: thalipeeth.png
+Thalipeeth (Multigrain flatbread), a dish from Chhatrapati Sambhajinagar (Marathwada), Maharashtra, India.
+Serving: a steel plate. Key details: two thick, crisp multigrain flatbreads with holes and sesame seeds, a knob of white butter on top. Nearby, slightly out of focus: a bowl of yogurt.
+
+5. File name: sabudana-khichdi.png
+Sabudana Khichdi (Tapioca pearls with peanuts), a dish from Pune, Maharashtra, India.
+Serving: a steel plate. Key details: translucent soaked tapioca pearls with crushed peanuts, potato cubes, green chillies and coriander. Nearby, slightly out of focus: a small bowl of yogurt.
+
+6. File name: chicken-xacuti.png
+Chicken Xacuti (Goan roasted-coconut chicken curry), a dish from Arambol (Harmal), Goa, India.
+Serving: a clay bowl. Key details: chicken pieces in a thick, dark-brown roasted-coconut gravy. Nearby, slightly out of focus: a small loaf of Goan pao.
+
+7. File name: dal-pitha.png
+Dal Pitha (Rice dumplings stuffed with chana dal), a dish from Patna, Bihar, India.
+Serving: a steel plate. Key details: half-moon shaped, smooth white rice-flour dumplings, one cut to show a yellow lentil filling, glossy with mustard oil and flecked with mustard seeds. Nearby, slightly out of focus: a bowl of green chutney.
+
+8. File name: sattu-sharbat.png
+Sattu Sharbat (Roasted-gram drink (sattu ghol)), a drink from Gaya (Magadh), Bihar, India.
+Serving: a steel glass. Key details: an opaque, pale beige roasted-gram drink with chopped onion, mint and a lemon slice, beaded with condensation. Nearby, slightly out of focus: a small heap of sattu flour and a halved lemon.
+
+============================================================
+
+BATCH 16 (East / Northeast)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: chilka-roti.png
+Chilka Roti (Rice-and-chana-dal pancake), a dish from Ranchi, Jharkhand, India.
+Serving: a steel plate. Key details: two thick, soft rice-and-lentil crepes with golden spots, beside a bowl of tomato chutney and potato curry. Nearby, slightly out of focus: a small bowl of soaked chana dal.
+
+2. File name: aloo-posto.png
+Aloo Posto (Potatoes in poppy-seed paste), a dish from Bankura, West Bengal, India.
+Serving: a bell-metal bowl. Key details: potato cubes coated in a creamy, pale off-white poppy-seed paste with slit green chillies. Nearby, slightly out of focus: a small heap of white poppy seeds and a plate of rice.
+
+3. File name: bela-pana.png
+Bela Pana (Bael-fruit drink for Odia New Year), a drink from Bhubaneswar, Odisha, India.
+Serving: two clay cups. Key details: thick, pale orange-brown wood-apple drink with flecks of grated coconut. Nearby, slightly out of focus: a halved hard-shelled bael fruit showing its orange pulp.
+
+4. File name: chhena-jhili.png
+Chhena Jhili (Fried chhena in syrup), a dish from Nimapada, Odisha, India.
+Serving: a ceramic bowl. Key details: small round, dark reddish-brown fried cheese discs glistening in clear sugar syrup. Nearby, slightly out of focus: a few green cardamom pods.
+
+5. File name: pakhala.png
+Pakhala Bhata (Fermented water-rice), a dish from Puri, Odisha, India.
+Serving: a bronze bowl. Key details: white cooked rice submerged in cloudy water with a dollop of curd, curry leaves and a dried red chilli floating, served with fried potato, a green chilli and raw onion. Nearby, slightly out of focus: a small plate of crisp fried lentil nuggets.
+
+6. File name: sel-roti.png
+Sel Roti (Ring-shaped rice bread), a dish from Gangtok, Sikkim, India.
+Serving: a steel plate. Key details: three large, thin, reddish-golden ring-shaped fried rice breads. Nearby, slightly out of focus: a cup of milk tea.
+
+7. File name: jolpan.png
+Jolpan (Assamese breakfast of flattened rice and curd), a dish from Jorhat, Assam, India.
+Serving: a bell-metal bowl. Key details: soaked flattened rice and crisp puffed rice under a dollop of thick white curd and crumbled brown jaggery. Nearby, slightly out of focus: a cup of milky Assam tea.
+
+8. File name: galho.png
+Galho (Naga rice-and-vegetable one-pot), a dish from Kohima, Nagaland, India.
+Serving: a deep ceramic bowl. Key details: a thick, loose rice and vegetable one-pot with wilted mustard greens, pumpkin cubes and green beans. Nearby, slightly out of focus: fresh ginger and green chillies.
+
+============================================================
+
+BATCH 17 (Northeast / South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: pumaloi.png
+Pumaloi (Khasi steamed rice cake), a dish from Shillong, Meghalaya, India.
+Serving: a woven bamboo plate. Key details: small, soft, crumbly white steamed rice cakes. Nearby, slightly out of focus: a bowl of dark black-sesame chutney.
+
+2. File name: double-ka-meetha.png
+Double ka Meetha (Hyderabadi bread pudding), a dish from Hyderabad, Telangana, India.
+Serving: a shallow ceramic dish. Key details: golden fried bread pieces soaked in saffron syrup, covered with a creamy layer of reduced milk and scattered slivered almonds and pistachios. Nearby, slightly out of focus: saffron strands in a small dish.
+
+3. File name: pootharekulu.png
+Pootharekulu (Paper-sheet sweet), a dish from Atreyapuram, Andhra Pradesh, India.
+Serving: a steel plate. Key details: four flat, folded parcels of translucent, paper-thin white rice film, layers visible at the edges, glistening with ghee and showing sugar and chopped nuts inside. Nearby, slightly out of focus: a stack of unfilled translucent rice sheets.
+
+4. File name: gongura-mutton.png
+Gongura Mutton (Goat curry with sorrel leaves), a dish from Guntur, Andhra Pradesh, India.
+Serving: a clay pot. Key details: bone-in goat pieces in a thick, dark olive-brown gravy flecked with wilted sorrel leaves, a sheen of red oil on top. Nearby, slightly out of focus: a bunch of fresh red-stemmed gongura leaves and a bowl of rice.
+
+5. File name: mangalore-buns.png
+Mangalore Buns (Banana puri), a dish from Udupi, Karnataka, India.
+Serving: a steel plate. Key details: puffy, golden-brown, slightly sweet banana puris. Nearby, slightly out of focus: a bowl of coconut chutney and a ripe banana.
+
+6. File name: curd-rice.png
+Curd Rice (Thayir sadam), a dish from Chennai, Tamil Nadu, India.
+Serving: a banana leaf. Key details: soft white curd rice tempered with mustard seeds, curry leaves and green chilli, topped with pomegranate seeds. Nearby, slightly out of focus: a small bowl of mango pickle.
+
+7. File name: neer-dosa.png
+Neer Dosa (Unfermented 'water' rice crepe), a dish from Mangaluru, Karnataka, India.
+Serving: a plate. Key details: thin, soft, lacy white rice crepes folded into triangles. Nearby, slightly out of focus: a bowl of coconut chutney.
+
+8. File name: ragi-mudde.png
+Ragi Mudde (Finger-millet balls with bassaru), a dish from Mandya, Karnataka, India.
+Serving: a steel plate. Key details: two smooth, dark brown finger-millet balls beside a bowl of thin lentil and greens broth. Nearby, slightly out of focus: a small heap of ragi flour.
+
+============================================================
+
+BATCH 18 (South)
+
+Please create 5 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: kerala-parotta.png
+Kerala Parotta (Flaky layered Malabar flatbread), a dish from Kozhikode (Malabar), Kerala, India.
+Serving: a plate. Key details: a stack of flaky, golden, layered round flatbreads, the layers pulled open. Nearby, slightly out of focus: a bowl of vegetable kurma.
+
+2. File name: pulihora.png
+Pulihora (Tamarind rice (puliyogare)), a dish from Thanjavur, Tamil Nadu, India.
+Serving: a brass plate. Key details: tangy brown-gold tamarind rice with peanuts, curry leaves and dried red chillies. Nearby, slightly out of focus: a block of tamarind.
+
+3. File name: kuzhi-paniyaram.png
+Kuzhi Paniyaram (Pan-cooked idli-batter dumplings), a dish from Karaikudi (Chettinad), Tamil Nadu, India.
+Serving: a cast-iron paniyaram pan. Key details: round, golden-brown dumplings speckled with shallots and curry leaves. Nearby, slightly out of focus: a bowl of coconut chutney.
+
+4. File name: jigarthanda.png
+Jigarthanda (Madurai's cooling milk drink), a drink from Madurai, Tamil Nadu, India.
+Serving: a tall glass. Key details: creamy pale caramel milk drink with almond-gum jelly and a scoop of ice cream on top. Nearby, slightly out of focus: a long spoon.
+
+5. File name: karimeen-pollichathu.png
+Karimeen Pollichathu (Pearl spot fish in banana leaf), a dish from Alappuzha (backwaters), Kerala, India.
+Serving: a banana leaf. Key details: an opened banana-leaf parcel with a whole pearl spot fish coated in thick red masala. Nearby, slightly out of focus: curry leaves and shallots.
+
+============================================================
+
+BATCH 19 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: noon-chai.png
+Noon Chai (Kashmiri pink salt tea), a drink from Srinagar, Jammu & Kashmir, India.
+Serving: two ceramic cups. Key details: pale pink milky tea topped with crushed pistachios. Nearby, slightly out of focus: a brass samovar and round Kashmiri bread.
+
+2. File name: gushtaba.png
+Gushtaba (Kashmiri meatballs in yogurt gravy), a dish from Srinagar, Jammu & Kashmir, India.
+Serving: a copper bowl. Key details: large, smooth, pale meatballs in a creamy off-white yogurt gravy flecked with dried mint. Nearby, slightly out of focus: a copper samovar and a stack of Kashmiri bread.
+
+3. File name: haak.png
+Haak (Kashmiri collard greens), a dish from Srinagar, Jammu & Kashmir, India.
+Serving: a ceramic bowl. Key details: whole dark-green collard leaves in a light, clear broth with whole dried red chillies. Nearby, slightly out of focus: a mound of white rice.
+
+4. File name: dum-olav.png
+Dum Olav (Kashmiri dum aloo), a dish from Srinagar, Jammu & Kashmir, India.
+Serving: a copper bowl. Key details: small whole fried potatoes in a thick, deep-red, glossy yogurt gravy. Nearby, slightly out of focus: a small dish of fennel seeds.
+
+5. File name: amritsari-fish.png
+Amritsari Fish (Spiced gram-flour fried fish), a dish from Amritsar, Punjab, India.
+Serving: a steel plate. Key details: crisp, golden-orange gram-flour battered fish pieces sprinkled with chaat masala, with onion rings, lemon wedges and green chutney. Nearby, slightly out of focus: a newspaper-lined basket.
+
+6. File name: pinni.png
+Pinni (Punjabi winter sweet), a dish from Ludhiana, Punjab, India.
+Serving: a steel plate. Key details: round, golden-brown, crumbly wheat-and-ghee balls studded with almond pieces. Nearby, slightly out of focus: a glass of hot milk.
+
+7. File name: jhangora-kheer.png
+Jhangora Kheer (Barnyard-millet pudding), a dish from Tehri (Garhwal), Uttarakhand, India.
+Serving: a brass bowl. Key details: creamy pale millet pudding topped with almonds and raisins. Nearby, slightly out of focus: a small heap of tiny millet grains.
+
+8. File name: kachri-chutney.png
+Kachri ki Chutney (Wild desert-melon chutney), a dish from Hisar, Haryana, India.
+Serving: a small stone mortar. Key details: coarse, red-flecked chutney of small dried melons, garlic and chilli glistening with mustard oil. Nearby, slightly out of focus: a millet roti with white butter.
+
+============================================================
+
+BATCH 20 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: kulfi.png
+Kulfi (Dense frozen milk dessert), a dish from Old Delhi, India.
+Serving: a steel plate. Key details: two cone-shaped, dense, pale-cream frozen milk desserts, sliced, topped with chopped pistachios. Nearby, slightly out of focus: a clay matka with metal kulfi moulds.
+
+2. File name: tandoori-chicken.png
+Tandoori Chicken (Yogurt-marinated chicken from the clay oven), a dish from Daryaganj, Delhi, India.
+Serving: a steel platter. Key details: charred, deep orange-red roasted chicken legs on sliced onion rings with lemon wedges. Nearby, slightly out of focus: a clay tandoor in the background.
+
+3. File name: jaljeera.png
+Jaljeera (Cumin-mint cooler), a drink from Delhi, India.
+Serving: two tall glasses. Key details: a dark-green, spiced cumin-mint drink with ice and a few fried gram-flour pearls on top. Nearby, slightly out of focus: fresh mint and a lemon.
+
+4. File name: paneer-tikka.png
+Paneer Tikka (Grilled marinated paneer), a dish from Delhi, India.
+Serving: a cast-iron plate. Key details: skewered, charred orange paneer cubes alternating with green pepper and onion, dusted with chaat masala. Nearby, slightly out of focus: a bowl of mint chutney.
+
+5. File name: gulab-jamun.png
+Gulab Jamun (Fried milk balls in rose syrup), a dish from Agra, Uttar Pradesh, India.
+Serving: a ceramic bowl. Key details: dark brown, glossy round milk dumplings soaking in syrup with a few rose petals. Nearby, slightly out of focus: a small bottle of rose water.
+
+6. File name: sheermal.png
+Sheermal (Saffron milk flatbread), a dish from Lucknow, Uttar Pradesh, India.
+Serving: a woven basket. Key details: round, golden-saffron, lightly glossy flatbreads pricked with fork marks. Nearby, slightly out of focus: a plate of kebabs.
+
+7. File name: phalsa-sharbat.png
+Phalsa Sharbat (Sweet-sour falsa berry drink), a drink from Lucknow, Uttar Pradesh, India.
+Serving: two glasses. Key details: a deep purple-magenta berry drink over ice with mint. Nearby, slightly out of focus: a small bowl of tiny purple phalsa berries.
+
+8. File name: gatte-ki-sabzi.png
+Gatte ki Sabzi (Gram-flour dumplings in yogurt gravy), a dish from Ajmer, Rajasthan, India.
+Serving: a brass bowl. Key details: sliced yellow gram-flour dumplings in a smooth orange yogurt gravy topped with coriander. Nearby, slightly out of focus: a millet roti.
+
+============================================================
+
+BATCH 21 (North / Central / Northeast)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: mirchi-vada.png
+Mirchi Vada (Jodhpuri stuffed chilli fritter), a dish from Jodhpur, Rajasthan, India.
+Serving: a steel plate. Key details: large green chillies in a crisp golden gram-flour coating, one cut to show the potato filling. Nearby, slightly out of focus: a bowl of tamarind chutney.
+
+2. File name: imarti.png
+Imarti (Urad-batter flower in syrup), a dish from Jaunpur, Uttar Pradesh, India.
+Serving: a steel plate. Key details: bright orange, flower-shaped coiled sweets glistening with syrup. Nearby, slightly out of focus: a cloth piping bag.
+
+3. File name: bajra-raab.png
+Bajra Raab (Warm pearl-millet drink), a drink from Barmer, Rajasthan, India.
+Serving: a steel cup. Key details: a warm, thin, beige millet drink. Nearby, slightly out of focus: a small heap of pearl millet.
+
+4. File name: makhan-malai.png
+Malaiyo (Winter milk foam (makhan malai, daulat ki chaat)), a dish from Varanasi, Uttar Pradesh, India.
+Serving: small clay cups. Key details: cloud-like, airy white milk foam topped with saffron streaks and chopped pistachios. Nearby, slightly out of focus: a large brass tray of foam.
+
+5. File name: mawa-bati.png
+Mawa Bati (Stuffed khoya balls in syrup), a dish from Bhopal, Madhya Pradesh, India.
+Serving: a ceramic bowl. Key details: very dark brown fried milk balls in syrup, one cut open to show a nut and saffron filling. Nearby, slightly out of focus: pistachios and saffron strands.
+
+6. File name: chakki-ki-shaak.png
+Chakki ki Shaak (Steamed wheat-gluten in yogurt curry), a dish from Indore (Malwa), Madhya Pradesh, India.
+Serving: a steel bowl. Key details: spongy, golden pieces of steamed wheat gluten in a light yellow yogurt gravy. Nearby, slightly out of focus: a ball of wheat dough in water.
+
+7. File name: gundruk.png
+Gundruk Jhol (Fermented-greens soup), a dish from Namchi, Sikkim, India.
+Serving: a ceramic bowl. Key details: a sour, brothy soup of dark dried fermented greens with potato and tomato. Nearby, slightly out of focus: a bundle of dried greens.
+
+8. File name: haah-kumura.png
+Haah Kumura (Duck with ash gourd), a dish from Sivasagar, Assam, India.
+Serving: a bell-metal bowl. Key details: dark duck pieces and translucent ash-gourd cubes in a peppery brown gravy. Nearby, slightly out of focus: a whole ash gourd.
+
+============================================================
+
+BATCH 22 (Northeast)
+
+Please create 5 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: aloo-pitika.png
+Aloo Pitika (Assamese mashed potato with mustard oil), a dish from Guwahati, Assam, India.
+Serving: a bell-metal plate. Key details: rough mashed potato glistening with mustard oil, with chopped raw onion, green chilli and coriander. Nearby, slightly out of focus: a plate of rice and dal.
+
+2. File name: kangshoi.png
+Kangshoi (Manipuri vegetable stew), a dish from Imphal, Manipur, India.
+Serving: a ceramic bowl. Key details: a clear, light vegetable stew with potato, cabbage and peas. Nearby, slightly out of focus: a plate of steamed rice.
+
+3. File name: singju.png
+Singju (Manipuri crunchy vegetable salad), a dish from Imphal, Manipur, India.
+Serving: a banana-leaf-lined plate. Key details: a heap of finely shredded cabbage, lotus stem slices and herbs dusted with roasted seed powder. Nearby, slightly out of focus: a few dried red chillies.
+
+4. File name: berma-bwtwi.png
+Berma Bwtwi (Tripuri fermented-fish vegetable stew), a dish from Agartala, Tripura, India.
+Serving: a clay bowl. Key details: a light vegetable stew of pumpkin, beans and brinjal with whole green chillies. Nearby, slightly out of focus: a bamboo basket.
+
+5. File name: sawhchiar.png
+Sawhchiar (Mizo rice cooked with chicken), a dish from Aizawl, Mizoram, India.
+Serving: a ceramic bowl. Key details: soft, thick rice cooked with shredded chicken, ginger and spring onion. Nearby, slightly out of focus: fresh ginger and garlic.
+
+============================================================
+
+BATCH 23 (West)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: dhokla.png
+Dhokla (Fermented rice-and-lentil steamed cake), a dish from Ahmedabad, Gujarat, India.
+Serving: a steel plate. Key details: soft, spongy pale-yellow squares with a slightly coarse crumb, topped with mustard seeds, sesame, curry leaves and coriander. Nearby, slightly out of focus: a bowl of green chutney.
+
+2. File name: fafda.png
+Fafda (Crisp gram-flour strips), a dish from Anand, Gujarat, India.
+Serving: a steel plate. Key details: long, pale golden crisp gram-flour strips beside fried green chillies and shredded papaya relish. Nearby, slightly out of focus: two jalebis on the side.
+
+3. File name: sev-tameta.png
+Sev Tameta nu Shaak (Tomato curry with crisp sev), a dish from Rajkot (Kathiawad), Gujarat, India.
+Serving: a steel bowl. Key details: a red, glossy tomato curry topped with a heap of crisp yellow gram-flour sev and coriander. Nearby, slightly out of focus: a millet rotla.
+
+4. File name: mohanthal.png
+Mohanthal (Gram-flour fudge for Krishna), a dish from Dwarka, Gujarat, India.
+Serving: a steel plate. Key details: grainy golden-brown fudge squares topped with slivered almonds and pistachios. Nearby, slightly out of focus: a brass diya.
+
+5. File name: kothimbir-vadi.png
+Kothimbir Vadi (Coriander-gram flour cakes), a dish from Nagpur, Maharashtra, India.
+Serving: a steel plate. Key details: crisp, golden-edged green coriander and gram flour slices. Nearby, slightly out of focus: a bunch of fresh coriander.
+
+6. File name: vangyache-bharit.png
+Vangyache Bharit (Fire-roasted brinjal mash), a dish from Jalgaon, Maharashtra, India.
+Serving: a steel bowl. Key details: smoky mashed brinjal with spring onion, green chilli and coriander. Nearby, slightly out of focus: a whole charred aubergine.
+
+7. File name: patra-ni-machhi.png
+Patra ni Machhi (Parsi fish steamed in banana leaf), a dish from Navsari, Gujarat, India.
+Serving: a banana leaf. Key details: an opened banana-leaf parcel with fish coated in a thick bright-green coconut-coriander chutney. Nearby, slightly out of focus: a lemon wedge.
+
+8. File name: khichu.png
+Khichu (Steamed rice-flour dough), a dish from Valsad, Gujarat, India.
+Serving: a steel plate. Key details: soft, glossy mounds of steamed rice-flour dough with a pool of oil and a dusting of red chilli powder. Nearby, slightly out of focus: a stack of round rice papads.
+
+============================================================
+
+BATCH 24 (West)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: basundi.png
+Basundi (Sweet reduced milk), a dish from Nashik, Maharashtra, India.
+Serving: a glass bowl. Key details: thick, creamy, pale-saffron reduced milk with slivered pistachios and almonds. Nearby, slightly out of focus: a small dish of saffron.
+
+2. File name: dal-pakwan.png
+Dal Pakwan (Sindhi chana dal with crisp fried bread), a dish from Ulhasnagar, Maharashtra, India.
+Serving: a steel plate. Key details: large crisp, flaky fried discs beside a bowl of thick yellow chana dal topped with onion and coriander. Nearby, slightly out of focus: a bowl of green chutney.
+
+3. File name: piyush.png
+Piyush (Shrikhand-buttermilk drink), a drink from Dadar, Mumbai, Maharashtra, India.
+Serving: two glasses. Key details: a thick, pale-saffron yogurt drink topped with chopped pistachios. Nearby, slightly out of focus: a small bowl of shrikhand.
+
+4. File name: bombil-fry.png
+Bombil Fry (Crisp-fried Bombay duck), a dish from Mumbai, Maharashtra, India.
+Serving: a steel plate. Key details: flat, butterflied fish fried in a crisp golden semolina crust with lemon wedges. Nearby, slightly out of focus: a bowl of pink sol kadhi.
+
+5. File name: akuri.png
+Akuri (Parsi soft spiced scrambled eggs), a dish from Mumbai, Maharashtra, India.
+Serving: a ceramic plate. Key details: soft, barely set yellow scrambled eggs with onion, green chilli and coriander. Nearby, slightly out of focus: two buttered pav.
+
+6. File name: varan-bhaat.png
+Varan Bhaat (Plain toor dal with rice and ghee), a dish from Pune, Maharashtra, India.
+Serving: a banana leaf. Key details: a mound of white rice with thick yellow dal poured over, a spoon of ghee and a lemon wedge. Nearby, slightly out of focus: a small steel bowl of ghee.
+
+7. File name: zunka-bhakri.png
+Zunka Bhakri (Gram-flour stir-fry with jowar flatbread), a dish from Satara, Maharashtra, India.
+Serving: a steel plate. Key details: a crumbly yellow gram-flour stir-fry beside two round, cracked jowar flatbreads and a raw onion wedge. Nearby, slightly out of focus: a green chilli and a garlic bulb.
+
+8. File name: chakli.png
+Chakli (Spiral fried snack), a dish from Kolhapur, Maharashtra, India.
+Serving: a steel plate. Key details: golden, spiked spiral fried snacks. Nearby, slightly out of focus: a brass chakli press.
+
+============================================================
+
+BATCH 25 (West / East)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: kokum-sharbat.png
+Kokum Sharbat (Konkan kokum cooler), a drink from Malvan (Sindhudurg), Maharashtra, India.
+Serving: two glasses. Key details: a deep ruby-red cooler with ice. Nearby, slightly out of focus: dried kokum rinds.
+
+2. File name: patoleo.png
+Patoleo (Rice cakes steamed in turmeric leaves), a dish from Mapusa, Goa, India.
+Serving: a plate. Key details: flat parcels of turmeric leaves, one opened to show a white rice layer and brown coconut-jaggery filling. Nearby, slightly out of focus: fresh turmeric leaves.
+
+3. File name: prawn-balchao.png
+Prawn Balchão (Goan vinegar-chilli prawn pickle-curry), a dish from Panaji, Goa, India.
+Serving: a ceramic bowl. Key details: prawns in a thick, dark-red, glossy chilli-vinegar masala. Nearby, slightly out of focus: a glass jar of balchão.
+
+4. File name: champaran-mutton.png
+Champaran Mutton (Ahuna: mutton sealed in a clay pot), a dish from Motihari (Champaran), Bihar, India.
+Serving: a sealed clay handi. Key details: dark, glossy mutton pieces with whole garlic cloves in a thick oily gravy, the dough seal broken open. Nearby, slightly out of focus: a wood fire.
+
+5. File name: silao-khaja.png
+Silao Khaja (Layered fried pastry), a dish from Silao, Bihar, India.
+Serving: a steel plate. Key details: flaky, many-layered golden pastries with a crisp sugar glaze. Nearby, slightly out of focus: a stack of rolled pastry.
+
+6. File name: shukto.png
+Shukto (Bitter-sweet mixed vegetables), a dish from Nabadwip, West Bengal, India.
+Serving: a bell-metal bowl. Key details: a pale, creamy mixed vegetable stew with bitter gourd, plantain, drumstick and fried lentil dumplings. Nearby, slightly out of focus: a mound of rice.
+
+7. File name: jhalmuri.png
+Jhalmuri (Kolkata spiced puffed rice), a dish from Kolkata, West Bengal, India.
+Serving: a newspaper cone. Key details: puffed rice tossed with onion, chilli, peanuts and spicy fried noodles, glistening with mustard oil. Nearby, slightly out of focus: a vendor's tin can.
+
+8. File name: chingri-malai-curry.png
+Chingri Malai Curry (Prawns in coconut milk), a dish from Kolkata, West Bengal, India.
+Serving: a ceramic bowl. Key details: large whole prawns in a creamy orange coconut-milk gravy. Nearby, slightly out of focus: a halved coconut.
+
+============================================================
+
+BATCH 26 (East / South)
+
+Please create 7 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: luchi-alur-dom.png
+Luchi & Alur Dom (Puffed bread with spiced potatoes), a dish from Kolkata, West Bengal, India.
+Serving: a bell-metal plate. Key details: puffed, pale white fried breads beside a bowl of small potatoes in a thick reddish gravy. Nearby, slightly out of focus: a cup of tea.
+
+2. File name: rasabali.png
+Rasabali (Fried chhena in thickened milk), a dish from Kendrapara, Odisha, India.
+Serving: a clay bowl. Key details: reddish-brown fried cheese discs floating in thick, cardamom-flecked sweetened milk. Nearby, slightly out of focus: green cardamom pods.
+
+3. File name: ghugni.png
+Ghugni (Dried yellow pea curry), a dish from Cuttack, Odisha, India.
+Serving: a leaf bowl. Key details: yellow dried-pea curry topped with raw onion, green chilli and coriander. Nearby, slightly out of focus: puffed puris.
+
+4. File name: chhena-gaja.png
+Chhena Gaja (Chhena-semolina blocks boiled in syrup), a dish from Pahala, Odisha, India.
+Serving: a steel plate. Key details: rectangular golden cheese-and-semolina blocks with a crystallised sugar crust. Nearby, slightly out of focus: a small bowl of syrup.
+
+5. File name: malpua.png
+Malpua (Amalu) (Sweet fried pancakes), a dish from Puri, Odisha, India.
+Serving: a plate. Key details: lacy-edged golden-brown fried pancakes glistening with syrup. Nearby, slightly out of focus: a small bowl of rabri.
+
+6. File name: machha-besara.png
+Machha Besara (Odia fish in mustard paste), a dish from Berhampur, Odisha, India.
+Serving: a bell-metal bowl. Key details: fish steaks in a thick, pale-yellow mustard gravy. Nearby, slightly out of focus: a small heap of mustard seeds.
+
+7. File name: falooda.png
+Falooda (Rose-milk dessert drink), a drink from Hyderabad, Telangana, India.
+Serving: a tall glass. Key details: layers of pink rose syrup, basil seeds, vermicelli and milk topped with kulfi and pistachios. Nearby, slightly out of focus: a long spoon.
+
+============================================================
+
+BATCH 27 (North / South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: goli-soda.png
+Goli Soda (Masala soda in a marble bottle (banta)), a drink from Delhi, India.
+Serving: two marble-stoppered glass bottles and a glass. Key details: fizzy, pale lemon-green spiced soda. Nearby, slightly out of focus: halved lemons.
+
+2. File name: sarva-pindi.png
+Sarva Pindi (Telangana rice-flour pan bread), a dish from Warangal, Telangana, India.
+Serving: a cast-iron pan. Key details: a thick, round, golden rice-flour bread with finger holes, flecked with chana dal, peanuts and curry leaves, cut into wedges. Nearby, slightly out of focus: a glass of tea.
+
+3. File name: punugulu.png
+Punugulu (Fried idli-batter fritters), a dish from Visakhapatnam, Andhra Pradesh, India.
+Serving: a steel plate. Key details: small, round, golden fried batter balls. Nearby, slightly out of focus: a bowl of peanut chutney.
+
+4. File name: qubani-ka-meetha.png
+Qubani ka Meetha (Hyderabadi apricot compote), a dish from Hyderabad, Telangana, India.
+Serving: a glass bowl. Key details: a thick, deep amber apricot compote topped with a dollop of cream and blanched almonds. Nearby, slightly out of focus: whole dried apricots.
+
+5. File name: mirchi-ka-salan.png
+Mirchi ka Salan (Hyderabadi chilli curry), a dish from Hyderabad, Telangana, India.
+Serving: a ceramic bowl. Key details: whole long green chillies in a thick, nutty brown peanut-sesame gravy. Nearby, slightly out of focus: a plate of biryani.
+
+6. File name: irani-chai.png
+Irani Chai (Hyderabad café tea), a drink from Hyderabad, Telangana, India.
+Serving: white porcelain cups. Key details: creamy, milky tea. Nearby, slightly out of focus: Osmania biscuits on a saucer.
+
+7. File name: gutti-vankaya.png
+Gutti Vankaya (Andhra stuffed baby brinjal), a dish from Vijayawada, Andhra Pradesh, India.
+Serving: a steel bowl. Key details: whole small purple brinjals bursting with a dark, nutty masala in a thick gravy. Nearby, slightly out of focus: a plate of rice.
+
+8. File name: bandar-laddu.png
+Bandar Laddu (Machilipatnam gram-flour laddu), a dish from Machilipatnam, Andhra Pradesh, India.
+Serving: a steel plate. Key details: dense, golden-yellow gram-flour laddus. Nearby, slightly out of focus: a small bowl of ghee.
+
+============================================================
+
+BATCH 28 (South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: ulava-charu.png
+Ulava Charu (Horse gram soup), a dish from Kurnool, Andhra Pradesh, India.
+Serving: a clay bowl. Key details: a dark brown, glossy horse-gram soup with a swirl of white cream. Nearby, slightly out of focus: a heap of horse gram.
+
+2. File name: chiroti.png
+Chiroti (Layered fried pastry with sugar), a dish from Hubballi, Karnataka, India.
+Serving: a steel plate. Key details: flaky, multi-layered round fried pastries dusted with powdered sugar. Nearby, slightly out of focus: a jug of warm sweet milk.
+
+3. File name: panakam.png
+Panakam (Jaggery-ginger-cardamom cooler), a drink from Chennai, Tamil Nadu, India.
+Serving: two steel tumblers. Key details: a cloudy golden-brown jaggery drink. Nearby, slightly out of focus: a block of jaggery and a halved lemon.
+
+4. File name: rose-milk.png
+Rose Milk (Chennai's pink milk), a drink from Mylapore, Chennai, Tamil Nadu, India.
+Serving: two tall glasses. Key details: bright pink chilled milk. Nearby, slightly out of focus: a few rose petals.
+
+5. File name: akki-rotti.png
+Akki Rotti (Karnataka rice-flour flatbread), a dish from Bengaluru, Karnataka, India.
+Serving: a banana leaf. Key details: a thin, golden-spotted rice flatbread speckled with onion, carrot and dill, a knob of butter on top. Nearby, slightly out of focus: a bowl of coconut chutney.
+
+6. File name: kori-rotti.png
+Kori Rotti (Tulu chicken curry with crisp rice wafers), a dish from Mangaluru, Karnataka, India.
+Serving: a plate. Key details: a deep red chicken curry in coconut milk poured over broken, crisp white rice wafers. Nearby, slightly out of focus: a stack of dry rice wafers.
+
+7. File name: maddur-vada.png
+Maddur Vada (Crisp onion-semolina patties), a dish from Maddur, Karnataka, India.
+Serving: a steel plate. Key details: flat, crisp, golden onion-and-semolina patties with visible curry leaves. Nearby, slightly out of focus: a bowl of coconut chutney.
+
+8. File name: ragi-malt.png
+Ragi Malt (Finger-millet porridge drink), a drink from Mysuru, Karnataka, India.
+Serving: a steel tumbler. Key details: a smooth, warm, mauve-brown millet drink. Nearby, slightly out of focus: a small heap of ragi grains.
+
+============================================================
+
+BATCH 29 (South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: sulaimani.png
+Sulaimani (Malabar spiced lemon tea), a drink from Kozhikode, Kerala, India.
+Serving: two small glasses. Key details: clear amber tea with a lemon slice and a mint leaf. Nearby, slightly out of focus: whole cardamom and cinnamon.
+
+2. File name: malabar-pathiri.png
+Malabar Pathiri (Paper-thin rice flatbread), a dish from Malappuram, Kerala, India.
+Serving: a plate. Key details: a stack of soft, paper-thin white rice flatbreads glistening with coconut milk. Nearby, slightly out of focus: a bowl of chicken curry.
+
+3. File name: mor-kuzhambu.png
+Mor Kuzhambu (Buttermilk and coconut curry), a dish from Coimbatore, Tamil Nadu, India.
+Serving: a steel bowl. Key details: a pale yellow buttermilk-coconut curry with pieces of ash gourd, topped with mustard seeds and curry leaves. Nearby, slightly out of focus: a mound of rice.
+
+4. File name: adai.png
+Adai (Multi-lentil and rice crepe), a dish from Kumbakonam, Tamil Nadu, India.
+Serving: a steel plate. Key details: a thick, crisp, golden-brown lentil crepe with a hole in the centre, flecked with chilli and curry leaves. Nearby, slightly out of focus: a small bowl of jaggery and a dollop of butter.
+
+5. File name: nannari-sarbath.png
+Nannari Sarbath (Sarsaparilla-root lime cooler), a drink from Tiruchirappalli, Tamil Nadu, India.
+Serving: two glasses. Key details: a clear reddish-brown cooler with lime and ice. Nearby, slightly out of focus: a bottle of nannari syrup.
+
+6. File name: unniyappam.png
+Unniyappam (Rice, jaggery and banana fritters), a dish from Palakkad, Kerala, India.
+Serving: a steel plate. Key details: small round, dark-brown fried sweet dumplings. Nearby, slightly out of focus: a cast-iron appam pan.
+
+7. File name: murukku.png
+Manapparai Murukku (Twisted rice-urad snack), a dish from Manapparai, Tamil Nadu, India.
+Serving: a steel plate. Key details: golden, coiled rice-flour spirals with sesame seeds. Nearby, slightly out of focus: a brass murukku press.
+
+8. File name: erissery.png
+Erissery (Pumpkin and cowpea curry with toasted coconut), a dish from Thrissur, Kerala, India.
+Serving: a banana leaf. Key details: a thick, mild orange pumpkin and red-bean curry topped with golden toasted coconut. Nearby, slightly out of focus: a mound of rice.
+
+============================================================
+
+BATCH 30 (South)
+
+Please create 6 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: kulukki-sarbath.png
+Kulukki Sarbath (Kerala shaken lime cooler), a drink from Kochi, Kerala, India.
+Serving: two tall glasses. Key details: a frothy, pale green lime cooler with a slit green chilli, basil seeds and ice. Nearby, slightly out of focus: a cocktail shaker.
+
+2. File name: ada-pradhaman.png
+Ada Pradhaman (Rice ada in jaggery and coconut milk), a dish from Kochi, Kerala, India.
+Serving: a bell-metal bowl. Key details: a creamy brown jaggery-coconut milk pudding with rice flakes, fried cashews and raisins. Nearby, slightly out of focus: a banana leaf with sadya dishes.
+
+3. File name: meen-molee.png
+Meen Molee (Fish stewed in coconut milk), a dish from Kottayam, Kerala, India.
+Serving: a clay pot. Key details: fish steaks in a pale golden-yellow coconut-milk stew with green chillies, tomato and curry leaves. Nearby, slightly out of focus: two lacy appams.
+
+4. File name: idiyappam.png
+Idiyappam (String hoppers), a dish from Tirunelveli, Tamil Nadu, India.
+Serving: a banana leaf. Key details: soft, lacy white nests of steamed rice noodles. Nearby, slightly out of focus: a small bowl of coconut milk and a wooden idiyappam press.
+
+5. File name: kappa-meen-curry.png
+Kappa & Meen Curry (Tapioca with red fish curry), a dish from Thiruvananthapuram, Kerala, India.
+Serving: a clay pot and plate. Key details: a mound of mashed yellow-white tapioca with coconut beside a fiery red fish curry in a clay pot. Nearby, slightly out of focus: dried kudampuli (Malabar tamarind).
+
+6. File name: cabbage-thoran.png
+Cabbage Thoran (Kerala cabbage with coconut), a dish from Thiruvananthapuram, Kerala, India.
+Serving: a banana leaf. Key details: finely shredded cabbage stir-fried with grated coconut, mustard seeds and curry leaves. Nearby, slightly out of focus: a bowl of rice.
+
+============================================================
+
+BATCH 31 (North)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: mutton-yakhni.png
+Mutton Yakhni (Kashmiri mutton in yogurt and fennel), a dish from Srinagar, Jammu & Kashmir, India.
+Serving: a copper bowl. Key details: mutton pieces in a pale, creamy yogurt gravy with dried mint. Nearby, slightly out of focus: a bowl of plain rice.
+
+2. File name: sohan-halwa.png
+Sohan Halwa (Brittle ghee halwa discs), a dish from Chandni Chowk, Delhi, India.
+Serving: a decorative tin. Key details: round, brittle, caramel-brown ghee halwa discs studded with almonds and pistachios. Nearby, slightly out of focus: a tin lid.
+
+3. File name: rabri.png
+Rabri (Layered reduced-milk sweet), a dish from Vrindavan, Uttar Pradesh, India.
+Serving: a clay kulhad. Key details: thick, creamy, layered reduced milk with nuts. Nearby, slightly out of focus: a jalebi on the side.
+
+4. File name: kalakand.png
+Kalakand (Alwar's grainy milk cake), a dish from Alwar, Rajasthan, India.
+Serving: a steel plate. Key details: soft, moist, grainy white milk-cake squares topped with pistachios. Nearby, slightly out of focus: a small brass bowl of milk.
+
+5. File name: moong-dal-halwa.png
+Moong Dal Halwa (Winter lentil halwa), a dish from Jaipur, Rajasthan, India.
+Serving: a brass bowl. Key details: glossy golden-brown grainy lentil halwa topped with almonds and pistachios. Nearby, slightly out of focus: a heap of yellow moong dal.
+
+6. File name: dhaulo-maans.png
+Safed Maas (Dhaulo Maans) (Rajasthani white mutton curry), a dish from Jaisalmer, Rajasthan, India.
+Serving: a brass bowl. Key details: mutton pieces in a pale ivory, creamy cashew-yogurt gravy. Nearby, slightly out of focus: a stack of rotis.
+
+7. File name: gujiya.png
+Gujiya (Holi pastry with khoya filling), a dish from Kanpur, Uttar Pradesh, India.
+Serving: a steel plate. Key details: crescent-shaped, crimped golden pastries, one broken to show khoya and nut filling. Nearby, slightly out of focus: a brass gujiya mould.
+
+8. File name: motichoor-laddoo.png
+Motichoor Laddoo (Tiny-boondi laddoo), a dish from Varanasi, Uttar Pradesh, India.
+Serving: a steel plate. Key details: bright orange, finely grained laddoos topped with melon seeds. Nearby, slightly out of focus: a brass diya.
+
+============================================================
+
+BATCH 32 (Central / West)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: bhopali-paya.png
+Bhopali Paya (Goat-trotter soup), a dish from Bhopal (Old City), Madhya Pradesh, India.
+Serving: a ceramic bowl. Key details: goat trotters in a dark, glossy, spiced broth topped with ginger juliennes and coriander. Nearby, slightly out of focus: lemon wedges and bread.
+
+2. File name: bhopali-gosht-korma.png
+Bhopali Gosht Korma (Slow-cooked mutton korma with a spice potli), a dish from Bhopal, Madhya Pradesh, India.
+Serving: a copper handi. Key details: tender mutton pieces in a rich, glossy brown korma gravy with fried onions. Nearby, slightly out of focus: a small muslin spice bundle and a sheermal.
+
+3. File name: khoya-jalebi.png
+Khoya Jalebi (Jabalpur's mawa jalebi), a dish from Jabalpur, Madhya Pradesh, India.
+Serving: a steel plate. Key details: thick, very dark brown, almost black spiral jalebis glistening with syrup. Nearby, slightly out of focus: a block of khoya.
+
+4. File name: garadu.png
+Garadu (Indore's fried yam chaat), a dish from Indore, Madhya Pradesh, India.
+Serving: a leaf bowl. Key details: golden fried yam cubes dusted with chaat masala with a lime wedge. Nearby, slightly out of focus: a whole garadu tuber.
+
+5. File name: indori-shikanji.png
+Indori Shikanji (Thick dry-fruit milk drink), a drink from Bada Sarafa, Indore, Madhya Pradesh, India.
+Serving: two glasses. Key details: a thick, pale cream milkshake topped with chopped almonds, cashews and pistachios. Nearby, slightly out of focus: a small brass bowl of dry fruits.
+
+6. File name: bore-baasi.png
+Bore Baasi (Chhattisgarh's fermented water-rice), a dish from Raipur, Chhattisgarh, India.
+Serving: a bell-metal bowl. Key details: soft rice soaked in cloudy water with raw onion, green chilli and a small bowl of red tomato chutney. Nearby, slightly out of focus: fried lentil nuggets.
+
+7. File name: saoji-mutton.png
+Saoji Mutton (Nagpur's fiery black-masala curry), a dish from Nagpur, Maharashtra, India.
+Serving: a clay bowl. Key details: mutton in a very dark, almost black, oily gravy with a red oil layer. Nearby, slightly out of focus: a jowar bhakri.
+
+8. File name: kaju-katli.png
+Kaju Katli (Cashew diamonds), a dish from Mumbai, Maharashtra, India.
+Serving: a silver tray. Key details: pale ivory diamond-shaped cashew sweets topped with silver leaf. Nearby, slightly out of focus: whole cashews.
+
+============================================================
+
+BATCH 33 (West / East)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: keema-pav.png
+Keema Pav (Irani café mince with buttered pav), a dish from Mumbai, Maharashtra, India.
+Serving: a steel plate. Key details: spiced minced meat with green peas beside buttered toasted pav, onion and lemon. Nearby, slightly out of focus: an Irani café glass of chai.
+
+2. File name: jardaloo-sali-boti.png
+Jardaloo Sali Boti (Parsi mutton with apricots and potato straws), a dish from Mumbai, Maharashtra, India.
+Serving: a ceramic bowl. Key details: mutton pieces with apricots in a glossy red-brown gravy topped with a heap of crisp potato straws. Nearby, slightly out of focus: a few dried apricots.
+
+3. File name: lonavala-chikki.png
+Chikki (Peanut-jaggery brittle), a dish from Lonavala, Maharashtra, India.
+Serving: a wooden board. Key details: golden peanut brittle bars. Nearby, slightly out of focus: roasted peanuts.
+
+4. File name: kolambi-fry.png
+Kolambi Fry (Konkani rava-crusted prawns), a dish from Alibag (Raigad), Maharashtra, India.
+Serving: a steel plate. Key details: crisp, semolina-crusted pink prawns with lemon wedges. Nearby, slightly out of focus: a glass of sol kadhi.
+
+5. File name: kombdi-vade.png
+Kombdi Vade (Malvani chicken curry with vade), a dish from Sawantwadi, Maharashtra, India.
+Serving: a steel thali. Key details: chicken curry in a dark roasted-coconut gravy beside puffy golden vade, onion and lemon. Nearby, slightly out of focus: a glass of pink sol kadhi.
+
+6. File name: paplet-saar.png
+Paplet Saar (Malvani pomfret curry), a dish from Vengurla (Malvan coast), Maharashtra, India.
+Serving: a steel bowl. Key details: pomfret steaks in an orange-brown roasted-coconut curry with kokum. Nearby, slightly out of focus: a glass of pink sol kadhi.
+
+7. File name: ambot-tik.png
+Ambot Tik (Goan sour-spicy fish curry), a dish from Vasco da Gama, Goa, India.
+Serving: a clay bowl. Key details: fish pieces in a fiery red, sour, glossy curry. Nearby, slightly out of focus: dried red chillies and tamarind.
+
+8. File name: langcha.png
+Langcha (Shaktigarh's fried milk sweet), a dish from Shaktigarh, Bardhaman, West Bengal, India.
+Serving: a clay bowl. Key details: long, very dark brown fried milk sweets in syrup. Nearby, slightly out of focus: green cardamom.
+
+============================================================
+
+BATCH 34 (East / South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: rasmalai.png
+Rasmalai (Chhena discs in saffron milk), a dish from Kolkata, West Bengal, India.
+Serving: a glass bowl. Key details: soft white cheese discs soaking in pale saffron milk topped with pistachios. Nearby, slightly out of focus: saffron strands.
+
+2. File name: fish-kabiraji.png
+Fish Kabiraji (Kolkata cabin-style fish cutlet in egg lace), a dish from College Street, Kolkata, West Bengal, India.
+Serving: a steel plate. Key details: a golden breaded fish cutlet wrapped in a crisp, lacy web of fried egg, with mustard sauce and onion salad. Nearby, slightly out of focus: a small bowl of kasundi.
+
+3. File name: mughlai-paratha.png
+Mughlai Paratha (Kolkata egg-stuffed paratha), a dish from Kolkata, West Bengal, India.
+Serving: a steel plate. Key details: a golden, square-folded crisp paratha cut to show an egg and onion filling, with onion-cucumber salad. Nearby, slightly out of focus: a bottle of ketchup.
+
+4. File name: bhetki-paturi.png
+Bhetki Paturi (Fish steamed in banana leaf with mustard), a dish from Kolkata, West Bengal, India.
+Serving: a banana leaf. Key details: an opened banana-leaf parcel with white fish coated in a yellow mustard-coconut paste and a green chilli. Nearby, slightly out of focus: a mound of rice.
+
+5. File name: kankada-jhola.png
+Kankada Jhola (Odia crab curry), a dish from Gopalpur, Odisha, India.
+Serving: a bell-metal bowl. Key details: red-shelled crab halves and potato wedges in a light orange curry. Nearby, slightly out of focus: a mud crab.
+
+6. File name: pathar-ka-gosht.png
+Pathar ka Gosht (Mutton seared on a hot stone), a dish from Hyderabad, Telangana, India.
+Serving: a black granite slab. Key details: thin, charred mutton slices with onion rings and mint. Nearby, slightly out of focus: lemon wedges.
+
+7. File name: ariselu.png
+Ariselu (Rice-jaggery discs with sesame), a dish from Rajahmundry, Andhra Pradesh, India.
+Serving: a steel plate. Key details: round, dark brown, flat rice-and-jaggery discs coated with sesame seeds. Nearby, slightly out of focus: a block of jaggery.
+
+8. File name: gongura-royyalu.png
+Gongura Royyalu (Prawns with sorrel leaves), a dish from Kakinada, Andhra Pradesh, India.
+Serving: a clay bowl. Key details: prawns in a dark olive-brown sorrel-leaf curry. Nearby, slightly out of focus: fresh gongura leaves.
+
+============================================================
+
+BATCH 35 (South)
+
+Please create 6 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: natu-kodi-pulusu.png
+Natu Kodi Pulusu (Rayalaseema country-chicken stew), a dish from Kadapa, Andhra Pradesh, India.
+Serving: a clay pot. Key details: country chicken pieces in a dark, fiery red-brown gravy. Nearby, slightly out of focus: two finger-millet balls.
+
+2. File name: chepala-pulusu.png
+Chepala Pulusu (Andhra tamarind fish curry (Nellore style)), a dish from Nellore, Andhra Pradesh, India.
+Serving: a clay pot. Key details: fish steaks in a dark red, glossy tamarind gravy with curry leaves. Nearby, slightly out of focus: a block of tamarind.
+
+3. File name: kesari-bath.png
+Kesari Bath (Saffron semolina sweet), a dish from Bengaluru, Karnataka, India.
+Serving: a banana leaf. Key details: a bright saffron-orange mound of semolina sweet with cashews and raisins. Nearby, slightly out of focus: a small bowl of upma.
+
+4. File name: kozhikode-halwa.png
+Kozhikode Halwa (Calicut halwa of SM Street), a dish from S. M. Street, Kozhikode, Kerala, India.
+Serving: a steel plate. Key details: jewel-bright red and amber translucent halwa bars studded with cashews. Nearby, slightly out of focus: a stack of halwa slabs.
+
+5. File name: meen-kuzhambu.png
+Meen Kuzhambu (Tamil tamarind fish curry), a dish from Nagapattinam, Tamil Nadu, India.
+Serving: a clay pot. Key details: fish pieces in a thick, dark reddish-brown tamarind gravy with shallots and garlic. Nearby, slightly out of focus: a bowl of rice.
+
+6. File name: tirunelveli-halwa.png
+Tirunelveli Halwa (Glossy wheat halwa), a dish from Tirunelveli, Tamil Nadu, India.
+Serving: a banana leaf. Key details: dark brown, translucent, glossy wheat halwa oozing ghee with cashews. Nearby, slightly out of focus: a brass ladle.
+
+============================================================
+
+BATCH 36 (North / West)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: balushahi.png
+Balushahi (Flaky fried pastry glazed in syrup (Badusha in the South)), a dish from Meerut, Uttar Pradesh, India.
+Serving: a steel plate. Key details: flaky, golden, slightly flattened rounds with a thumb dimple and a thin white sugar glaze. Nearby, slightly out of focus: a box of sweets.
+
+2. File name: pakora.png
+Pakora (Gram-flour vegetable fritters (bhajia, bajji)), a dish from North India, India.
+Serving: a steel plate lined with paper. Key details: crisp, golden, rough onion and spinach fritters. Nearby, slightly out of focus: a glass of chai and green chutney.
+
+3. File name: bikaneri-bhujia.png
+Bikaneri Bhujia (Moth-bean and gram-flour sev (GI-protected)), a dish from Bikaner, Rajasthan, India.
+Serving: a steel bowl. Key details: a heap of fine, crisp, golden-brown gram-flour strands. Nearby, slightly out of focus: a brass sev press.
+
+4. File name: mathri.png
+Mathri (Flaky fried crackers with ajwain and pepper), a dish from Rajasthan, India.
+Serving: a steel plate. Key details: flaky, pale golden round crackers with ajwain specks and fork pricks. Nearby, slightly out of focus: a jar of mango pickle.
+
+5. File name: phirni.png
+Phirni (Ground-rice milk pudding set in clay bowls), a dish from Lucknow, Uttar Pradesh, India.
+Serving: a small unglazed clay bowl (shikora). Key details: smooth, set, pale ground-rice pudding topped with slivered pistachios and saffron strands. Nearby, slightly out of focus: more clay bowls.
+
+6. File name: aloo-tikki.png
+Aloo Tikki Chaat (Crisp potato patties with yogurt and chutneys), a dish from Varanasi, Uttar Pradesh, India.
+Serving: a leaf bowl (dona). Key details: two crisp golden potato patties covered in yogurt, dark tamarind chutney, green chutney and sev. Nearby, slightly out of focus: a chaat cart tawa.
+
+7. File name: soan-papdi.png
+Soan Papdi (Flaky strands of pulled sugar and roasted flour), a dish from Western and northern India (origin debated), Gujarat, India.
+Serving: a cardboard sweet box. Key details: pale golden cubes of fine flaky strands, crumbling at the edges, topped with chopped pistachio. Nearby, slightly out of focus: loose flakes.
+
+8. File name: khakhra.png
+Methi Khakhra (Paper-thin roasted wheat crispbread), a dish from Rajkot, Gujarat, India.
+Serving: a wooden board. Key details: a stack of thin, brittle, brown-spotted green-flecked wheat crispbreads, one broken. Nearby, slightly out of focus: a cup of tea.
+
+============================================================
+
+BATCH 37 (West / South)
+
+Please create 8 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: nankhatai.png
+Nankhatai (Ghee shortbread with besan and cardamom), a dish from Surat, Gujarat, India.
+Serving: a white plate. Key details: pale golden round shortbread biscuits with cracked tops and a pistachio sliver. Nearby, slightly out of focus: a cup of tea.
+
+2. File name: shakarpara.png
+Shakarpara (Sweet fried dough diamonds (shankarpali)), a dish from Nashik, Maharashtra, India.
+Serving: a steel bowl. Key details: small golden fried diamonds of sweet dough. Nearby, slightly out of focus: a Diwali diya.
+
+3. File name: bhel-puri.png
+Bhel Puri (Puffed-rice chaat with tamarind and sev), a dish from Girgaum Chowpatty, Mumbai, Maharashtra, India.
+Serving: a paper cone on a steel plate. Key details: puffed rice tossed with onion, tomato, potato, chutneys, topped with sev and coriander. Nearby, slightly out of focus: a crushed papdi.
+
+4. File name: chivda.png
+Poha Chivda (Crisp flattened-rice mix with peanuts and curry leaves), a dish from Pune, Maharashtra, India.
+Serving: a steel bowl. Key details: crisp yellow flattened-rice mix with peanuts, curry leaves, cashews and coconut slices. Nearby, slightly out of focus: a glass jar of it.
+
+5. File name: dahi-vada.png
+Dahi Vada (Soft lentil dumplings in seasoned yogurt), a dish from Basavakalyan (old Kalyani), Karnataka, India.
+Serving: a steel bowl. Key details: soft lentil dumplings buried in white yogurt, streaked with tamarind chutney, red chilli and cumin. Nearby, slightly out of focus: a spoon.
+
+6. File name: sheer-khurma.png
+Sheer Khurma (Eid vermicelli pudding with dates and milk), a dish from Hyderabad (Old City), Telangana, India.
+Serving: a glass bowl. Key details: warm vermicelli pudding in milk with slivered dates, almonds and pistachios. Nearby, slightly out of focus: a bowl of dates.
+
+7. File name: sundal.png
+Kondakadalai Sundal (Chickpeas tempered with coconut (Navaratri offering)), a dish from Marina Beach, Chennai, Tamil Nadu, India.
+Serving: a banana-leaf-lined bowl. Key details: boiled chickpeas tossed with mustard seeds, curry leaves, red chilli and grated coconut. Nearby, slightly out of focus: a newspaper cone.
+
+8. File name: veg-puff.png
+Veg Puff (Bakery puff pastry with spiced vegetable filling), a dish from Bengaluru, Karnataka, India.
+Serving: a bakery paper on a plate. Key details: a golden, flaky, layered puff pastry triangle, one cut open to show yellow potato-pea filling. Nearby, slightly out of focus: a glass of tea.
+
+============================================================
+
+BATCH 38 (South)
+
+Please create 2 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: mysore-bonda.png
+Mysore Bonda (Fluffy yogurt-and-flour fritters), a dish from Mysuru, Karnataka, India.
+Serving: a steel plate. Key details: round, puffy, golden fritters, one broken open to show a soft airy inside. Nearby, slightly out of focus: a bowl of coconut chutney.
+
+2. File name: banana-chips.png
+Kerala Banana Chips (Nendran plantain chips fried in coconut oil (upperi)), a dish from Thrissur, Kerala, India.
+Serving: a cane basket. Key details: thin, round, yellow plantain chips. Nearby, slightly out of focus: a raw green nendran plantain.
+
+============================================================
+
+BATCH 39 (Northeast)
+
+Please create 5 photorealistic food photographs, one separate image per dish, in the order listed. If you can only make one image per reply, make image 1 now, then make the next one each time I write "next". Above each image, write its file name so I can save it correctly.
+
+Style for every image (keep it identical across the whole set): Editorial cookbook photography of home-cooked Indian food. Weathered wooden or stone kitchen counter. 45-degree camera angle, 50mm lens, shallow depth of field, dish centred with space around it. Soft natural window light from the left, gentle shadows, warm but true-to-life colours. A little visible steam for hot dishes. No text, no logos, no hands, no people. Landscape, 3:2 aspect ratio.
+
+1. File name: khasi-ko-masu.png
+Khasi ko Masu (Nepali goat curry of the Dashain feast), a dish from Gangtok, Sikkim, India.
+Serving: a copper bowl. Key details: dark, thick bone-in goat curry glistening with mustard oil. Nearby, slightly out of focus: sel roti rings.
+
+2. File name: lau-diya-maas.png
+Lau Diya Maas (Fish stewed with bottle gourd), a dish from Jorhat, Assam, India.
+Serving: a bell-metal bowl. Key details: golden fried fish steaks with translucent bottle-gourd batons in a thin light broth. Nearby, slightly out of focus: a whole bottle gourd.
+
+3. File name: paro-koldil.png
+Paro Mangxo aru Koldil (Pigeon cooked with banana flower), a dish from Nagaon, Assam, India.
+Serving: a bell-metal (kanh) bowl. Key details: dark, thick pigeon curry with tender chopped banana flower. Nearby, slightly out of focus: a whole banana flower.
+
+4. File name: konir-dom.png
+Konir Dom (Assamese egg and potato curry), a dish from Guwahati, Assam, India.
+Serving: a steel bowl. Key details: halved hard-boiled eggs and potato quarters in a red onion-tomato gravy with coriander. Nearby, slightly out of focus: a plate of rice.
+
+5. File name: nga-thongba.png
+Nga Thongba (Meitei fish curry with citrus peel and herbs), a dish from Imphal, Manipur, India.
+Serving: a brass bowl. Key details: fish pieces with potato and peas in a thin yellow-orange curry, topped with chopped culantro and chives. Nearby, slightly out of focus: a plate of steamed rice.

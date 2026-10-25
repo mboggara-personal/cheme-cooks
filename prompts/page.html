@@ -1,0 +1,112 @@
+<title>Food Atlas Image Prompts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working checklist: intro and shared style card, then one card per batch with copy controls and per-dish ticks. Palette borrowed from the ChemE Cooks atlas. */
+:root{
+  --paper:#eef1ea; --panel:#fafbf7; --panel-2:#e3e8dd; --rule:#cfd6c8;
+  --ink:#1b222a; --ink-2:#46505b; --muted:#6c776f;
+  --turmeric:#a96c00; --turmeric-ink:#7a4d00; --turmeric-soft:#f4e2ad; --good:#1d8a3a;
+  --f-display:"Gloock",Georgia,serif; --f-body:"Atkinson Hyperlegible",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#11161b; --panel:#171d23; --panel-2:#212931; --rule:#2e3842; --ink:#ebe8df; --ink-2:#bcc3bd; --muted:#8c968f;
+  --turmeric:#ebb53e; --turmeric-ink:#f3c766; --turmeric-soft:#40330f; --good:#4fc26b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#11161b; --panel:#171d23; --panel-2:#212931; --rule:#2e3842; --ink:#ebe8df; --ink-2:#bcc3bd; --muted:#8c968f;
+  --turmeric:#ebb53e; --turmeric-ink:#f3c766; --turmeric-soft:#40330f; --good:#4fc26b; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 60px}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:0 0 8px;text-wrap:balance}
+.kick{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--turmeric-ink)}
+.lead{color:var(--ink-2);max-width:64ch;margin:0 0 18px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 22px;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--ink-2);counter-increment:s;min-width:0}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--f-mono);font-size:12px;margin-right:8px}
+.steps b{color:var(--ink)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding-block:10px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--rule);margin-bottom:16px}
+.bar .prog{flex:1;height:8px;background:var(--panel-2);border-radius:4px;overflow:hidden}
+.bar .prog i{display:block;height:100%;background:var(--good);transition:width .3s}
+.bar span{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.btn{border:0;border-radius:999px;padding:8px 14px;font:inherit;font-weight:700;font-size:13.5px;background:var(--ink);color:var(--paper);cursor:pointer;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn.ok{background:var(--good);color:#fff}
+.btn:focus-visible,input:focus-visible{outline:2px solid var(--turmeric);outline-offset:2px}
+.style{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--turmeric);border-radius:12px;padding:14px 16px;margin-bottom:22px}
+.style h2,.batch h2{font-family:var(--f-display);font-weight:400;font-size:22px;margin:0}
+.style p{margin:6px 0 10px;color:var(--ink-2);font-size:14px}
+.batches{display:grid;gap:14px}
+.batch{background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.bh{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.bh .t{flex:1;min-width:160px}
+.bh small{display:block;font-family:var(--f-mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.batch.done{opacity:.6}
+.list{list-style:none;margin:0;padding:4px 0}
+.list li{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:10px;align-items:center;padding:7px 14px}
+.list li+li{border-top:1px dashed var(--rule)}
+.list input{width:18px;height:18px;accent-color:var(--good)}
+.list .nm{font-weight:700;font-size:14.5px}
+.list .fn{display:block;font-family:var(--f-mono);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.list li.ok .nm{text-decoration:line-through;color:var(--muted)}
+.list .mini{border:1px solid var(--rule);background:transparent;border-radius:999px;padding:4px 10px;font:inherit;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+details.peek{border-top:1px solid var(--rule)}
+details.peek summary{padding:9px 14px;cursor:pointer;font-size:13px;color:var(--ink-2)}
+details.peek pre{margin:0;padding:12px 14px 16px;white-space:pre-wrap;font-family:var(--f-mono);font-size:12px;line-height:1.55;color:var(--ink-2);background:var(--paper);overflow-wrap:anywhere}
+.note{font-size:13px;color:var(--muted);margin-top:22px;max-width:70ch}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--paper);padding:9px 14px;border-radius:10px;font-weight:700;font-size:13.5px;transition:all .2s;pointer-events:none;z-index:9}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:700px){.steps{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <div class="kick">ChemE Cooks · Indian Food Atlas</div>
+  <h1>Image prompts for every dish</h1>
+  <p class="lead">Paste one batch at a time into ChatGPT. Each batch repeats the shared style so every image matches, and every dish carries the file name the atlas expects.</p>
+  <ol class="steps">
+    <li><b>Copy a batch</b> and paste it into one ChatGPT conversation. Keep all batches in that same chat for a consistent look.</li>
+    <li><b>Type "next"</b> if ChatGPT makes only one image per reply. Save each image under the file name shown above it.</li>
+    <li><b>Tick dishes off</b> as you save them, then send me the files. I'll swap them in for the pencil sketches.</li>
+  </ol>
+  <div class="bar"><span id="cnt">0 / 93 saved</span><div class="prog"><i id="pg" style="width:0%"></i></div><button class="btn ghost" id="reset">Reset ticks</button></div>
+  <section class="style"><h2>Shared style</h2><p id="styletxt"></p><button class="btn ghost" id="copyStyle">Copy style only</button></section>
+  <div class="batches" id="batches"></div>
+  <p class="note">Each prompt asks for a 3:2 landscape image, the shape of the atlas cards. The dish details describe what an authentic serving looks like; if an image comes out wrong (for example, the wrong vessel or a garnish the dish doesn't have), reply with the correction and ask ChatGPT to redo just that file. Ticks are saved in this browser only.</p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const DATA = /*DATA*/;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const KEY = "foodatlas.prompts.v1";
+let done = {}; try { done = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e) {} };
+function toast(m){ const t=$("#toast"); t.textContent=m; t.classList.add("on"); clearTimeout(toast.t); toast.t=setTimeout(()=>t.classList.remove("on"),1600); }
+async function copy(text, btn, label){
+  try { await navigator.clipboard.writeText(text); toast(label); if(btn){ const o=btn.textContent; btn.textContent="Copied"; btn.classList.add("ok"); setTimeout(()=>{btn.textContent=o; btn.classList.remove("ok");},1400);} }
+  catch(e){ const ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{ document.execCommand("copy"); toast(label); }catch(_){ toast("Select the text below and copy it"); } ta.remove(); }
+}
+$("#styletxt").textContent = DATA.style;
+$("#copyStyle").onclick = e => copy(DATA.style, e.currentTarget, "Style copied");
+function render(){
+  $("#batches").innerHTML = DATA.batches.map(b => {
+    const n = b.items.filter(x=>done[x.id]).length, all = n===b.items.length;
+    return `<article class="batch ${all?"done":""}" id="b${b.n}">
+      <div class="bh"><div class="t"><h2>Batch ${b.n}</h2><small>${esc(b.regions.join(" / ").toUpperCase())} · ${b.items.length} DISHES · ${n} SAVED</small></div>
+        <button class="btn" data-copyb="${b.n}">Copy batch ${b.n}</button></div>
+      <ul class="list">${b.items.map((x,i)=>`<li class="${done[x.id]?"ok":""}"><input type="checkbox" id="c-${x.id}" data-id="${x.id}" ${done[x.id]?"checked":""} aria-label="Saved ${esc(x.name)}"><label for="c-${x.id}"><span class="nm">${i+1}. ${esc(x.name)}</span><span class="fn">${esc(x.id)}.png</span></label><button class="mini" data-copyd="${x.id}">Copy one</button></li>`).join("")}</ul>
+      <details class="peek"><summary>Show the full batch text</summary><pre>${esc(b.msg)}</pre></details>
+    </article>`; }).join("");
+  const total = DATA.batches.reduce((a,b)=>a+b.items.length,0), n = Object.values(done).filter(Boolean).length;
+  $("#cnt").textContent = `${n} / ${total} saved`; $("#pg").style.width = (n/total*100)+"%";
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-copyb]"); if(b){ const B=DATA.batches[+b.dataset.copyb-1]; copy(B.msg, b, `Batch ${B.n} copied`); return; }
+  const d = e.target.closest("[data-copyd]"); if(d){ const x=DATA.batches.flatMap(b=>b.items).find(i=>i.id===d.dataset.copyd);
+    copy(`Please create one photorealistic food photograph. Write its file name above the image.\n\nStyle: ${DATA.style}\n\n${x.text}`, d, `${x.name} copied`); }
+});
+document.addEventListener("change", e => { const c=e.target.closest("[data-id]"); if(!c) return; done[c.dataset.id]=c.checked; save(); render(); });
+$("#reset").onclick = () => { done = {}; save(); render(); toast("Ticks cleared"); };
+render();
+</script>
