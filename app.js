@@ -20,7 +20,7 @@ const STATE_REGION = {"Jammu & Kashmir":"North","Ladakh":"North","Himachal Prade
 /* ================= persistence ================= */
 const KEY = "chemecooks.atlas.v1";
 const store = (() => { let s = {}; try { s = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
-  return Object.assign({ view:"map", pass:{}, thali:[], best:0, gamexp:0, sort:"geo", ticks:{} }, s); })();
+  return Object.assign({ view:"map", pass:{}, thali:[], best:0, gamexp:0, sort:"geo", ticks:{}, serv:{} }, s); })();
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} };
 
 /* ================= nutrition: Nutri-Score 2017 ================= */
@@ -435,13 +435,14 @@ document.addEventListener("click", e => { const o=e.target.closest("[data-open]"
 /* ================= view toggle ================= */
 function setView(v, push=true){
   store.view=v; save();
-  $("#vMap").setAttribute("aria-pressed", v==="map"); $("#vCards").setAttribute("aria-pressed", v==="cards");
-  $("#mapView").hidden = v!=="map"; $("#cardView").hidden = v!=="cards";
+  $("#vMap").setAttribute("aria-pressed", v==="map"); $("#vCards").setAttribute("aria-pressed", v==="cards"); $("#vPlan").setAttribute("aria-pressed", v==="plan");
+  $("#mapView").hidden = v!=="map"; $("#cardView").hidden = v!=="cards"; $("#planView").hidden = v!=="plan";
+  $("#filters").hidden = v==="plan"; if (v==="plan" && typeof renderPlan==="function") renderPlan();
   if (v!=="map" && game) endGame(true);
   if (push && !$("#drawer").classList.contains("on")) history.replaceState(null,"","#"+v);
   if (v==="map") requestAnimationFrame(updatePins);
 }
-$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards");
+$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan");
 
 /* ================= map ================= */
 const svg = d3.select("#map"), W=800, H=900;
@@ -586,7 +587,7 @@ function renderDetail(){
     <div style="min-width:0"><h2>${esc(d.name)}</h2><div class="aka">${esc(d.aka)}</div>
      <div class="where"><svg width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 13s5-4.6 5-8A5 5 0 0 0 1 5c0 3.4 5 8 5 8z"/><circle cx="6" cy="5" r="1.6"/></svg><b>${esc(d.place)}</b><span class="conf ${d.conf}">${d.conf}</span></div>
      <div class="tags">${fs(d)}<span class="tag">${d.diet==="veg"?"Vegetarian":"Non-vegetarian"}</span>${d.tags.map(t=>`<button class="tag dt" data-tagf="${t}" title="${esc(TAGDEF[t][1])}">${TAGDEF[t][0]}</button>`).join("")}${d.meals.map(m=>`<span class="tag">${m==="snack"&&d.snack?"Snack · "+SNACKDEF[d.snack][0]:cap(m)}</span>`).join("")}${nsb(d)}</div>${d.k.length||d.f.length?`<div class="tags">${d.k.map(k=>`<button class="tag kit" data-kit="${k}">${esc(KITCHENS[k])}</button>`).join("")}${d.f.map(f=>`<button class="tag fest" data-fest="${esc(f)}">${esc(f)}</button>`).join("")}</div>`:""}</div></div>
-   <div class="acts"><button class="tog" id="tTaste" aria-pressed="${!!s.t}">✓ Tasted</button><button class="tog cook" id="tCook" aria-pressed="${!!s.c}">★ Cooked</button><button class="tog" id="tThali" aria-pressed="${store.thali.includes(d.id)}">${store.thali.includes(d.id)?"In thali":"+ Add to thali"}</button></div>
+   <div class="acts"><button class="tog" id="tTaste" aria-pressed="${!!s.t}">✓ Tasted</button><button class="tog cook" id="tCook" aria-pressed="${!!s.c}">★ Cooked</button><button class="tog" id="tThali" aria-pressed="${store.thali.includes(d.id)}">${store.thali.includes(d.id)?"In thali":"+ Add to thali"}</button><button class="tog" id="tPlan">+ Meal plan</button></div>
    <div class="tabs" role="tablist">${tabs.map(([k,l])=>`<button role="tab" data-tab="${k}" aria-selected="${tab===k}">${l}</button>`).join("")}</div>
    <div class="pane" id="pane"></div><div class="bigstamp" id="bigstamp">cooked!</div>`;
   $("#dbody").style.position="relative";
@@ -639,7 +640,17 @@ function stepMeta(t){
 }
 const STOP = new Set(["with","from","into","about","for","the","and","fresh","finely","chopped","sliced","grated","small","large","whole","split","soaked","boiled","raw","dried","each","pinch","optional","thick","thin","crushed","minced","divided"]);
 function needs(d,t){ const T=t.toLowerCase(); const out=[]; d.ing.forEach(r=>{ if(r[0]==="#") return; const w=r[1].toLowerCase().replace(/\(.*?\)/g,"").split(/[^a-z]+/).filter(x=>x.length>3&&!STOP.has(x)); if(w.some(x=>T.includes(x.replace(/s$/,"")))) out.push(r); }); return out.slice(0,6); }
-function parseTime(s){ const segs=[]; s.split(/\+|,/).forEach(p=>{ p=p.trim(); const h=(p.match(/(\d+)\s*h/)||[])[1], mi=(p.match(/(\d+)\s*min/)||[])[1]; const mins=(+h||0)*60+(+mi||0); if(!mins) return; let lab=p.replace(/\d+\s*h|\d+\s*min/g,"").trim(); segs.push({mins,lab:lab||(segs.length?"wait":"hands-on")}); }); return segs; }
+/* ----- servings scaling: numbers in quantity strings are multiplied; "pinch", "for frying" stay ----- */
+const servOf = d => store.serv[d.id] || d.serves;
+const fac = d => servOf(d)/d.serves;
+const FRAC={"½":.5,"¼":.25,"¾":.75,"⅓":1/3,"⅔":2/3,"⅛":.125};
+function fmtQ(x){ if(x>=50) return String(Math.round(x/5)*5); if(x>=10) return String(Math.round(x)); const w=Math.floor(x), r=x-w;
+  const o=[[0,""],[.125,"⅛"],[.25,"¼"],[1/3,"⅓"],[.5,"½"],[2/3,"⅔"],[.75,"¾"],[1,""]].reduce((b,o)=>Math.abs(r-o[0])<Math.abs(r-b[0])?o:b);
+  const ww=o[0]===1?w+1:w; return (ww||o[1]?(ww||"")+o[1]:"⅛"); }
+function scaleQty(q,f){ if(Math.abs(f-1)<1e-9) return q; return q.replace(/(\d+(?:\.\d+)?)?([½¼¾⅓⅔⅛])|(\d+(?:\.\d+)?)/g,(m,a,fr,b)=>fmtQ((fr?(+(a||0))+FRAC[fr]:+b)*f)); }
+const sq = (d,q) => scaleQty(q,fac(d));
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-srv]"); if(!b||!cur) return; const n=Math.max(1,Math.min(16,servOf(cur)+(+b.dataset.srv))); if(n===cur.serves) delete store.serv[cur.id]; else store.serv[cur.id]=n; save(); renderPane(); });
+function parseTime(s){ const segs=[]; s.split(/\+|,/).forEach(p=>{ p=p.trim().replace(/(\d*)½\s*h/,(m,x)=>`${(+x||0)*60+30} min`); const h=(p.match(/(\d+)\s*h/)||[])[1], mi=(p.match(/(\d+)\s*min/)||[])[1]; const mins=(+h||0)*60+(+mi||0); if(!mins) return; let lab=p.replace(/\d+\s*h|\d+\s*min/g,"").trim(); segs.push({mins,lab:lab||(segs.length?"wait":"hands-on")}); }); return segs; }
 const fmtM = m => m>=60 ? `${Math.floor(m/60)} h${m%60?" "+m%60+" min":""}` : `${m} min`;
 const SEGCOL = {"hands-on":"var(--turmeric)",soak:"#5b8fb0",ferment:"#8a6bb8",marinade:"var(--chili)",rest:"#7f9a6a",drying:"#b08c5b"};
 function level(d){ const segs=parseTime(d.time); const passive=segs.slice(1).reduce((a,s)=>a+s.mins,0); return passive>=240?"Weekend project":(d.steps.length<=4&&d.mins<=35)?"Easy":"Moderate"; }
@@ -653,7 +664,7 @@ function paneRecipe(d){
   const nI=d.ing.filter(r=>r[0]!=="#").length;
   let i=-1; const groups=[]; let g={title:"",items:[]}; groups.push(g);
   d.ing.forEach(r=>{ if(r[0]==="#"){ g={title:r[1],items:[]}; groups.push(g); return;} i++; g.items.push([r,i]); });
-  const mise = groups.filter(g=>g.items.length).map(g=>`${g.title?`<div class="misec">${esc(g.title)}</div>`:""}<div class="misegrid">${g.items.map(([r,j])=>{const c=catOf(r);return `<label class="mtile ${tk.i.includes(j)?"done":""}" title="${CATNAME[c]}"><input type="checkbox" data-ti="${j}" ${tk.i.includes(j)?"checked":""}>${bowlIcon(c)}<b>${esc(r[0])}</b><span>${esc(r[1])}</span></label>`;}).join("")}</div>`).join("");
+  const mise = groups.filter(g=>g.items.length).map(g=>`${g.title?`<div class="misec">${esc(g.title)}</div>`:""}<div class="misegrid">${g.items.map(([r,j])=>{const c=catOf(r);return `<label class="mtile ${tk.i.includes(j)?"done":""}" title="${CATNAME[c]}"><input type="checkbox" data-ti="${j}" ${tk.i.includes(j)?"checked":""}>${bowlIcon(c)}<b>${esc(sq(d,r[0]))}</b><span>${esc(r[1])}</span></label>`;}).join("")}</div>`).join("");
   const ov=overlayFor(d);
   const steps = d.steps.map((s,j)=>{ const m=stepMeta(s); return `<li class="bstep ${tk.s.includes(j)?"done":""}"><label><input type="checkbox" data-ts="${j}" ${tk.s.includes(j)?"checked":""}><span class="bn">${j+1}</span></label>
      <div class="bbody"><div class="beq">${eqIcon(m.eq,18)}<span>${m.eqName}</span>${m.chips.map(c=>c.type==="time"?`<button class="tchip" data-timer="${c.secs}" data-tlabel="Step ${j+1}">${tIcon()} ${c.label}</button>`:`<span class="tchip ${c.type}">${c.type==="temp"?thIcon():wIcon()} ${c.label}</span>`).join("")}</div><p>${esc(s)}</p>${opChip(ov[j])}</div></li>`; }).join("");
@@ -661,10 +672,10 @@ function paneRecipe(d){
   return `<article class="book">
    <header class="bhead"><div class="kick mono">RECIPE № ${String(ORDER.indexOf(d.id)+1).padStart(2,"0")} · ${esc(d.region.toUpperCase())} · ${esc(d.state.toUpperCase())}</div>
     <h2>${esc(d.name)}</h2><p class="headnote">${esc(d.hist?.place||d.story)}</p>${(v=>v?`<button class="vbanner" data-jumpvars="1">You searched for <b>${esc(v.name)}</b>, a variant of this dish. See how it differs ↓</button>`:"")(viaVariant(d))}
-    <div class="facts"><div><small>Serves</small><b>${d.serves}</b></div><div><small>Hands-on</small><b>${fmtM(segs[0]?.mins||d.mins)}</b></div><div><small>Start to finish</small><b>${fmtM(tot||d.mins)}</b></div><div><small>Makes</small><b>≈${d.yield} g</b></div><div><small>Level</small><b>${level(d)}</b></div></div>
+    <div class="facts"><div><small>Serves</small><b class="srv"><button class="srvb" data-srv="-1" aria-label="Fewer servings">−</button><span class="mono">${servOf(d)}</span><button class="srvb" data-srv="1" aria-label="More servings">+</button></b></div><div><small>Hands-on</small><b>${fmtM(segs[0]?.mins||d.mins)}</b></div><div><small>Start to finish</small><b>${fmtM(tot||d.mins)}</b></div><div><small>Makes</small><b>≈${Math.round(d.yield*fac(d))} g</b></div><div><small>Level</small><b>${level(d)}</b></div></div>
     ${segs.length>1?`<div class="tline" aria-label="Timeline">${segs.map(s=>`<span style="flex:${Math.max(s.mins/tot,.12)};background:${SEGCOL[s.lab]||SEGCOL[s.lab.split(" ")[0]]||"var(--ink-2)"}" title="${esc(s.lab)} · ${fmtM(s.mins)}"><em>${esc(s.lab)} · ${fmtM(s.mins)}</em></span>`).join("")}</div>`:""}
    </header>
-   <section><div class="bsec"><h3>Mise en place</h3><span class="prog mono"><span>${tk.i.length}/${nI}</span><span class="bar"><i style="width:${tk.i.length/nI*100}%"></i></span></span></div>${mise}</section>
+   <section><div class="bsec"><h3>Mise en place</h3>${fac(d)!==1?`<span class="scaled mono">×${+fac(d).toFixed(2)} · quantities in the steps are for ${d.serves}</span>`:""}<span class="prog mono"><span>${tk.i.length}/${nI}</span><span class="bar"><i style="width:${tk.i.length/nI*100}%"></i></span></span></div>${mise}</section>
    <section><div class="bsec"><h3>Method</h3><span class="prog mono"><span>${tk.s.length}/${d.steps.length}</span><span class="bar"><i style="width:${tk.s.length/d.steps.length*100}%"></i></span></span></div><ol class="bsteps">${steps}</ol></section>
    <div class="cookdone"><button class="btn acc" id="cookMode">${eqIcon("pot",16)} Start cook mode</button><button class="btn ${tk.s.length===d.steps.length?"":"ghost"}" id="cookIt">${status(d.id).c?"Cooked ★ (tap to undo)":"I cooked this"}</button><button class="btn ghost" id="resetTicks">Reset</button></div>
    ${d.vars.length?`<section class="vars" id="vars"><h3>Variants <small>· not written up separately</small></h3><p class="vlead">Well-known forms of ${esc(d.name)}. Start from the recipe above and make these changes.</p><ul>${d.vars.map(v=>`<li class="${viaVariant(d)===v?"hit":""}"><b>${esc(v.name)}</b> <span>${esc(v.note)}</span> <a href="${esc(v.url)}" target="_blank" rel="noopener" class="vlink">recipes on the web ↗</a></li>`).join("")}</ul></section>`:""}
@@ -727,18 +738,22 @@ function wirePane(d){
 }
 
 /* ---------- kitchen timer + cook mode ---------- */
-let timer=null;
+let timers=[], tIv=null;
 function beep(){ try{ const ac=new (window.AudioContext||window.webkitAudioContext)(); [0,0.35,0.7].forEach(t=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=880;o.connect(g);g.connect(ac.destination);g.gain.setValueAtTime(.0001,ac.currentTime+t);g.gain.exponentialRampToValueAtTime(.3,ac.currentTime+t+.02);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+t+.3);o.start(ac.currentTime+t);o.stop(ac.currentTime+t+.32);}); }catch(e){} try{ navigator.vibrate&&navigator.vibrate([200,100,200]); }catch(e){} }
-function startTimer(secs,label){ stopTimer(); timer={end:Date.now()+secs*1000,total:secs,label,paused:false,left:secs}; tickTimer(); timer.iv=setInterval(tickTimer,500); $("#ktimer").hidden=false; }
-function stopTimer(){ if(timer){ clearInterval(timer.iv); timer=null; } const k=$("#ktimer"); if(k) k.hidden=true; }
-function tickTimer(){ if(!timer) return; const left=timer.paused?timer.left:Math.max(0,Math.round((timer.end-Date.now())/1000)); timer.left=left;
-  const mm=String(Math.floor(left/60)).padStart(2,"0"), ss=String(left%60).padStart(2,"0");
-  const k=$("#ktimer"); k.innerHTML=`<svg width="34" height="34" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--panel-2)" stroke-width="4"/><circle cx="18" cy="18" r="15" fill="none" stroke="var(--turmeric)" stroke-width="4" stroke-dasharray="${(94.2*left/timer.total).toFixed(1)} 94.2" transform="rotate(-90 18 18)"/></svg><span><small>${esc(timer.label)}</small><b class="mono">${mm}:${ss}</b></span><button class="ibtn" id="kPause" aria-label="${timer.paused?"Resume":"Pause"} timer">${timer.paused?"▶":"❚❚"}</button><button class="ibtn" id="kStop" aria-label="Stop timer">✕</button>`;
-  $("#kPause").onclick=()=>{ if(timer.paused){ timer.end=Date.now()+timer.left*1000; timer.paused=false; } else timer.paused=true; tickTimer(); };
-  $("#kStop").onclick=stopTimer;
-  if(left===0 && !timer.paused){ clearInterval(timer.iv); beep(); toast(`${timer.label}: time's up`); k.classList.add("ring"); setTimeout(()=>{k.classList.remove("ring");stopTimer();},6000); }
+/* several timers can run at once (one per pot); the tray stacks them, soonest first */
+function startTimer(secs,label){ timers.push({id:Math.random().toString(36).slice(2),end:Date.now()+secs*1000,total:secs,label,paused:false,left:secs,rung:false}); if(!tIv) tIv=setInterval(tickTimer,500); tickTimer(); }
+function stopTimer(id){ timers = id==null ? [] : timers.filter(t=>t.id!==id); if(!timers.length && tIv){ clearInterval(tIv); tIv=null; } tickTimer(); }
+function tickTimer(){ const k=$("#ktimer"); if(!k) return; if(!timers.length){ k.hidden=true; k.innerHTML=""; return; } k.hidden=false;
+  timers.forEach(t=>{ t.left=t.paused?t.left:Math.max(0,Math.round((t.end-Date.now())/1000));
+    if(t.left===0&&!t.paused&&!t.rung){ t.rung=true; beep(); toast(`${t.label}: time's up`); setTimeout(()=>stopTimer(t.id),8000); } });
+  const L=timers.slice().sort((a,b)=>a.left-b.left);
+  k.innerHTML=L.map(t=>{ const mm=String(Math.floor(t.left/60)).padStart(2,"0"), ss=String(t.left%60).padStart(2,"0");
+    return `<div class="krow ${t.rung?"ring":""}"><svg width="30" height="30" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="var(--panel-2)" stroke-width="4"/><circle cx="18" cy="18" r="15" fill="none" stroke="${t.rung?"var(--chili)":"var(--turmeric)"}" stroke-width="4" stroke-dasharray="${(94.2*t.left/t.total).toFixed(1)} 94.2" transform="rotate(-90 18 18)"/></svg><span><small>${esc(t.label)}</small><b class="mono">${mm}:${ss}</b></span><button class="ibtn" data-kp="${t.id}" aria-label="${t.paused?"Resume":"Pause"} timer">${t.paused?"▶":"❚❚"}</button><button class="ibtn" data-ks="${t.id}" aria-label="Stop timer">✕</button></div>`; }).join("");
 }
-document.addEventListener("click",e=>{ const t=e.target.closest("[data-timer]"); if(t){ e.preventDefault(); startTimer(+t.dataset.timer, `${cur?cur.name+" · ":""}${t.dataset.tlabel||"Timer"}`); toast("Timer started"); } const hw=e.target.closest("[data-how]"); if(hw) openMethods(hw.dataset.how); });
+$("#ktimer").addEventListener("click",e=>{ const p=e.target.closest("[data-kp]"), x=e.target.closest("[data-ks]");
+  if(p){ const t=timers.find(t=>t.id===p.dataset.kp); if(t){ if(t.paused){ t.end=Date.now()+t.left*1000; t.paused=false; } else t.paused=true; tickTimer(); } }
+  if(x) stopTimer(x.dataset.ks); });
+document.addEventListener("click",e=>{ const t=e.target.closest("[data-timer]"); if(t){ e.preventDefault(); startTimer(+t.dataset.timer, t.dataset.tfull||`${(cookState&&cookState.d||cur)?(cookState&&cookState.d||cur).name+" · ":""}${t.dataset.tlabel||"Timer"}`); toast(timers.length>1?`${timers.length} timers running`:"Timer started"); } const hw=e.target.closest("[data-how]"); if(hw) openMethods(hw.dataset.how); });
 let cookState=null, wake=null;
 function openCook(d,i){
   cookState={d,i}; const c=$("#cook"); c.hidden=false; document.body.style.overflow="hidden";
@@ -756,11 +771,12 @@ function renderCook(){
      <p class="cktext">${esc(s)}</p>
      <div class="ckchips">${m.chips.map(c=>c.type==="time"?`<button class="tchip big" data-timer="${c.secs}" data-tlabel="Step ${i+1}">${tIcon()} Start ${c.label} timer</button>`:`<span class="tchip big ${c.type}">${c.label}</span>`).join("")}</div>
      ${(()=>{const o=overlayFor(d)[i]; return o?`<div class="ckop">${opChip(o,true)}</div>`:"";})()}
-     ${nd.length?`<div class="ckneed"><small class="mono">YOU'LL NEED</small>${nd.map(r=>`<span>${bowlIcon(catOf(r))}<b>${esc(r[0])}</b> ${esc(r[1])}</span>`).join("")}</div>`:""}</div>`; }
-  $("#cook").innerHTML=`<div class="ckbar"><b>${esc(d.name)}</b><span class="ckdots">${d.steps.map((_,j)=>`<i class="${j<i?"p":j===i?"c":""}"></i>`).join("")}</span><button class="ibtn" id="ckX" aria-label="Exit cook mode"><svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M2 2l10 10M12 2L2 12"/></svg></button></div>
+     ${nd.length?`<div class="ckneed"><small class="mono">YOU'LL NEED</small>${nd.map(r=>`<span>${bowlIcon(catOf(r))}<b>${esc(sq(d,r[0]))}</b> ${esc(r[1])}</span>`).join("")}</div>`:""}</div>`; }
+  $("#cook").innerHTML=`<div class="ckbar"><b>${esc(d.name)}${fac(d)!==1?` <small class="mono">· serves ${servOf(d)}</small>`:""}</b><button class="btn ghost ckingb" id="ckIng" aria-pressed="${!!cookState.ing}">Ingredients</button><span class="ckdots">${d.steps.map((_,j)=>`<i class="${j<i?"p":j===i?"c":""}"></i>`).join("")}</span><button class="ibtn" id="ckX" aria-label="Exit cook mode"><svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8"><path d="M2 2l10 10M12 2L2 12"/></svg></button></div>
+   ${cookState.ing?`<div class="ckingp">${d.ing.map(r=>r[0]==="#"?`<div class="misec">${esc(r[1])}</div>`:`<div><b>${esc(sq(d,r[0]))}</b> ${esc(r[1])}</div>`).join("")}</div>`:""}
    <div class="ckmain">${body}</div>
    ${done?"":`<div class="cknav"><button class="btn ghost" id="ckPrev" ${i===0?"disabled":""}>← Back</button><button class="btn acc" id="ckNext">${i===n-1?"Finish":"Done, next step →"}</button></div>`}`;
-  $("#ckX").onclick=closeCook;
+  $("#ckX").onclick=closeCook; $("#ckIng").onclick=()=>{ cookState.ing=!cookState.ing; renderCook(); };
   const p=$("#ckPrev"); if(p) p.onclick=()=>{ cookState.i--; renderCook(); };
   const nx=$("#ckNext"); if(nx) nx.onclick=()=>{ if(!tk.s.includes(i)) tk.s.push(i); save(); cookState.i++; renderCook(); };
   const st=$("#ckStamp"); if(st) st.onclick=()=>{ if(!status(d.id).c) mark(d.id,"c"); closeCook(); };
@@ -1434,7 +1450,7 @@ document.addEventListener("keydown", e => {
   if (e.key==="Escape"){ if($("#modal").classList.contains("on")) closeModal(); else if($("#drawer").classList.contains("on")) closeDrawer(); else if(game) endGame(true); else if(typing) document.activeElement.blur(); return; }
   if (typing) return;
   if (e.key==="/"){ e.preventDefault(); $("#q").focus(); }
-  else if (e.key==="m") setView("map"); else if (e.key==="c") setView("cards");
+  else if (e.key==="m") setView("map"); else if (e.key==="c") setView("cards"); else if (e.key==="p") setView("plan");
   else if (e.key==="g") startGame();
   else if (cur && e.key==="ArrowRight") step(1); else if (cur && e.key==="ArrowLeft") step(-1);
 });
@@ -1445,9 +1461,10 @@ document.addEventListener("click", e => { const tg=e.target.closest("[data-tagf]
 document.addEventListener("click", e => { const k=e.target.closest("[data-kit]"), f=e.target.closest("[data-fest]"); if(!k&&!f) return; clearAll(); if(k) F.kit=k.dataset.kit; else F.fest=f.dataset.fest; closeDrawer(); applyFilters(); toast(`Showing ${shown.length} dish${shown.length===1?"":"es"}: ${k?KITCHENS[F.kit]:F.fest}`); });
 $("#subt").textContent = `Indian Food Atlas · ${DISHES.length} dishes`;
 renderFilters(); syncHdr(); refreshHeader();
+/*PLANNER*/
 const h=(location.hash||"").slice(1);
-setView(h==="cards"||h==="map"?h:store.view, false);
+setView(h==="cards"||h==="map"||h==="plan"?h:store.view, false);
 applyFilters(); drawGratLabels();
 if (byId[h]) { const d=byId[h]; setTimeout(()=>{ flyTo(d); openDish(h,{noFocus:true}); }, 60); }
-window.__atlas={byId,F,matches,viaVariant,HIST};
+window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime};
 })();
