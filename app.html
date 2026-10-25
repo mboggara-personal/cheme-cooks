@@ -668,6 +668,31 @@ ul.tchk .linkbtn{font-size:13px}
 .shi span small{display:block;color:var(--muted);font-size:11px}.shi input:checked+span{opacity:.45;text-decoration:line-through}
 @media (max-width:980px){ .pweek{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:560px){ .ps2{grid-template-columns:1fr 1fr} .ps2>div{padding:8px 10px} .ps2 b{font-size:17px} .pweek{grid-template-columns:1fr} .pkdays{grid-template-columns:repeat(4,1fr)} }
+
+/* ---- ingredients + pantry ---- */
+.kingr{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 14px}.kingr small{font-size:10.5px;color:var(--muted);margin-right:4px}
+.ichip{border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer}
+.ichip.have{border-color:var(--veg);color:var(--veg)}.ichip:hover{background:var(--panel-2)}
+.ptabs{margin-bottom:6px}
+.igrid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.icardb{display:flex;flex-direction:column;gap:4px;text-align:left;border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:14px;padding:12px;cursor:pointer;font:inherit;min-height:150px}
+.icardb:hover{box-shadow:var(--shadow)}.icardb b{font-family:var(--f-display);font-weight:400;font-size:19px}.icardb small{color:var(--muted);font-size:12px}
+.icardb p{margin:4px 0 0;font-size:13px;color:var(--ink-2);line-height:1.4}.ifoot{margin-top:auto;font-size:11px;color:var(--muted)}
+.itype{align-self:flex-start;font-size:10.5px;font-weight:700;letter-spacing:.03em;padding:2px 8px;border-radius:999px;background:var(--panel-2);color:var(--ink-2)}
+.t-spice{background:#f3dcc4;color:#7a3b10}.t-sour{background:#e3eccb;color:#4b5e14}.t-pulse{background:#f4e7b4;color:#6b5300}.t-grain{background:#efe3cc;color:#6a4f1d}
+.t-fat{background:#f8e7a8;color:#6d5300}.t-dairy{background:#eef0f4;color:#3b4a5e}.t-sweet{background:#f1dccd;color:#6e3a1c}.t-aroma{background:#d8ecd6;color:#2e5d2a}.t-ferment{background:#e6dbf0;color:#4f3270}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .itype{filter:brightness(.8) saturate(1.1)}}
+.icard .ilocal{color:var(--ink-2);margin-top:0}.icard h3{margin:14px 0 4px;font-size:14px}.icard p{margin:0;line-height:1.5}
+.igrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}.ichem{background:var(--turmeric-soft);color:#3a2a00;border-radius:12px;padding:2px 12px 10px}
+.pgrid{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:16px;align-items:start;margin-top:10px}
+.plist{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:10px 12px;max-height:75vh;overflow:auto}
+.pgrp h4{margin:10px 0 4px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.pchk{display:flex;align-items:center;gap:8px;font-size:14px;padding:2px 0;cursor:pointer}.pchk span{flex:1}.pchk .linkbtn{padding:0 4px}
+.presults h3{margin:6px 0 6px}.pres{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+.prow{display:grid;grid-template-columns:auto auto auto 1fr;gap:8px;align-items:center;font-size:14px;padding:4px 6px;border-radius:8px}.prow:hover{background:var(--panel-2)}
+.pmiss{font-size:12px;color:var(--chili)}
+.shi.have{opacity:.55}.ihave{color:var(--veg);font-size:11px}
+@media (max-width:760px){ .pgrid{grid-template-columns:1fr} .plist{max-height:none} .igrid{grid-template-columns:1fr} }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -693,6 +718,7 @@ ul.tchk .linkbtn{font-size:13px}
       <button id="vMap" aria-pressed="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3.5l4.5-2 5 2 4.5-2v11l-4.5 2-5-2-4.5 2z"/><path d="M5.5 1.5v11M10.5 3.5v11"/></svg>Map</button>
       <button id="vCards" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1"/><rect x="9" y="9" width="5.5" height="5.5" rx="1"/></svg>Cards</button>
       <button id="vPlan" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="2.5" width="13" height="12" rx="1.5"/><path d="M1.5 6h13M5 1v3M11 1v3M4.5 9h2M9.5 9h2M4.5 12h2"/></svg>Plan</button>
+      <button id="vPantry" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 2.5h8M5 2.5v2.2a3.5 3.5 0 0 1-1.5 2.9v6.4h9V7.6A3.5 3.5 0 0 1 11 4.7V2.5"/><path d="M3.5 10h9"/></svg>Pantry</button>
     </div>
     <div class="tools">
       <button class="tbtn play" id="bPlay" title="Guess the origin (G)"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="6.5"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".8" fill="currentColor"/></svg><span class="lbl">Guess origin</span></button>
@@ -747,6 +773,7 @@ ul.tchk .linkbtn{font-size:13px}
   </section>
 
   <section id="planView" hidden></section>
+  <section id="pantryView" hidden></section>
   <footer>
     <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map boundaries: DataMeet India (CC BY 2.5 IN), simplified.
   </footer>

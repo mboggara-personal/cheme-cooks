@@ -668,6 +668,31 @@ ul.tchk .linkbtn{font-size:13px}
 .shi span small{display:block;color:var(--muted);font-size:11px}.shi input:checked+span{opacity:.45;text-decoration:line-through}
 @media (max-width:980px){ .pweek{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:560px){ .ps2{grid-template-columns:1fr 1fr} .ps2>div{padding:8px 10px} .ps2 b{font-size:17px} .pweek{grid-template-columns:1fr} .pkdays{grid-template-columns:repeat(4,1fr)} }
+
+/* ---- ingredients + pantry ---- */
+.kingr{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 14px}.kingr small{font-size:10.5px;color:var(--muted);margin-right:4px}
+.ichip{border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer}
+.ichip.have{border-color:var(--veg);color:var(--veg)}.ichip:hover{background:var(--panel-2)}
+.ptabs{margin-bottom:6px}
+.igrid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.icardb{display:flex;flex-direction:column;gap:4px;text-align:left;border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:14px;padding:12px;cursor:pointer;font:inherit;min-height:150px}
+.icardb:hover{box-shadow:var(--shadow)}.icardb b{font-family:var(--f-display);font-weight:400;font-size:19px}.icardb small{color:var(--muted);font-size:12px}
+.icardb p{margin:4px 0 0;font-size:13px;color:var(--ink-2);line-height:1.4}.ifoot{margin-top:auto;font-size:11px;color:var(--muted)}
+.itype{align-self:flex-start;font-size:10.5px;font-weight:700;letter-spacing:.03em;padding:2px 8px;border-radius:999px;background:var(--panel-2);color:var(--ink-2)}
+.t-spice{background:#f3dcc4;color:#7a3b10}.t-sour{background:#e3eccb;color:#4b5e14}.t-pulse{background:#f4e7b4;color:#6b5300}.t-grain{background:#efe3cc;color:#6a4f1d}
+.t-fat{background:#f8e7a8;color:#6d5300}.t-dairy{background:#eef0f4;color:#3b4a5e}.t-sweet{background:#f1dccd;color:#6e3a1c}.t-aroma{background:#d8ecd6;color:#2e5d2a}.t-ferment{background:#e6dbf0;color:#4f3270}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .itype{filter:brightness(.8) saturate(1.1)}}
+.icard .ilocal{color:var(--ink-2);margin-top:0}.icard h3{margin:14px 0 4px;font-size:14px}.icard p{margin:0;line-height:1.5}
+.igrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px}.ichem{background:var(--turmeric-soft);color:#3a2a00;border-radius:12px;padding:2px 12px 10px}
+.pgrid{display:grid;grid-template-columns:minmax(260px,1fr) 2fr;gap:16px;align-items:start;margin-top:10px}
+.plist{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:10px 12px;max-height:75vh;overflow:auto}
+.pgrp h4{margin:10px 0 4px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.pchk{display:flex;align-items:center;gap:8px;font-size:14px;padding:2px 0;cursor:pointer}.pchk span{flex:1}.pchk .linkbtn{padding:0 4px}
+.presults h3{margin:6px 0 6px}.pres{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+.prow{display:grid;grid-template-columns:auto auto auto 1fr;gap:8px;align-items:center;font-size:14px;padding:4px 6px;border-radius:8px}.prow:hover{background:var(--panel-2)}
+.pmiss{font-size:12px;color:var(--chili)}
+.shi.have{opacity:.55}.ihave{color:var(--veg);font-size:11px}
+@media (max-width:760px){ .pgrid{grid-template-columns:1fr} .plist{max-height:none} .igrid{grid-template-columns:1fr} }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -693,6 +718,7 @@ ul.tchk .linkbtn{font-size:13px}
       <button id="vMap" aria-pressed="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3.5l4.5-2 5 2 4.5-2v11l-4.5 2-5-2-4.5 2z"/><path d="M5.5 1.5v11M10.5 3.5v11"/></svg>Map</button>
       <button id="vCards" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1"/><rect x="9" y="9" width="5.5" height="5.5" rx="1"/></svg>Cards</button>
       <button id="vPlan" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="2.5" width="13" height="12" rx="1.5"/><path d="M1.5 6h13M5 1v3M11 1v3M4.5 9h2M9.5 9h2M4.5 12h2"/></svg>Plan</button>
+      <button id="vPantry" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 2.5h8M5 2.5v2.2a3.5 3.5 0 0 1-1.5 2.9v6.4h9V7.6A3.5 3.5 0 0 1 11 4.7V2.5"/><path d="M3.5 10h9"/></svg>Pantry</button>
     </div>
     <div class="tools">
       <button class="tbtn play" id="bPlay" title="Guess the origin (G)"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="6.5"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".8" fill="currentColor"/></svg><span class="lbl">Guess origin</span></button>
@@ -747,6 +773,7 @@ ul.tchk .linkbtn{font-size:13px}
   </section>
 
   <section id="planView" hidden></section>
+  <section id="pantryView" hidden></section>
   <footer>
     <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map boundaries: DataMeet India (CC BY 2.5 IN), simplified.
   </footer>
@@ -6462,14 +6489,14 @@ document.addEventListener("click", e => { const o=e.target.closest("[data-open]"
 /* ================= view toggle ================= */
 function setView(v, push=true){
   store.view=v; save();
-  $("#vMap").setAttribute("aria-pressed", v==="map"); $("#vCards").setAttribute("aria-pressed", v==="cards"); $("#vPlan").setAttribute("aria-pressed", v==="plan");
-  $("#mapView").hidden = v!=="map"; $("#cardView").hidden = v!=="cards"; $("#planView").hidden = v!=="plan";
-  $("#filters").hidden = v==="plan"; if (v==="plan" && typeof renderPlan==="function") renderPlan();
+  $("#vMap").setAttribute("aria-pressed", v==="map"); $("#vCards").setAttribute("aria-pressed", v==="cards"); $("#vPlan").setAttribute("aria-pressed", v==="plan"); $("#vPantry").setAttribute("aria-pressed", v==="pantry");
+  $("#mapView").hidden = v!=="map"; $("#cardView").hidden = v!=="cards"; $("#planView").hidden = v!=="plan"; $("#pantryView").hidden = v!=="pantry";
+  $("#filters").hidden = v==="plan"||v==="pantry"; if (v==="plan" && typeof renderPlan==="function") renderPlan(); if (v==="pantry" && typeof renderPantry==="function") renderPantry();
   if (v!=="map" && game) endGame(true);
   if (push && !$("#drawer").classList.contains("on")) history.replaceState(null,"","#"+v);
   if (v==="map") requestAnimationFrame(updatePins);
 }
-$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan");
+$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan"); $("#vPantry").onclick=()=>setView("pantry");
 
 /* ================= map ================= */
 const svg = d3.select("#map"), W=800, H=900;
@@ -6702,6 +6729,7 @@ function paneRecipe(d){
     <div class="facts"><div><small>Serves</small><b class="srv"><button class="srvb" data-srv="-1" aria-label="Fewer servings">−</button><span class="mono">${servOf(d)}</span><button class="srvb" data-srv="1" aria-label="More servings">+</button></b></div><div><small>Hands-on</small><b>${fmtM(segs[0]?.mins||d.mins)}</b></div><div><small>Start to finish</small><b>${fmtM(tot||d.mins)}</b></div><div><small>Makes</small><b>≈${Math.round(d.yield*fac(d))} g</b></div><div><small>Level</small><b>${level(d)}</b></div></div>
     ${segs.length>1?`<div class="tline" aria-label="Timeline">${segs.map(s=>`<span style="flex:${Math.max(s.mins/tot,.12)};background:${SEGCOL[s.lab]||SEGCOL[s.lab.split(" ")[0]]||"var(--ink-2)"}" title="${esc(s.lab)} · ${fmtM(s.mins)}"><em>${esc(s.lab)} · ${fmtM(s.mins)}</em></span>`).join("")}</div>`:""}
    </header>
+   ${ingrChips(d)}
    <section><div class="bsec"><h3>Mise en place</h3>${fac(d)!==1?`<span class="scaled mono">×${+fac(d).toFixed(2)} · quantities in the steps are for ${d.serves}</span>`:""}<span class="prog mono"><span>${tk.i.length}/${nI}</span><span class="bar"><i style="width:${tk.i.length/nI*100}%"></i></span></span></div>${mise}</section>
    <section><div class="bsec"><h3>Method</h3><span class="prog mono"><span>${tk.s.length}/${d.steps.length}</span><span class="bar"><i style="width:${tk.s.length/d.steps.length*100}%"></i></span></span></div><ol class="bsteps">${steps}</ol></section>
    <div class="cookdone"><button class="btn acc" id="cookMode">${eqIcon("pot",16)} Start cook mode</button><button class="btn ${tk.s.length===d.steps.length?"":"ghost"}" id="cookIt">${status(d.id).c?"Cooked ★ (tap to undo)":"I cooked this"}</button><button class="btn ghost" id="resetTicks">Reset</button></div>
@@ -7489,6 +7517,7 @@ document.addEventListener("click", e => { const k=e.target.closest("[data-kit]")
 $("#subt").textContent = `Indian Food Atlas · ${DISHES.length} dishes`;
 renderFilters(); syncHdr(); refreshHeader();
 /* ================= meal planner + ChemE kitchen scheduler ================= */
+const WK = t => ["Wikipedia: " + t.replace(/_/g," ").replace(/\(.*\)/,"").trim(), "https://en.wikipedia.org/wiki/" + t];   // W is the map width inside this scope
 const DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"], DAYL=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const SLOTS=["breakfast","lunch","snack","dinner"];
 const PLAN = store.plan = Object.assign({people:2, wd:45, we:90, burners:2, veg:false, snacks:false,
@@ -7829,8 +7858,8 @@ function shopping(){
 function openShop(){
   const {groups,fmtG,eggN}=shopping(); const order=Object.values(AISLE).filter((v,i,a)=>a.indexOf(v)===i);
   const txt=order.filter(a=>groups[a]).map(a=>`${a}\n`+groups[a].sort((x,y)=>y.g-x.g).map(it=>`- ${it.name}: ${fmtG(it.k,it.g)}${eggN(it.k)}`).join("\n")).join("\n\n")+"\n\nPantry: salt, whole and ground spices (check stock)";
-  openModal(`<h2>Shopping list</h2>`, Object.keys(groups).length?`<p class="note" style="margin-top:0">For ${PLAN.people} ${PLAN.people>1?"people":"person"}, every planned dish, totalled by ingredient. Weights are the amounts the recipes use (peeled, trimmed); buy a little more of vegetables and meat on the bone.</p>
-    <div class="shop">${order.filter(a=>groups[a]).map(a=>`<div class="shg"><h3>${a}</h3>${groups[a].sort((x,y)=>y.g-x.g).map(it=>`<label class="shi"><input type="checkbox"><span><b>${esc(it.name)}</b> <span class="mono">${fmtG(it.k,it.g)}${eggN(it.k)}</span><small>${it.uses.slice(0,4).map(esc).join(", ")}${it.uses.length>4?` +${it.uses.length-4}`:""}</small></span></label>`).join("")}</div>`).join("")}
+  openModal(`<h2>Shopping list</h2>`, Object.keys(groups).length?`<p class="note" style="margin-top:0">For ${PLAN.people} ${PLAN.people>1?"people":"person"}, every planned dish, totalled by ingredient. Weights are the amounts the recipes use (peeled, trimmed); buy a little more of vegetables and meat on the bone. Items ticked in your pantry are pre-checked.</p>
+    <div class="shop">${order.filter(a=>groups[a]).map(a=>`<div class="shg"><h3>${a}</h3>${groups[a].sort((x,y)=>(inPantryKey(x.k)-inPantryKey(y.k))||y.g-x.g).map(it=>`<label class="shi ${inPantryKey(it.k)?"have":""}"><input type="checkbox" ${inPantryKey(it.k)?"checked":""}><span><b>${esc(it.name)}</b>${inPantryKey(it.k)?' <small class="ihave">in your pantry</small>':""} <span class="mono">${fmtG(it.k,it.g)}${eggN(it.k)}</span><small>${it.uses.slice(0,4).map(esc).join(", ")}${it.uses.length>4?` +${it.uses.length-4}`:""}</small></span></label>`).join("")}</div>`).join("")}
      <div class="shg"><h3>Pantry</h3><p class="note">Salt and the whole and ground spices the recipes call for: check your stock.</p></div></div>
     <div class="cookdone"><button class="btn acc" id="shCopy">Copy as text</button></div>`
    :`<div class="empty" style="padding:20px 8px"><b>Nothing planned yet</b>Add dishes to the week, or tap “Fill my week”.</div>`);
@@ -7873,15 +7902,171 @@ function openPlanHow(){
    <h3>4. Read the result like a process engineer</h3><p><b>Makespan</b> is the session length. <b>Utilisation</b> is the share of it you are busy. The <b>bottleneck</b> is whatever limits it: you, the stove, or one long dish. Overlapping passive steps with hands-on work is where the time saving comes from, compared with cooking one dish after another.</p>
    <h3>5. Scale-up isn't linear</h3><p>Cooking for more people makes frying, rolling and chopping take longer (more batches), but a pot simmers in about the same time whether it holds two portions or six. The planner scales those steps and leaves the rest. Soaks and ferments longer than two hours become advance-prep reminders.</p>
    <h3>6. Batching the chores</h3><p>The weekend prep session groups repeated chores (onions, ginger-garlic paste, boiled potatoes) because every chore has a set-up cost, paid once per batch.</p>
-   <p class="note">The schedule is a heuristic, not an optimum; real recipes have slack the step times don't capture. Further reading: ${srcList([W("Gantt_chart"),W("Critical_path_method"),W("List_scheduling"),W("Job-shop_scheduling"),W("Batch_production")])}</p>`);
+   <p class="note">The schedule is a heuristic, not an optimum; real recipes have slack the step times don't capture. Further reading: ${srcList([WK("Gantt_chart"),WK("Critical_path_method"),WK("List_scheduling"),WK("Job-shop_scheduling"),WK("Batch_production")])}</p>`);
 }
 
 /* ---------- wiring ---------- */
 wirePlan();
 document.addEventListener("click",e=>{ const b=e.target.closest("#tPlan"); if(b&&cur) openAddFromDish(cur); });
 
+/* ===== Ingredient & Spice Atlas =====
+   [id, name, local names, type, NUT keys, text pattern (for spices hidden under "spice"), grown in, chemistry, storage, US substitute / where to buy, wiki page] */
+const INGR_TYPES = {spice:"Spices & seeds",sour:"Souring agents",pulse:"Dals & pulses",grain:"Grains & flours",fat:"Oils & ghee",dairy:"Dairy",sweet:"Sweeteners",aroma:"Aromatics & produce",ferment:"Fermented"};
+const INGR_RAW = [
+// ---- spices ----
+["cumin","Cumin","jeera, jeeragam","spice",[],"cumin|jeera","Gujarat and Rajasthan; India is the world's largest grower.","Cuminaldehyde gives the warm, earthy aroma. Its aroma compounds dissolve in fat, which is why seeds are crackled in hot oil (tadka) first: the oil carries the flavour through the dish.","Whole seeds about a year airtight and dark; ground, 3–6 months.","Any supermarket. 1 tsp ground cumin ≈ 1¼ tsp seeds.","Cumin"],
+["mustard-seed","Mustard seeds","rai, sasive, kadugu","spice",[],"mustard seeds?|\\brai\\b","Rajasthan, Madhya Pradesh, Uttar Pradesh, Haryana.","Whole seeds are mild. Crushed and wet, the enzyme myrosinase turns sinigrin into sharp allyl isothiocyanate (the bite of Bengali kasundi). Popped in hot oil, the enzyme is destroyed and the seeds turn nutty instead.","About a year, airtight.","Brown mustard seeds at Indian grocers; supermarket yellow seeds are milder.","Mustard_seed"],
+["fenugreek","Fenugreek seeds","methi dana, vendhayam","spice",[],"fenugreek|methi seeds|methi dana","Rajasthan grows over 80% of India's crop.","Sotolon gives the maple-syrup aroma. A pinch in idli and dosa batter is traditional; soaked seeds turn slimy, which cooks credit with helping the batter hold air. Burnt seeds turn bitter, so fry them only until reddish.","About a year, airtight.","Indian grocers; some spice aisles. Don't swap with dried fenugreek leaves.","Fenugreek"],
+["coriander-seed","Coriander seeds","dhania, kothamalli vithai","spice",[],"coriander (seeds?|powder)|dhania powder","Rajasthan, Madhya Pradesh, Gujarat.","Linalool gives a floral, citrusy note. Dry-roasting before grinding (as in sambar powder) adds roasted Maillard notes.","Seeds a year; ground about 4 months.","Any supermarket.","Coriander"],
+["turmeric","Turmeric","haldi, manjal, pasupu","spice",[],"turmeric|haldi","Telangana, Maharashtra, Tamil Nadu (Erode), Odisha; India grows most of the world's turmeric.","Curcumin is the yellow pigment. It dissolves in fat, not water, and it's a natural pH indicator: it turns red-brown with alkali such as baking soda or slaked lime.","Ground, about a year in the dark; fresh root 2–3 weeks in the fridge.","Any supermarket. Fresh root at Asian grocers.","Turmeric"],
+["red-chilli","Dried red chilli","lal mirch; Kashmiri, Byadgi, Guntur","spice",[],"red chill|chilli powder|chili powder|kashmiri|byadgi|dried chill","Andhra Pradesh and Telangana (Guntur), Karnataka (Byadgi), Kashmir.","Capsaicin triggers the TRPV1 heat receptor. It dissolves in fat and alcohol, not water, so yogurt or milk calms the burn better than water. Kashmiri and Byadgi chillies are rich in red capsanthin and mild in heat: colour without fire.","Whole a year; powder 6 months (it fades).","Indian grocers. For Kashmiri chilli: 3 parts paprika to 1 part cayenne.","Chili_pepper"],
+["black-pepper","Black pepper","kali mirch, milagu","spice",[],"pepper(corns)?\\b|kali mirch|milagu","Kerala and Karnataka: the Malabar Coast, the spice that drew traders for two thousand years.","Piperine gives pepper its bite. Pepper was India's main source of heat before chillies arrived from the Americas in the 16th century.","Whole peppercorns for years; grind as you need.","Any supermarket.","Black_pepper"],
+["cardamom","Green cardamom","elaichi, elakkai","spice",[],"cardamom|elaichi","The Western Ghats' Cardamom Hills of Kerala and Karnataka.","1,8-cineole (eucalyptus) and α-terpinyl acetate give the cool, floral perfume. The aroma is volatile: grind seeds just before use.","Whole pods a year; seeds lose aroma fast once out of the pod.","Supermarket spice aisle (pricey) or Indian grocers.","Elettaria_cardamomum"],
+["black-cardamom","Black cardamom","badi elaichi","spice",[],"black cardamom|badi elaichi","Sikkim, Darjeeling and the eastern Himalaya.","Dried over open fires, so it tastes smoky and camphorous. Used whole in biryanis, kormas and dals.","Whole pods a year or more.","Indian grocers. No good substitute; a pinch of smoked paprika gives some smokiness.","Amomum_subulatum"],
+["clove","Cloves","laung, lavangam","spice",[],"(?<!garlic )cloves?\\b|laung","Kerala and Tamil Nadu (Nilgiris, Kanyakumari).","Eugenol gives the hot, numbing note; it's also the old dentists' remedy for toothache. Strong: two or three cloves season a whole pot.","Whole a year or more.","Any supermarket.","Clove"],
+["cinnamon","Cinnamon / cassia","dalchini, pattai","spice",[],"cinnamon|dalchini|cassia","Kerala; much Indian 'dalchini' is imported cassia.","Cinnamaldehyde gives the aroma. Cassia, the thicker bark, is the cinnamon most sold in North America; it's high in coumarin, so European agencies advise against large daily amounts.","Sticks a year or more.","Any supermarket stick.","Cinnamon"],
+["asafoetida","Asafoetida","hing, perungayam","spice",[],"asafoetida|\\bhing\\b|perungayam","Mostly imported as raw resin from Afghanistan and Iran and processed in India; Himachal Pradesh began growing it in 2020.","Organosulphur compounds (disulphides, like those in garlic and onion) give the strong smell, which mellows into an oniony, savoury note in hot fat. Sold 'compounded' with flour and gum, so standard hing often contains wheat.","Airtight, a year or more; keep it away from other spices.","Indian grocers. Gluten-free brands use rice flour.","Asafoetida"],
+["ajwain","Ajwain (carom)","omum, vamu","spice",[],"ajwain|carom|omum","Rajasthan and Gujarat.","Thymol, the same compound as in thyme, gives a sharp, thyme-like taste. Often added to fried and bean dishes, traditionally for digestion.","About a year.","Indian grocers. Dried thyme is the nearest match.","Ajwain"],
+["fennel","Fennel seeds","saunf, perunjeerakam","spice",[],"fennel|saunf","Gujarat (Unjha) and Rajasthan.","Anethole, the same compound as in anise and liquorice, gives the sweet note. Candied fennel is India's after-dinner breath freshener.","About a year.","Any supermarket.","Fennel"],
+["nigella","Nigella (kalonji)","kalonji, kala jeera (in Bengal)","spice",[],"nigella|kalonji","Punjab, Himachal Pradesh, Bihar and Assam.","Thymoquinone gives a slightly bitter, oniony taste. One of the five seeds in Bengal's panch phoron.","About a year.","Indian or Middle Eastern grocers.","Nigella_sativa"],
+["saffron","Saffron","kesar, zafran","spice",[],"saffron|kesar","Pampore, Kashmir, whose saffron carries a GI tag.","Crocin gives the gold colour and dissolves in water (steep it in warm milk); safranal gives the hay-like aroma; picrocrocin the bitterness. Each strand is a crocus stigma picked by hand.","Airtight and dark, 2–3 years.","Supermarkets or Indian grocers; avoid cheap powder.","Saffron"],
+["poppy","White poppy seeds","khus khus, posto, gasagasalu","spice",["poppy"],"poppy|posto|khus","Grown under government licence in Madhya Pradesh, Rajasthan and Uttar Pradesh.","Rich in oil, so ground poppy seeds thicken a sauce (Bengali posto, kormas) like a nut paste.","Oily seeds go rancid: fridge, 6 months.","Indian grocers.","Poppy_seed"],
+["sesame","Sesame seeds","til, ellu","spice",["sesame"],"sesame|\\btil\\b|ellu","Gujarat, Rajasthan, West Bengal, Madhya Pradesh.","Sesamol and sesamin are natural antioxidants that keep sesame oil from going rancid. Toasting makes nutty pyrazines.","Fridge or cool, 6 months.","Any supermarket.","Sesame"],
+["curry-leaf","Curry leaves","kadi patta, karuveppilai","spice",[],"curry lea","Grown in home gardens across South India.","Their aroma comes from volatile terpenes released in hot oil within seconds. Dried leaves lose most of it.","A week in the fridge; freeze on the stem for months.","Fresh or frozen at Indian grocers. No real substitute; leave out rather than use curry powder.","Curry_tree"],
+["amchur","Amchur (dry mango powder)","amchoor","spice",[],"amchur|amchoor|mango powder","Uttar Pradesh and Madhya Pradesh, from unripe mangoes.","Citric and malic acids give sourness without adding liquid, which suits dry dishes, chaat and tandoor marinades.","About a year, airtight (it clumps in humidity).","Indian grocers. Lime juice and zest at the end.","Amchoor"],
+["kasuri-methi","Kasuri methi","dried fenugreek leaves","spice",[],"kasuri methi|dried fenugreek leaves","Nagaur, Rajasthan; named after Kasur, now in Pakistan.","Sotolon again: the maple-and-curry note that finishes butter chicken and dal makhani. Crush between your palms to release it.","About a year, airtight.","Indian grocers.","Fenugreek"],
+["garam-masala","Garam masala","—","spice",[],"garam masala","A blend, not a crop: every family and region has its own.","A mix of warming spices (cinnamon, cardamom, cloves, pepper and others). Usually added near the end so the most volatile aroma compounds aren't cooked off.","About 3–6 months; better freshly ground.","Supermarkets and Indian grocers.","Garam_masala"],
+// ---- souring ----
+["tamarind","Tamarind","imli, puli, chintapandu","sour",["tamarind"],"tamarind|imli","Karnataka, Tamil Nadu and Andhra Pradesh.","Tartaric acid gives a deep, fruity sourness; the pulp's sugars balance it. Soak and squeeze the pulp, then strain out the fibre: a simple solid-liquid extraction.","Block a year, cool and dry; concentrate in the fridge.","Blocks and concentrate at Indian or Latin grocers (1 tsp concentrate ≈ a lime-sized ball).","Tamarind"],
+["kokum","Kokum","amsul, punarpuli","sour",["kokum"],"kokum","The Western Ghats and Konkan coast: Maharashtra, Goa, Karnataka, Kerala.","The rind is rich in hydroxycitric acid and purple anthocyanins, which colour sol kadhi pink.","Dried rind a year, airtight.","Indian grocers (dried kokum or kokum syrup). Tamarind with a little lime instead.","Garcinia_indica"],
+["kachampuli","Kachampuli","Coorg vinegar; kudampuli in Kerala","sour",[],"kachampuli|kudampuli","Coorg (Kodagu), Karnataka, from the Malabar tamarind, Garcinia gummi-gutta.","A dark, sour concentrate from the fruit's juice, which turns Kodava pandi curry almost black.","Years, sealed.","Online from Coorg sellers. Tamarind concentrate with a splash of vinegar.","Garcinia_gummi-gutta"],
+["lemon","Lemon / lime","nimbu, elumichai","sour",["lemon"],"lemon|lime juice","Grown across India.","Citric acid. Added off the heat, because boiling dulls its fresh aroma.","Whole fruit 2–3 weeks in the fridge.","Any supermarket.","Lemon"],
+["vinegar","Vinegar","sirka; Goan toddy vinegar","sour",["vinegar"],"vinegar","Goa makes vinegar from coconut-palm toddy.","Acetic acid, made by bacteria from alcohol: the second step of a two-stage fermentation (sugar → alcohol → acid). It also helps preserve vindaloo-style marinades.","Indefinitely.","Coconut vinegar at Asian grocers; cider vinegar works.","Vinegar"],
+// ---- pulses ----
+["toor","Toor dal","arhar, tuvaram paruppu, kandi pappu","pulse",["toor"],"toor|arhar|tuvar","Maharashtra, Karnataka, Madhya Pradesh.","Split pigeon peas. Their starch gelatinises and the hulled halves break down into a creamy dal; a pressure cooker gets it there in a fraction of the time.","A year, airtight; older dal takes longer to cook.","Indian grocers. Yellow split peas are the nearest supermarket swap.","Pigeon_pea"],
+["urad","Urad dal","black gram, ulundu, minumulu","pulse",["urad"],"urad|black gram|ulundu","Madhya Pradesh, Uttar Pradesh, Andhra Pradesh.","Cooked or ground, urad turns mucilaginous; ground with cold water it whips into a foam that holds air, the secret of fluffy idli and medu vada.","A year, airtight.","Indian grocers (whole, split, or skinned white).","Vigna_mungo"],
+["moong","Moong dal","green gram, pesarapappu, cherupayar","pulse",["moong","moongwhole","sprout"],"moong|mung|green gram","Rajasthan, Madhya Pradesh, Maharashtra.","Small and thin-skinned, so the split dal cooks in about 20 minutes without soaking. Sprouting starts enzymes that turn some starch into sugars.","A year, airtight.","Indian or Asian grocers (mung beans).","Mung_bean"],
+["chana","Chana dal","Bengal gram, kadalai paruppu","pulse",["chanadal","drypeas"],"chana dal|bengal gram|kadalai paruppu","Madhya Pradesh, Maharashtra, Rajasthan.","Split, skinned desi chickpeas. They hold their shape, so they're used for crunch in tempering and for thick dals.","A year, airtight.","Indian grocers. Yellow split peas cook faster but similar.","Chickpea"],
+["besan","Besan (gram flour)","kadalai maavu","pulse",["besan"],"besan|gram flour|chickpea flour","Ground from chana dal.","High protein and no gluten. Its proteins set when heated, binding pakora batter and making dhokla and kadhi possible; roasted besan turns nutty (Maillard).","6 months; it goes stale.","Indian grocers. Chickpea flour (garbanzo flour) from supermarkets is close.","Gram_flour"],
+["masoor","Masoor dal","red lentil","pulse",["masoor"],"masoor|red lentil","Madhya Pradesh, Uttar Pradesh, Bihar.","Hulled red lentils fall apart in 15 minutes, turning golden as they cook.","A year, airtight.","Any supermarket (red lentils).","Lentil"],
+["rajma","Rajma (kidney beans)","—","pulse",["kidney"],"rajma|kidney bean","Jammu (Bhaderwah), Himachal Pradesh, Uttarakhand.","Raw beans contain phytohaemagglutinin, a lectin that causes severe stomach upset. Boiling hard for at least 10 minutes destroys it; slow cookers below boiling don't.","A year, airtight.","Any supermarket (dried or canned).","Kidney_bean"],
+["kabuli-chana","Chickpeas (kabuli chana)","chole, kondakadalai","pulse",["chickpea"],"chickpea|kabuli|chole","Madhya Pradesh, Maharashtra, Rajasthan.","A pinch of baking soda in the soaking water raises the pH and softens the skins faster.","A year, airtight.","Any supermarket (dried or canned).","Chickpea"],
+["horse-gram","Horse gram","kulthi, ulavalu, kollu","pulse",["horsegram"],"horse gram|kulthi|ulavalu|kollu","Dry uplands of Karnataka, Andhra Pradesh and Tamil Nadu.","A hardy legume that grows where little else will; very slow to cook, so it's soaked and pressure-cooked.","A year, airtight.","Indian grocers or online.","Macrotyloma_uniflorum"],
+// ---- grains ----
+["rice","Rice","chawal, arisi; basmati, sona masuri, ponni, gobindobhog","grain",["rice","blackrice"],"\\brice\\b(?! flour)","Everywhere wet: West Bengal, Uttar Pradesh, Punjab, Andhra Pradesh; basmati from the Punjab plains.","Starch has two parts: amylose (long chains) and amylopectin (branched). High-amylose basmati cooks fluffy and separate; low-amylose sticky rices clump.","Raw rice a year or more, airtight.","Basmati and sona masuri at supermarkets and Indian grocers.","Rice"],
+["atta","Atta (whole-wheat flour)","gehun ka atta","grain",["atta","dalia"],"\\batta\\b|whole-?wheat","Punjab, Haryana, Uttar Pradesh, Madhya Pradesh.","Kneading links two wheat proteins, glutenin and gliadin, into gluten, the stretchy network that lets a roti puff with steam. Atta is stone-ground fine, with the bran.","2–3 months (the bran's oil goes rancid); freeze for longer.","Indian grocers. Supermarket whole-wheat flour is coarser and makes heavier rotis.","Atta_(flour)"],
+["maida","Maida","refined wheat flour","grain",["maida","bread","pav","noodles","vermicelli","gluten"],"maida|plain flour|all-purpose","Milled from wheat.","Endosperm only, no bran: soft, white and gluten-forming, for naan, parotta, samosa pastry and sweets.","About a year.","All-purpose flour.","Maida_flour"],
+["semolina","Semolina (rava, sooji)","rava, sooji","grain",["semolina"],"semolina|rava|sooji|suji","Milled from wheat.","Coarse wheat granules; roasting in ghee first keeps upma and kesari from turning gluey.","About 6 months; roast it first and it keeps longer.","Fine semolina or 'cream of wheat'.","Semolina"],
+["rice-flour","Rice flour","chawal ka atta, arisi maavu","grain",["ricefl"],"rice flour|rice-flour","Ground from rice.","No gluten, so rice-flour doughs (pathiri, akki rotti, idiyappam) are made with boiling water, which gelatinises the starch into a workable dough.","6 months.","Asian grocers (not glutinous rice flour).","Rice_flour"],
+["poha","Poha (flattened rice)","aval, avalakki, chira","grain",["poha","puffedrice"],"poha|flattened rice|aval|chira|puffed rice|kurmura|muri","Chhattisgarh, Madhya Pradesh, Bihar, Odisha.","Rice is soaked or parboiled, roasted and rolled flat. Because the starch is already pre-cooked, a quick rinse softens it.","6 months, airtight.","Indian grocers (thick for poha, thin for chivda).","Flattened_rice"],
+["millets","Millets: ragi, bajra, jowar","nachni, kambu, cholam","grain",["ragi","bajra","jowar","barnyard"],"ragi|bajra|jowar|millet|barnyard","Ragi in Karnataka; bajra in Rajasthan; jowar in Maharashtra and Karnataka.","Gluten-free, drought-hardy grains. Bajra flour goes rancid quickly once ground (its oil meets fat-splitting enzymes), so it's traditionally milled fresh.","Whole grain a year; flour 2–4 weeks (fridge helps).","Indian grocers or online.","Millet"],
+["sago","Sago (sabudana)","javvarisi","grain",["sago","tapioca"],"sago|sabudana|tapioca","Salem, Tamil Nadu, from tapioca roots.","Pearls of almost pure tapioca starch. Soaked, they swell; cooked, the starch turns clear and chewy. A vrat favourite because it isn't a grain.","A year or more, airtight.","Indian grocers (medium pearls); not the tiny dessert kind.","Sago"],
+// ---- fats ----
+["ghee","Ghee","nei, tuppa","fat",["ghee"],"ghee","Made wherever there are dairy animals.","Butter is simmered until the water boils off and the milk solids brown, which leaves pure fat with a nutty aroma. With no water or milk solids left, it keeps well and smokes only at about 250 °C.","Months in a cupboard; longer in the fridge.","Indian grocers and most supermarkets.","Ghee"],
+["mustard-oil","Mustard oil","sarson ka tel, kachi ghani","fat",["mustardoil"],"mustard oil","Rajasthan, Uttar Pradesh, Bengal, Assam, Odisha.","Pungent allyl isothiocyanate gives the sinus-clearing bite. Cooks heat it until it just smokes, then cool it slightly, to mellow it. It's naturally high in erucic acid, so in the US it's sold labelled 'for external use only'.","A year, cool and dark.","Indian grocers. Many US cooks use it anyway; others swap a neutral oil plus a pinch of mustard powder.","Mustard_oil"],
+["coconut-oil","Coconut oil","velichenna","fat",["coconutoil"],"coconut oil","Kerala, Tamil Nadu, Karnataka.","Mostly saturated fat (lauric acid), so it's solid below about 24 °C and very stable in frying. The flavour of Kerala cooking.","A year or more.","Any supermarket (unrefined for flavour).","Coconut_oil"],
+["sesame-oil","Sesame oil (gingelly)","nallennai, til ka tel","fat",["sesameoil"],"sesame oil|gingelly","Tamil Nadu and Andhra Pradesh.","Cold-pressed from raw seeds: light gold and mild. Not the dark, toasted Chinese sesame oil.","A year; its antioxidants keep it from going rancid.","Indian grocers ('gingelly oil').","Sesame_oil"],
+// ---- dairy ----
+["yogurt","Dahi (yogurt)","thayir, perugu, doi","dairy",["yogurt"],"yogurt|curd\\b|dahi","Made at home everywhere from the last batch's culture.","Lactic acid bacteria turn lactose into lactic acid; at about pH 4.6 the casein proteins gel. Strained (hung) dahi becomes shrikhand.","1–2 weeks in the fridge; it gets sourer.","Plain whole-milk yogurt; Greek yogurt for hung curd.","Dahi_(curd)"],
+["paneer","Paneer & chhena","—","dairy",["paneer","chhena"],"paneer|chhena","Made from milk anywhere.","Hot milk curdled with acid (lemon juice or vinegar). Acid-set curds have no stretchy calcium-casein network like rennet cheese, so paneer softens but never melts. Chhena is the same curd, fresh and unpressed, for Bengali sweets.","Paneer 3–4 days in the fridge, or freeze.","Indian grocers or supermarkets; or make it from whole milk.","Paneer"],
+["khoya","Khoya (mawa)","khoa","dairy",["khoya","milkpowder","condensedmilk"],"khoya|mawa|khoa|milk powder|condensed milk","Mathura, Agra and dairy towns across the North.","Milk evaporated to about a fifth of its weight; milk sugars and proteins brown slightly (Maillard), giving peda and gulab jamun their caramel note.","3–4 days in the fridge; freezes well.","Indian grocers (frozen). Ricotta cooked down with milk powder works.","Khoa"],
+// ---- sweet ----
+["jaggery","Jaggery","gur, vellam, bellam; nolen gur","sweet",["jaggery"],"jaggery|\\bgur\\b|vellam","Uttar Pradesh (Muzaffarnagar) and Maharashtra (Kolhapur); date-palm jaggery in Bengal.","Unrefined cane or palm sugar boiled down with its molasses kept in, so it brings minerals, colour and caramel flavour along with sucrose.","Months, airtight (it absorbs moisture).","Indian grocers; or Latin piloncillo / panela.","Jaggery"],
+// ---- aromatics & produce ----
+["coconut","Coconut","nariyal, thengai","aroma",["coconut","drycoconut","coconutmilk"],"coconut(?! oil)","Kerala, Tamil Nadu, Karnataka, Andhra Pradesh.","Coconut milk is an emulsion of fat droplets in water. Boiling it hard can break the emulsion and split it, so it's added late and simmered gently.","Fresh grated 2 days in the fridge; freezes well.","Frozen grated coconut and canned coconut milk at Indian and Asian grocers.","Coconut"],
+["ginger","Ginger","adrak, inji","aroma",["ginger"],"ginger","Kerala and the Northeast (Meghalaya, Mizoram, Sikkim).","Gingerol gives the fresh heat; cooking turns some of it into milder zingerone, and drying makes sharper shogaols (dry ginger, saunth).","3 weeks in the fridge; freezes well.","Any supermarket.","Ginger"],
+["garlic","Garlic","lehsun, poondu","aroma",["garlic"],"garlic","Madhya Pradesh, Rajasthan, Gujarat.","Crushing mixes the enzyme alliinase with alliin to make allicin, garlic's sharp smell. Leaving crushed garlic 10 minutes before cooking lets more form.","Whole heads a few months, cool and airy.","Any supermarket.","Garlic"],
+["onion","Onion","pyaaz, vengayam","aroma",["onion"],"onion|shallot","Maharashtra, around Nashik and the big onion market at Lasalgaon.","Cutting releases syn-propanethial-S-oxide, the tear gas. Slow cooking browns the sugars (caramelisation and Maillard) into birista, the base of countless gravies.","A month or two, cool, dark and airy (not near potatoes).","Any supermarket; red onions are closest to Indian ones.","Onion"],
+["green-chilli","Green chilli","hari mirch, pachai milagai","aroma",["chili"],"green chill","Andhra Pradesh, Karnataka, Maharashtra.","Unripe chillies: fresh, grassy capsaicin heat. Slitting them releases more heat than adding them whole.","1–2 weeks in the fridge, stems removed.","Serrano or Thai chillies.","Chili_pepper"],
+["tomato","Tomato","tamatar, thakkali","aroma",["tomato"],"tomato","Andhra Pradesh, Madhya Pradesh, Karnataka.","Adds acidity and glutamates (umami). A New World crop, it only entered most Indian kitchens in the last two centuries.","Ripe ones a few days at room temperature.","Any supermarket; Roma tomatoes for gravies.","Tomato"],
+["coriander-leaf","Coriander leaves","hara dhania, kothamalli","aroma",["coriander"],"coriander lea|cilantro|coriander, chopped","Grown everywhere.","Aldehydes give its fresh aroma; some people carry a gene variant that makes them taste it as soapy.","Wrapped in a cloth, 4–5 days in the fridge.","Cilantro.","Coriander"],
+// ---- fermented ----
+["fermented-soy","Fermented soybean","axone/akhuni (Naga), bekang (Mizo), hawaijar (Manipur), tungrymbai (Khasi)","ferment",["soy","natto"],"axone|akhuni|bekang|hawaijar|fermented soybean","The Northeast.","Boiled soybeans fermented by Bacillus bacteria break down protein into savoury amino acids and ammonia notes, a cousin of Japanese natto.","Weeks in the fridge; sun-dried for months.","Online or NE Indian shops; natto is the nearest swap.","Axone"],
+["ngari","Ngari & berma (fermented fish)","ngari (Manipur), berma (Tripura)","ferment",["mas"],"ngari|berma","Manipur and Tripura.","Small fish, sun-dried and packed tight into sealed pots to ferment for months; their proteins break down into intense savoury compounds, much as in fish sauce.","Months, sealed.","NE Indian shops; Thai or Vietnamese fish sauce in a pinch.","Fermented_fish"],
+["bamboo-shoot","Bamboo shoot","bas tenga, khorisa, mesu","ferment",["bamboo"],"bamboo shoot","The Northeast, where it's eaten fresh, fermented or dried.","Raw shoots contain cyanogenic glycosides, which release cyanide. Boiling (or long fermentation) breaks them down; that's why fresh shoots are always boiled first.","Fermented: months in jars; canned: years.","Canned or fermented bamboo shoot at Asian grocers.","Bamboo_shoot"]
+];
+
+/* ================= ingredient atlas + pantry ================= */
+const INGR = INGR_RAW.map(([id,name,local,type,keys,re,grown,chem,keep,sub,wiki])=>({id,name,local,type,keys,re:new RegExp("\\b(?:"+re+")","i"),grown,chem,keep,sub,src:WK(wiki)}));
+const INGR_BY = Object.fromEntries(INGR.map(x=>[x.id,x]));
+const KEY2ING = {}; INGR.forEach(x=>x.keys.forEach(k=>KEY2ING[k]=x.id));
+const BASICS_P = new Set(["k:oil","k:sugar","k:butterS"]);          // assumed in every kitchen (with salt and water)
+store.pantry = store.pantry || []; if(store.basics===undefined) store.basics=true;
+const OPT_HEAD=/to serve|garnish|serve with/i;
+const PIN = {}; // dish id -> {req:Set, opt:Set}
+function dishNeeds(d){ if(PIN[d.id]) return PIN[d.id];
+  const req=new Set(), opt=new Set(); let head="";
+  d.ing.forEach(r=>{ if(r[0]==="#"){ head=r[1]; return; }
+    const optional=/optional/i.test(r[0]+" "+r[1])||OPT_HEAD.test(head)||/^to serve/i.test(r[0]); const S=optional?opt:req;
+    Object.keys(r[2]||{}).forEach(k=>{ if(k==="water"||k==="salt"||k==="spice"||k==="soda") return; S.add(KEY2ING[k]||"k:"+k); });
+    INGR.forEach(x=>{ if(!x.keys.length && x.re.test(r[1])) S.add(x.id); });
+  });
+  opt.forEach(x=>{ if(req.has(x)) opt.delete(x); });
+  return PIN[d.id]={req,opt}; }
+const pName = id => INGR_BY[id] ? INGR_BY[id].name : (KEYNAME[id.slice(2)]||cap(id.slice(2)));
+function pAisle(id){ if(INGR_BY[id]) return INGR_TYPES[INGR_BY[id].type]; const k=id.slice(2); let c=CAT[k]||(NUT[k]&&NUT[k][6]?"veg":"other"); if(k==="egg"||k==="yolk") c="protein"; return AISLE[c]||"Other"; }
+const havePantry = id => store.pantry.includes(id) || (store.basics && BASICS_P.has(id));
+function inPantryKey(k){ return havePantry(KEY2ING[k]||"k:"+k); }
+function missing(d){ return [...dishNeeds(d).req].filter(id=>!havePantry(id)); }
+function snip(t){ const S=t.split(/(?<=\.)\s+/); let o=""; for(const x of S){ o+=(o?" ":"")+x; if(o.length>=60) break; } return o; }
+const ingrDishes = id => DISHES.filter(d=>dishNeeds(d).req.has(id)||dishNeeds(d).opt.has(id));
+function ingrChips(d){ const L=[...dishNeeds(d).req].filter(id=>INGR_BY[id]).slice(0,10); if(!L.length) return "";
+  return `<div class="kingr"><small class="mono">KEY INGREDIENTS</small>${L.map(id=>`<button class="ichip ${havePantry(id)?"have":""}" data-ingr="${id}">${esc(INGR_BY[id].name)}</button>`).join("")}</div>`; }
+
+/* ---------- ingredient card ---------- */
+function openIngr(id){ const x=INGR_BY[id]; if(!x) return; const L=ingrDishes(id);
+  openModal(`<h2>${esc(x.name)}</h2>`,`<div class="icard">
+   <p class="ilocal">${esc(x.local)} · <span class="tag">${INGR_TYPES[x.type]}</span></p>
+   <div class="igrid"><div><h3>Where it grows</h3><p>${esc(x.grown)}</p></div>
+    <div class="ichem"><h3>⚗ The ChemE bit</h3><p>${esc(x.chem)}</p></div>
+    <div><h3>Storing it</h3><p>${esc(x.keep)}</p></div>
+    <div><h3>In a US kitchen</h3><p>${esc(x.sub)}</p></div></div>
+   <div class="cookdone"><button class="btn ${havePantry(id)?"acc":"ghost"}" id="iHave">${havePantry(id)?"✓ In my pantry":"+ I have this"}</button></div>
+   <h3>Used in ${L.length} dish${L.length===1?"":"es"}</h3><div class="rasa">${L.slice(0,60).map(d=>`<button class="kinb" data-open="${d.id}">${esc(d.name)}</button>`).join("")}${L.length>60?`<span class="on">+${L.length-60} more</span>`:""}</div>
+   <h3>Source</h3>${srcList([x.src])}</div>`);
+  $("#iHave").onclick=()=>{ togglePantry(id); openIngr(id); };
+}
+function togglePantry(id){ const i=store.pantry.indexOf(id); if(i>=0) store.pantry.splice(i,1); else store.pantry.push(id); save(); }
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-ingr]"); if(b){ e.preventDefault(); openIngr(b.dataset.ingr); } });
+
+/* ---------- the pantry view ---------- */
+let pTab="atlas", pType="", pQ="";
+const STARTER=["cumin","mustard-seed","turmeric","red-chilli","coriander-seed","garam-masala","asafoetida","black-pepper","cardamom","clove","cinnamon","fenugreek","ajwain","fennel","curry-leaf","rice","atta","maida","semolina","besan","toor","moong","urad","chana","masoor","kabuli-chana","ghee","yogurt","onion","tomato","ginger","garlic","green-chilli","coriander-leaf","lemon","tamarind","jaggery","coconut","k:potato","k:milk","k:peas"];
+function renderPantry(){
+  const el=$("#pantryView"); if(!el) return;
+  const tabs=`<div class="tabs ptabs" role="tablist"><button role="tab" data-ptab="atlas" aria-selected="${pTab==="atlas"}">Ingredient atlas</button><button role="tab" data-ptab="pantry" aria-selected="${pTab==="pantry"}">My pantry · what can I cook?</button></div>`;
+  if(pTab==="atlas"){
+    const ws=pQ.toLowerCase().split(/\s+/).filter(Boolean);
+    const L=INGR.filter(x=>(!pType||x.type===pType)&&ws.every(w=>(x.name+" "+x.local+" "+x.grown).toLowerCase().includes(w)));
+    el.innerHTML=`<div class="cards-h"><h2>Ingredients &amp; spices<span>${INGR.length} cards</span></h2><input type="search" class="pkq" id="iq" placeholder="Search ingredients" value="${esc(pQ)}" style="max-width:280px;margin:0"></div>${tabs}
+     <div class="fgroup" style="margin:10px 0 14px;flex-wrap:wrap"><button class="chip" data-itype="" aria-pressed="${!pType}">All</button>${Object.entries(INGR_TYPES).map(([k,v])=>`<button class="chip" data-itype="${k}" aria-pressed="${pType===k}">${v} <small>${INGR.filter(x=>x.type===k).length}</small></button>`).join("")}</div>
+     <div class="igrid2">${L.map(x=>{ const n=ingrDishes(x.id).length; return `<button class="icardb" data-ingr="${x.id}"><span class="itype t-${x.type}">${INGR_TYPES[x.type]}</span><b>${esc(x.name)}</b><small>${esc(x.local)}</small><p>${esc(snip(x.chem))}</p><span class="ifoot mono">${n} dishes${havePantry(x.id)?" · ✓ in pantry":""}</span></button>`; }).join("")||`<p class="note">No match.</p>`}</div>`;
+  } else {
+    const all=new Set(); DISHES.forEach(d=>dishNeeds(d).req.forEach(id=>all.add(id)));
+    const groups={}; [...all].forEach(id=>(groups[pAisle(id)] ||= []).push(id));
+    const order=[...Object.values(INGR_TYPES),...new Set(Object.values(AISLE))].filter((v,i,a)=>a.indexOf(v)===i&&groups[v]);
+    const ranked=DISHES.map(d=>({d,m:missing(d)})).filter(x=>x.m.length<=2).sort((a,b)=>a.m.length-b.m.length||handsOn(a.d)-handsOn(b.d));
+    const sec=(n,t)=>{ const L=ranked.filter(x=>x.m.length===n); return L.length?`<h3>${t} <small class="mono">${L.length}</small></h3><div class="pres">${L.slice(0,40).map(({d,m})=>`<div class="prow">${fs(d)}<button class="pnm" data-open="${d.id}">${esc(d.name)}</button><span class="mono pmin">${Math.round(handsOn(d))}′</span>${m.length?`<span class="pmiss">need ${m.map(id=>esc(pName(id))).join(", ")}</span>`:""}</div>`).join("")}${L.length>40?`<p class="note">+${L.length-40} more</p>`:""}</div>`:""; };
+    el.innerHTML=`<div class="cards-h"><h2>My pantry<span>${store.pantry.length} items ticked</span></h2>
+      <div class="pact" style="margin:0"><button class="btn ghost" id="pStarter">Tick a typical Indian pantry</button><button class="btn ghost" id="pNone">Clear</button><label class="chip" style="cursor:pointer"><input type="checkbox" id="pBas" ${store.basics?"checked":""}> Assume oil, sugar, salt, water</label></div></div>${tabs}
+     <div class="pgrid"><div class="plist">${order.map(g=>`<div class="pgrp"><h4>${g}</h4>${groups[g].sort((a,b)=>pName(a).localeCompare(pName(b))).map(id=>`<label class="pchk"><input type="checkbox" data-pid="${id}" ${store.pantry.includes(id)?"checked":""}><span>${esc(pName(id))}</span>${INGR_BY[id]?`<button class="linkbtn" data-ingr="${id}" aria-label="About ${esc(pName(id))}">ⓘ</button>`:""}</label>`).join("")}</div>`).join("")}</div>
+      <div class="presults">${store.pantry.length?sec(0,"Cook now")+sec(1,"Missing one thing")+sec(2,"Missing two things")||`<p class="note">Nothing yet within two items. Tick a few more.</p>`:`<div class="empty" style="padding:20px 8px"><b>What's in your kitchen?</b>Tick what you have, or start from a typical Indian pantry, and dishes you can cook now appear here, quickest first.</div>`}
+       <p class="note">Matching uses each recipe's ingredient list; optional extras and serving garnishes don't count. Spices hidden in a recipe's "spices" line count only when the atlas has a card for them.</p></div></div>`;
+  }
+}
+function wirePantry(){ const el=$("#pantryView");
+  el.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+    if(b.dataset.ptab){ pTab=b.dataset.ptab; renderPantry(); }
+    else if(b.dataset.itype!==undefined && b.hasAttribute("data-itype")){ pType=b.dataset.itype; renderPantry(); }
+    else if(b.id==="pStarter"){ STARTER.forEach(id=>{ if(!store.pantry.includes(id)) store.pantry.push(id); }); save(); renderPantry(); toast("Ticked a typical Indian pantry: untick what you're out of"); }
+    else if(b.id==="pNone"){ store.pantry=[]; save(); renderPantry(); } });
+  el.addEventListener("change",e=>{ const t=e.target; if(t.dataset.pid){ togglePantry(t.dataset.pid); renderPantry(); } else if(t.id==="pBas"){ store.basics=t.checked; save(); renderPantry(); } });
+  el.addEventListener("input",e=>{ if(e.target.id==="iq"){ pQ=e.target.value; const pos=e.target.selectionStart; renderPantry(); const q=$("#iq"); q.focus(); q.setSelectionRange(pos,pos); } });
+}
+wirePantry();
+
 const h=(location.hash||"").slice(1);
-setView(h==="cards"||h==="map"||h==="plan"?h:store.view, false);
+setView(["cards","map","plan","pantry"].includes(h)?h:store.view, false);
 applyFilters(); drawGratLabels();
 if (byId[h]) { const d=byId[h]; setTimeout(()=>{ flyTo(d); openDish(h,{noFocus:true}); }, 60); }
 window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime};

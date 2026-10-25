@@ -435,14 +435,14 @@ document.addEventListener("click", e => { const o=e.target.closest("[data-open]"
 /* ================= view toggle ================= */
 function setView(v, push=true){
   store.view=v; save();
-  $("#vMap").setAttribute("aria-pressed", v==="map"); $("#vCards").setAttribute("aria-pressed", v==="cards"); $("#vPlan").setAttribute("aria-pressed", v==="plan");
-  $("#mapView").hidden = v!=="map"; $("#cardView").hidden = v!=="cards"; $("#planView").hidden = v!=="plan";
-  $("#filters").hidden = v==="plan"; if (v==="plan" && typeof renderPlan==="function") renderPlan();
+  $("#vMap").setAttribute("aria-pressed", v==="map"); $("#vCards").setAttribute("aria-pressed", v==="cards"); $("#vPlan").setAttribute("aria-pressed", v==="plan"); $("#vPantry").setAttribute("aria-pressed", v==="pantry");
+  $("#mapView").hidden = v!=="map"; $("#cardView").hidden = v!=="cards"; $("#planView").hidden = v!=="plan"; $("#pantryView").hidden = v!=="pantry";
+  $("#filters").hidden = v==="plan"||v==="pantry"; if (v==="plan" && typeof renderPlan==="function") renderPlan(); if (v==="pantry" && typeof renderPantry==="function") renderPantry();
   if (v!=="map" && game) endGame(true);
   if (push && !$("#drawer").classList.contains("on")) history.replaceState(null,"","#"+v);
   if (v==="map") requestAnimationFrame(updatePins);
 }
-$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan");
+$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan"); $("#vPantry").onclick=()=>setView("pantry");
 
 /* ================= map ================= */
 const svg = d3.select("#map"), W=800, H=900;
@@ -675,6 +675,7 @@ function paneRecipe(d){
     <div class="facts"><div><small>Serves</small><b class="srv"><button class="srvb" data-srv="-1" aria-label="Fewer servings">−</button><span class="mono">${servOf(d)}</span><button class="srvb" data-srv="1" aria-label="More servings">+</button></b></div><div><small>Hands-on</small><b>${fmtM(segs[0]?.mins||d.mins)}</b></div><div><small>Start to finish</small><b>${fmtM(tot||d.mins)}</b></div><div><small>Makes</small><b>≈${Math.round(d.yield*fac(d))} g</b></div><div><small>Level</small><b>${level(d)}</b></div></div>
     ${segs.length>1?`<div class="tline" aria-label="Timeline">${segs.map(s=>`<span style="flex:${Math.max(s.mins/tot,.12)};background:${SEGCOL[s.lab]||SEGCOL[s.lab.split(" ")[0]]||"var(--ink-2)"}" title="${esc(s.lab)} · ${fmtM(s.mins)}"><em>${esc(s.lab)} · ${fmtM(s.mins)}</em></span>`).join("")}</div>`:""}
    </header>
+   ${ingrChips(d)}
    <section><div class="bsec"><h3>Mise en place</h3>${fac(d)!==1?`<span class="scaled mono">×${+fac(d).toFixed(2)} · quantities in the steps are for ${d.serves}</span>`:""}<span class="prog mono"><span>${tk.i.length}/${nI}</span><span class="bar"><i style="width:${tk.i.length/nI*100}%"></i></span></span></div>${mise}</section>
    <section><div class="bsec"><h3>Method</h3><span class="prog mono"><span>${tk.s.length}/${d.steps.length}</span><span class="bar"><i style="width:${tk.s.length/d.steps.length*100}%"></i></span></span></div><ol class="bsteps">${steps}</ol></section>
    <div class="cookdone"><button class="btn acc" id="cookMode">${eqIcon("pot",16)} Start cook mode</button><button class="btn ${tk.s.length===d.steps.length?"":"ghost"}" id="cookIt">${status(d.id).c?"Cooked ★ (tap to undo)":"I cooked this"}</button><button class="btn ghost" id="resetTicks">Reset</button></div>
@@ -1463,7 +1464,7 @@ $("#subt").textContent = `Indian Food Atlas · ${DISHES.length} dishes`;
 renderFilters(); syncHdr(); refreshHeader();
 /*PLANNER*/
 const h=(location.hash||"").slice(1);
-setView(h==="cards"||h==="map"||h==="plan"?h:store.view, false);
+setView(["cards","map","plan","pantry"].includes(h)?h:store.view, false);
 applyFilters(); drawGratLabels();
 if (byId[h]) { const d=byId[h]; setTimeout(()=>{ flyTo(d); openDish(h,{noFocus:true}); }, 60); }
 window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime};

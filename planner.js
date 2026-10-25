@@ -1,4 +1,5 @@
 /* ================= meal planner + ChemE kitchen scheduler ================= */
+const WK = t => ["Wikipedia: " + t.replace(/_/g," ").replace(/\(.*\)/,"").trim(), "https://en.wikipedia.org/wiki/" + t];   // W is the map width inside this scope
 const DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"], DAYL=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const SLOTS=["breakfast","lunch","snack","dinner"];
 const PLAN = store.plan = Object.assign({people:2, wd:45, we:90, burners:2, veg:false, snacks:false,
@@ -339,8 +340,8 @@ function shopping(){
 function openShop(){
   const {groups,fmtG,eggN}=shopping(); const order=Object.values(AISLE).filter((v,i,a)=>a.indexOf(v)===i);
   const txt=order.filter(a=>groups[a]).map(a=>`${a}\n`+groups[a].sort((x,y)=>y.g-x.g).map(it=>`- ${it.name}: ${fmtG(it.k,it.g)}${eggN(it.k)}`).join("\n")).join("\n\n")+"\n\nPantry: salt, whole and ground spices (check stock)";
-  openModal(`<h2>Shopping list</h2>`, Object.keys(groups).length?`<p class="note" style="margin-top:0">For ${PLAN.people} ${PLAN.people>1?"people":"person"}, every planned dish, totalled by ingredient. Weights are the amounts the recipes use (peeled, trimmed); buy a little more of vegetables and meat on the bone.</p>
-    <div class="shop">${order.filter(a=>groups[a]).map(a=>`<div class="shg"><h3>${a}</h3>${groups[a].sort((x,y)=>y.g-x.g).map(it=>`<label class="shi"><input type="checkbox"><span><b>${esc(it.name)}</b> <span class="mono">${fmtG(it.k,it.g)}${eggN(it.k)}</span><small>${it.uses.slice(0,4).map(esc).join(", ")}${it.uses.length>4?` +${it.uses.length-4}`:""}</small></span></label>`).join("")}</div>`).join("")}
+  openModal(`<h2>Shopping list</h2>`, Object.keys(groups).length?`<p class="note" style="margin-top:0">For ${PLAN.people} ${PLAN.people>1?"people":"person"}, every planned dish, totalled by ingredient. Weights are the amounts the recipes use (peeled, trimmed); buy a little more of vegetables and meat on the bone. Items ticked in your pantry are pre-checked.</p>
+    <div class="shop">${order.filter(a=>groups[a]).map(a=>`<div class="shg"><h3>${a}</h3>${groups[a].sort((x,y)=>(inPantryKey(x.k)-inPantryKey(y.k))||y.g-x.g).map(it=>`<label class="shi ${inPantryKey(it.k)?"have":""}"><input type="checkbox" ${inPantryKey(it.k)?"checked":""}><span><b>${esc(it.name)}</b>${inPantryKey(it.k)?' <small class="ihave">in your pantry</small>':""} <span class="mono">${fmtG(it.k,it.g)}${eggN(it.k)}</span><small>${it.uses.slice(0,4).map(esc).join(", ")}${it.uses.length>4?` +${it.uses.length-4}`:""}</small></span></label>`).join("")}</div>`).join("")}
      <div class="shg"><h3>Pantry</h3><p class="note">Salt and the whole and ground spices the recipes call for: check your stock.</p></div></div>
     <div class="cookdone"><button class="btn acc" id="shCopy">Copy as text</button></div>`
    :`<div class="empty" style="padding:20px 8px"><b>Nothing planned yet</b>Add dishes to the week, or tap “Fill my week”.</div>`);
@@ -383,7 +384,7 @@ function openPlanHow(){
    <h3>4. Read the result like a process engineer</h3><p><b>Makespan</b> is the session length. <b>Utilisation</b> is the share of it you are busy. The <b>bottleneck</b> is whatever limits it: you, the stove, or one long dish. Overlapping passive steps with hands-on work is where the time saving comes from, compared with cooking one dish after another.</p>
    <h3>5. Scale-up isn't linear</h3><p>Cooking for more people makes frying, rolling and chopping take longer (more batches), but a pot simmers in about the same time whether it holds two portions or six. The planner scales those steps and leaves the rest. Soaks and ferments longer than two hours become advance-prep reminders.</p>
    <h3>6. Batching the chores</h3><p>The weekend prep session groups repeated chores (onions, ginger-garlic paste, boiled potatoes) because every chore has a set-up cost, paid once per batch.</p>
-   <p class="note">The schedule is a heuristic, not an optimum; real recipes have slack the step times don't capture. Further reading: ${srcList([W("Gantt_chart"),W("Critical_path_method"),W("List_scheduling"),W("Job-shop_scheduling"),W("Batch_production")])}</p>`);
+   <p class="note">The schedule is a heuristic, not an optimum; real recipes have slack the step times don't capture. Further reading: ${srcList([WK("Gantt_chart"),WK("Critical_path_method"),WK("List_scheduling"),WK("Job-shop_scheduling"),WK("Batch_production")])}</p>`);
 }
 
 /* ---------- wiring ---------- */
