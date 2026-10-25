@@ -51,6 +51,9 @@ function nutrition(d) {
   }
   return { per100:p, serv:s, kj, fvl, N, P, nTot, protCounts, score, grade };
 }
+/* Nutri-Score 2017: milk and drinks that are more than 80% milk are scored as foods; other drinks use the beverage table (computed here so every drink follows the same rule) */
+const DAIRY_K=["milk","yogurt","cream","condensedmilk","icecream","milkpowder"];
+DISHES.forEach(d => { if(!d.meals.includes("drinks")) return; let dairy=0, liq=0; d.ing.forEach(r=>{ if(r[0]==="#") return; for(const [k,g] of Object.entries(r[2]||{})){ if(DAIRY_K.includes(k)){ dairy+=g; liq+=g; } else if(k==="water"||k==="coconutmilk") liq+=g; } }); d.bev = !(liq && dairy/liq>0.8); d.dairyDrink = !d.bev; });
 DISHES.forEach(d => { d.nut = nutrition(d); d.grade = d.nut.grade; d.tags = deriveTags(d); snackify(d); d.vars = (VARIANTS[d.id]||[]).map(v=>({name:v[0],note:v[1],url:v[2]||("https://www.google.com/search?q="+encodeURIComponent(v[0]+" recipe"))})); });
 
 /* ================= pencil sketch engine ================= */
@@ -735,7 +738,7 @@ function wirePane(d){
   const cm=$("#cookMode"); if(cm) cm.onclick=()=>openCook(d,0);
   const rt=$("#resetTicks"); if(rt) rt.onclick=()=>{ delete store.ticks[d.id]; save(); renderPane(); };
   const om=$("#oMap"); if(om) om.onclick=()=>{ closeDrawer(); setView("map"); flyTo(d); };
-  if($("#pane .lab")) wireCheme(d);
+  if(tab==="cheme" && $("#labc")) wireCheme(d);
 }
 
 /* ---------- kitchen timer + cook mode ---------- */
@@ -819,7 +822,7 @@ function mNutri(){
    <h3>Worked example</h3><label class="exsel">Dish <select id="exDish">${DISHES.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(x=>`<option value="${x.id}" ${x.id===d.id?"selected":""}>${esc(x.name)}</option>`).join("")}</select></label><div id="ex">${example(d)}</div>
    <h3>Daily references on the per-serving bars</h3>
    <ul class="plain"><li>Salt: WHO recommends under 5 g a day.</li><li>Sugars: WHO recommends free sugars under 10% of energy, about 50 g at 2000 kcal. The bars show total sugars, which also include milk and fruit sugars.</li><li>Energy 2000 kcal, protein 50 g, saturated fat 20 g: EU reference intakes.</li><li>Fibre 25 g: EFSA adequate intake for adults.</li></ul>
-   <h3>Drinks</h3><p>Drinks use the 2017 beverage rules: stricter energy and sugar thresholds per 100 ml, bigger fruit-and-vegetable points, and grades B (≤1), C (2–5), D (6–9), E (≥10); only plain water earns an A. Milk and drinks that are more than 80% milk (filter coffee, thandai) are scored with the general food rules instead.</p>
+   <h3>Drinks</h3><p>Drinks use the 2017 beverage rules: stricter energy and sugar thresholds per 100 ml, bigger fruit-and-vegetable points, and grades B (≤1), C (2–5), D (6–9), E (≥10); only plain water earns an A. Milk and drinks that are more than 80% milk, by the weight of their liquids (filter coffee, thandai, rose milk, falooda), are scored with the general food rules instead, as the 2017 rules did; the atlas works this out from each recipe.</p>
    <h3>Limits worth knowing</h3>
    <ul class="plain"><li>Nutri-Score was built for packaged foods; here it is a way to compare dishes, not a verdict.</li><li>It ignores frying method, portion size and processing. Legume-rich dishes can score A even when deep-fried.</li><li>Potatoes, yams and sweet potatoes don't count as vegetables.</li><li>Fibre values come from USDA (AOAC method), which reads somewhat higher than the method the published fibre thresholds assume, so fibre points may run slightly generous.</li><li>Composition values are typical, not measured on these exact dishes, and cooked yields are estimates.</li></ul>
    <h3>Sources</h3>${srcList([SRC.nutriWiki,SRC.nutriOFF,SRC.nutriBev,SRC.usda,SRC.ifct,SRC.whoSalt,SRC.whoSugar,SRC.euRI,SRC.fibre])}`;
@@ -1375,7 +1378,7 @@ function paneCheme(d){
    <h3>Sources</h3>${srcList(D.src.map(s=>DS[s]))}`;
 }
 function wireCheme(d){
-  const key=DEEP_BY_DISH[d.id]; if(!key) return;
+  const key=DEEP_BY_DISH[d.id]; if(!key || !$("#pane .lab")) return;
   const D=DEEP[key], L=LABS[D.lab];
   const go=()=>{ const ok=L.run(); const st=$("#chalst"); if(!st) return; st.textContent=ok?" ✓ Solved":""; st.className=ok?"ok":"";
     if(ok){ store.labs ||= {}; if(!store.labs[D.lab]){ store.labs[D.lab]=true; save(); refreshHeader(); toast(`Process badge: ${LAB_BADGES[D.lab]}`); } } };
@@ -1467,5 +1470,5 @@ const h=(location.hash||"").slice(1);
 setView(["cards","map","plan","pantry"].includes(h)?h:store.view, false);
 applyFilters(); drawGratLabels();
 if (byId[h]) { const d=byId[h]; setTimeout(()=>{ flyTo(d); openDish(h,{noFocus:true}); }, 60); }
-window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime,LABS,DEEP};
+window.__atlas={byId,F,matches,viaVariant,HIST,PLAN,opsOf,schedule,fillWeek,handsOn,stepMeta,parseTime,LABS,DEEP,PAIRS,CARB_IDS,CONDIMENT,KIDS,INGR,STARTER,dishNeeds};
 })();
