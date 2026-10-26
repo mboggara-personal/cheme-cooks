@@ -857,7 +857,7 @@ function mData(){
    <h3>Sources</h3>${srcList([SRC.fssai,SRC.datameet,SRC.beans,SRC.temp])}`;
 }
 function mCheme(){
-  return `<h3>What the ChemE deep dives are</h3>
+  return `${whatBox("Never studied chemical engineering? Start here:")}<h3>What the ChemE deep dives are</h3>
    <p>Each deep dive treats a recipe as a small process plant: a process flow diagram of unit operations, an interactive model with live plots, a mass and energy balance from the recipe's own quantities, troubleshooting from first principles, and the industrial process that runs on the same physics. Recipe steps carry unit-operation chips that link back here. Switch between <b>Kitchen</b> and <b>Engineer</b> depth inside any deep dive.</p>
    <h3>How the models are built</h3>
    <table class="pts mb mtab"><tr><td>Fermentation</td><td>Gompertz curve fitted to measured idli batter rise and pH at ≈ 30 °C; temperature via the Ratkowsky square-root rule (T<sub>min</sub> illustrative)</td></tr>
@@ -1363,13 +1363,13 @@ function paneCheme(d){
   const key=DEEP_BY_DISH[d.id];
   if(!key){
     return `<div class="lockban"><svg width="34" height="34" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 7h10M15 7v8L8.5 26.5A3 3 0 0 0 11 31h14a3 3 0 0 0 2.5-4.5L21 15V7"/><path d="M11 23h14"/></svg><div><b>No deep dive for this dish yet</b><span>${Object.keys(DEEP).length} process deep dives with interactive labs are live, covering ${Object.keys(DEEP_BY_DISH).length} dishes (see the concept index). Here are the core concepts in this recipe:</span></div></div>
-     ${d.cheme.map(k=>`<div class="concept"><b>${esc(CHEME[k][0])}</b><p>${esc(CHEME[k][1])}</p><button class="linkbtn" data-concept="${k}">See all ${DISHES.filter(x=>x.cheme.includes(k)).length} dishes with ${esc(CHEME[k][0].toLowerCase())} →</button></div>`).join("")}
-     <p><button class="btn ghost" data-cindex="1">Open the concept index</button></p>`;
+     ${d.cheme.map(k=>`<div class="concept"><b>${esc(CHEME[k][0])}</b><p>${esc(CHEME[k][1])} ${whatConcept(k)}</p><button class="linkbtn" data-concept="${k}">See all ${DISHES.filter(x=>x.cheme.includes(k)).length} dishes with ${esc(CHEME[k][0].toLowerCase())} →</button></div>`).join("")}
+     <p><button class="btn ghost" data-cindex="1">Open the concept index</button></p>${whatBox()}`;
   }
   const D=DEEP[key], L=LABS[D.lab], eng=isEng(), done=store.labs&&store.labs[D.lab];
   return `<div class="dhead"><div><div class="kick mono">CHEME DEEP DIVE</div><h3 style="margin:2px 0 0">${esc(D.title)}</h3></div>
     <div class="seg dseg" role="group" aria-label="Depth"><button data-depth="kit" aria-pressed="${!eng}">Kitchen</button><button data-depth="eng" aria-pressed="${eng}">Engineer</button></div></div>
-   <p class="story" style="font-size:15.5px">${esc(eng?D.eng:D.kitchen)}</p>
+   <p class="story" style="font-size:15.5px">${esc(eng?D.eng:D.kitchen)}</p>${eng?"":whatBox("Terms like unit operation or mass balance new to you?")}
    <h3>Process flow</h3>
    <div class="pfdwrap"><div class="pfd">${D.pfd.map((u,i)=>`<div class="unit"><span class="un mono">U-${String(i+1).padStart(2,"0")}</span><b>${esc(u[0])}</b><span class="uop">${esc(u[1])}</span>${eng?`<span class="ucond mono">${esc(u[2])}</span>`:""}</div>${i<D.pfd.length-1?'<span class="arrow" aria-hidden="true">→</span>':""}`).join("")}</div></div>
    <h3>Lab: ${esc(L.title)} ${done?`<span class="pbadge">✓ ${esc(LAB_BADGES[D.lab])} badge</span>`:""}</h3>
@@ -1398,9 +1398,9 @@ document.addEventListener("click",e=>{
 /* ---------- concept index ---------- */
 function openConcepts(){
   const rows=Object.entries(CHEME).map(([k,[n,desc]])=>({k,n,desc,L:DISHES.filter(d=>d.cheme.includes(k))})).sort((a,b)=>b.L.length-a.L.length);
-  openModal(`<h2>ChemE concept index</h2>`,`<p class="lead" style="font-family:var(--f-display);font-size:17px;margin:0 0 14px">Every concept, and every dish that uses it. Tap "Show on map" to light up just those dishes.</p>
+  openModal(`<h2>ChemE concept index</h2>`,`<p class="lead" style="font-family:var(--f-display);font-size:17px;margin:0 0 14px">Every concept, and every dish that uses it. Tap "Show on map" to light up just those dishes.</p>${whatBox()}
    <div class="deepl">${Object.entries(DEEP).map(([k,D])=>`<button class="deepc" data-open="${D.dishes[0]}" data-deeptab="1"><span class="mono">DEEP DIVE${store.labs&&store.labs[D.lab]?" · ✓":""}</span><b>${esc(D.title)}</b><span>${D.dishes.map(id=>esc(byId[id].name)).join(" · ")}</span></button>`).join("")}</div>
-   <div class="cidx">${rows.map(r=>`<div class="crow"><div><b>${esc(r.n)}</b><p>${esc(r.desc)}</p><div class="cdish">${r.L.slice(0,14).map(d=>`<button class="kinb" data-open="${d.id}">${esc(d.name)}</button>`).join("")}${r.L.length>14?`<span class="mono" style="font-size:11px;color:var(--muted)">+${r.L.length-14} more</span>`:""}</div></div><button class="btn ghost" data-concept="${r.k}">Show ${r.L.length} on map</button></div>`).join("")}</div>`);
+   <div class="cidx">${rows.map(r=>`<div class="crow"><div><b>${esc(r.n)}</b><p>${esc(r.desc)} ${whatConcept(r.k)}</p><div class="cdish">${r.L.slice(0,14).map(d=>`<button class="kinb" data-open="${d.id}">${esc(d.name)}</button>`).join("")}${r.L.length>14?`<span class="mono" style="font-size:11px;color:var(--muted)">+${r.L.length-14} more</span>`:""}</div></div><button class="btn ghost" data-concept="${r.k}">Show ${r.L.length} on map</button></div>`).join("")}</div>`);
 }
 document.addEventListener("click",e=>{ const t=e.target.closest("[data-deeptab]"); if(t){ if(cookState) closeCook(); setTimeout(()=>{ if(!cur) return; $("#dbody").scrollTop=0; tab="cheme"; $$(".tabs button").forEach(x=>x.setAttribute("aria-selected",x.dataset.tab==="cheme")); renderPane(); },0); } });
 

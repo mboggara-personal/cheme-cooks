@@ -30,7 +30,7 @@ function openIngr(id){ const x=INGR_BY[id]; if(!x) return; const L=ingrDishes(id
   openModal(`<h2>${esc(x.name)}</h2>`,`<div class="icard">
    <p class="ilocal">${esc(x.local)} · <span class="tag">${INGR_TYPES[x.type]}</span></p>
    <div class="igrid"><div><h3>Where it grows</h3><p>${esc(x.grown)}</p></div>
-    <div class="ichem"><h3>⚗ The ChemE bit</h3><p>${esc(x.chem)}</p></div>
+    <div class="ichem"><h3>⚗ The ChemE bit</h3><p>${esc(x.chem)}</p><a class="clink" href="${whatURL()}"${whatTarget()}>New to chemical engineering? The basics, sketched →</a></div>
     <div><h3>Storing it</h3><p>${esc(x.keep)}</p></div>
     <div><h3>In a US kitchen</h3><p>${esc(x.sub)}</p></div></div>
    <div class="cookdone"><button class="btn ${havePantry(id)?"acc":"ghost"}" id="iHave">${havePantry(id)?"✓ In my pantry":"+ I have this"}</button></div>

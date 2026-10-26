@@ -381,7 +381,7 @@ function openPrep(){
 
 /* ---------- 11. how it works ---------- */
 function openPlanHow(){
-  openModal(`<h2>Your kitchen as a batch plant</h2>`,`<p>A chemical plant and a home kitchen share a scheduling problem: several products (dishes) each pass through a fixed sequence of operations, and they compete for limited resources. The planner treats it the way a process engineer would.</p>
+  openModal(`<h2>Your kitchen as a batch plant</h2>`,`${whatBox("Batch plant, critical path, unit operations: new terms?")}<p>A chemical plant and a home kitchen share a scheduling problem: several products (dishes) each pass through a fixed sequence of operations, and they compete for limited resources. The planner treats it the way a process engineer would.</p>
    <h3>1. Every dish is a recipe of unit operations</h3><p>Each step is an operation with a duration, taken from the times in the step or shared out from the recipe's total time. Part of it needs you (<b>hands-on</b>: chopping, tempering, rolling); part runs by itself (<b>passive</b>: simmering, pressure-cooking, baking, soaking, fermenting). Steps also hold equipment: a burner or the oven.</p>
    <h3>2. Resources are limited</h3><p>You are one operator with two hands. The stove has as many burners as you set, and there is one oven. Passive steps still hold their burner.</p>
    <h3>3. Schedule backwards from serving time</h3><p>Like a plant scheduling to a delivery date, the planner starts from the moment the food is served and works back. At each point it places the operation from the dish with the <b>longest remaining chain</b> (the critical path) first, if your hands and a burner are free. Everything finishes together, hot, and you see the latest moment to start.</p>

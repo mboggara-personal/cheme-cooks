@@ -725,6 +725,10 @@ ul.tchk .linkbtn{font-size:13px}
 :root[data-theme="dark"] .themebtn .i-sun{display:none}:root[data-theme="dark"] .themebtn .i-moon{display:block}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .themebtn .i-sun{display:none}:root:not([data-theme="light"]) .themebtn .i-moon{display:block}}
 :root[data-theme="dark"] .itype{filter:brightness(.8) saturate(1.1)}
+a.tbtn{color:var(--ink);text-decoration:none}a.tbtn:hover{border-color:var(--ink)}
+.whatis{display:flex;gap:12px;align-items:center;border:1px dashed var(--rule);border-left:3px solid var(--turmeric);border-radius:10px;padding:9px 12px;margin:10px 0 14px;font-size:14px;color:var(--ink-2);background:var(--panel)}
+.whatis a{font-weight:700;color:var(--turmeric-ink)}.whatis .wq{font-family:var(--f-display);font-size:20px;color:var(--turmeric-ink);line-height:1}
+.clink{display:inline-block;font-size:13px;font-weight:700;color:var(--turmeric-ink);margin:2px 0 0 0}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -755,6 +759,7 @@ ul.tchk .linkbtn{font-size:13px}
     <div class="tools">
       <button class="tbtn play" id="bPlay" title="Guess the origin (G)"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="6.5"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".8" fill="currentColor"/></svg><span class="lbl">Guess origin</span></button>
       <button class="tbtn" id="bLab" title="ChemE concept index and labs"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1.5h4M6.8 1.5v4.5L2.6 12.6A1.3 1.3 0 0 0 3.7 14.5h8.6a1.3 1.3 0 0 0 1.1-1.9L9.2 6V1.5"/><path d="M4.2 10h7.6"/></svg><span class="lbl">ChemE</span></button>
+      <a class="tbtn" id="bWhat" href="../cheme/" title="What is chemical engineering? A pencil-sketch primer"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="6.5"/><path d="M6.2 6.2a1.9 1.9 0 1 1 2.6 1.7c-.5.3-.8.7-.8 1.3v.5"/><circle cx="8" cy="11.6" r=".5" fill="currentColor"/></svg><span class="lbl">What is ChemE?</span></a>
       <button class="tbtn" id="bKids" title="Kitchen science for kids"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="2"/><ellipse cx="8" cy="8" rx="7" ry="2.8"/><ellipse cx="8" cy="8" rx="7" ry="2.8" transform="rotate(60 8 8)"/><ellipse cx="8" cy="8" rx="7" ry="2.8" transform="rotate(120 8 8)"/></svg><span class="lbl">Kids lab</span></button>
       <button class="tbtn" id="bTrails" title="Food trails"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="3.5" cy="12.5" r="1.8"/><circle cx="12.5" cy="3.5" r="1.8"/><path d="M5 11c3-1 1-5 4-6.5" stroke-dasharray="2 2"/></svg><span class="lbl">Trails</span></button>
       <button class="tbtn" id="bSurprise" title="Surprise me"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><circle cx="5" cy="5" r="1" fill="currentColor"/><circle cx="11" cy="11" r="1" fill="currentColor"/><circle cx="8" cy="8" r="1" fill="currentColor"/></svg><span class="lbl">Surprise</span></button>
@@ -6946,7 +6951,7 @@ function mData(){
    <h3>Sources</h3>${srcList([SRC.fssai,SRC.datameet,SRC.beans,SRC.temp])}`;
 }
 function mCheme(){
-  return `<h3>What the ChemE deep dives are</h3>
+  return `${whatBox("Never studied chemical engineering? Start here:")}<h3>What the ChemE deep dives are</h3>
    <p>Each deep dive treats a recipe as a small process plant: a process flow diagram of unit operations, an interactive model with live plots, a mass and energy balance from the recipe's own quantities, troubleshooting from first principles, and the industrial process that runs on the same physics. Recipe steps carry unit-operation chips that link back here. Switch between <b>Kitchen</b> and <b>Engineer</b> depth inside any deep dive.</p>
    <h3>How the models are built</h3>
    <table class="pts mb mtab"><tr><td>Fermentation</td><td>Gompertz curve fitted to measured idli batter rise and pH at ≈ 30 °C; temperature via the Ratkowsky square-root rule (T<sub>min</sub> illustrative)</td></tr>
@@ -7452,13 +7457,13 @@ function paneCheme(d){
   const key=DEEP_BY_DISH[d.id];
   if(!key){
     return `<div class="lockban"><svg width="34" height="34" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 7h10M15 7v8L8.5 26.5A3 3 0 0 0 11 31h14a3 3 0 0 0 2.5-4.5L21 15V7"/><path d="M11 23h14"/></svg><div><b>No deep dive for this dish yet</b><span>${Object.keys(DEEP).length} process deep dives with interactive labs are live, covering ${Object.keys(DEEP_BY_DISH).length} dishes (see the concept index). Here are the core concepts in this recipe:</span></div></div>
-     ${d.cheme.map(k=>`<div class="concept"><b>${esc(CHEME[k][0])}</b><p>${esc(CHEME[k][1])}</p><button class="linkbtn" data-concept="${k}">See all ${DISHES.filter(x=>x.cheme.includes(k)).length} dishes with ${esc(CHEME[k][0].toLowerCase())} →</button></div>`).join("")}
-     <p><button class="btn ghost" data-cindex="1">Open the concept index</button></p>`;
+     ${d.cheme.map(k=>`<div class="concept"><b>${esc(CHEME[k][0])}</b><p>${esc(CHEME[k][1])} ${whatConcept(k)}</p><button class="linkbtn" data-concept="${k}">See all ${DISHES.filter(x=>x.cheme.includes(k)).length} dishes with ${esc(CHEME[k][0].toLowerCase())} →</button></div>`).join("")}
+     <p><button class="btn ghost" data-cindex="1">Open the concept index</button></p>${whatBox()}`;
   }
   const D=DEEP[key], L=LABS[D.lab], eng=isEng(), done=store.labs&&store.labs[D.lab];
   return `<div class="dhead"><div><div class="kick mono">CHEME DEEP DIVE</div><h3 style="margin:2px 0 0">${esc(D.title)}</h3></div>
     <div class="seg dseg" role="group" aria-label="Depth"><button data-depth="kit" aria-pressed="${!eng}">Kitchen</button><button data-depth="eng" aria-pressed="${eng}">Engineer</button></div></div>
-   <p class="story" style="font-size:15.5px">${esc(eng?D.eng:D.kitchen)}</p>
+   <p class="story" style="font-size:15.5px">${esc(eng?D.eng:D.kitchen)}</p>${eng?"":whatBox("Terms like unit operation or mass balance new to you?")}
    <h3>Process flow</h3>
    <div class="pfdwrap"><div class="pfd">${D.pfd.map((u,i)=>`<div class="unit"><span class="un mono">U-${String(i+1).padStart(2,"0")}</span><b>${esc(u[0])}</b><span class="uop">${esc(u[1])}</span>${eng?`<span class="ucond mono">${esc(u[2])}</span>`:""}</div>${i<D.pfd.length-1?'<span class="arrow" aria-hidden="true">→</span>':""}`).join("")}</div></div>
    <h3>Lab: ${esc(L.title)} ${done?`<span class="pbadge">✓ ${esc(LAB_BADGES[D.lab])} badge</span>`:""}</h3>
@@ -7487,9 +7492,9 @@ document.addEventListener("click",e=>{
 /* ---------- concept index ---------- */
 function openConcepts(){
   const rows=Object.entries(CHEME).map(([k,[n,desc]])=>({k,n,desc,L:DISHES.filter(d=>d.cheme.includes(k))})).sort((a,b)=>b.L.length-a.L.length);
-  openModal(`<h2>ChemE concept index</h2>`,`<p class="lead" style="font-family:var(--f-display);font-size:17px;margin:0 0 14px">Every concept, and every dish that uses it. Tap "Show on map" to light up just those dishes.</p>
+  openModal(`<h2>ChemE concept index</h2>`,`<p class="lead" style="font-family:var(--f-display);font-size:17px;margin:0 0 14px">Every concept, and every dish that uses it. Tap "Show on map" to light up just those dishes.</p>${whatBox()}
    <div class="deepl">${Object.entries(DEEP).map(([k,D])=>`<button class="deepc" data-open="${D.dishes[0]}" data-deeptab="1"><span class="mono">DEEP DIVE${store.labs&&store.labs[D.lab]?" · ✓":""}</span><b>${esc(D.title)}</b><span>${D.dishes.map(id=>esc(byId[id].name)).join(" · ")}</span></button>`).join("")}</div>
-   <div class="cidx">${rows.map(r=>`<div class="crow"><div><b>${esc(r.n)}</b><p>${esc(r.desc)}</p><div class="cdish">${r.L.slice(0,14).map(d=>`<button class="kinb" data-open="${d.id}">${esc(d.name)}</button>`).join("")}${r.L.length>14?`<span class="mono" style="font-size:11px;color:var(--muted)">+${r.L.length-14} more</span>`:""}</div></div><button class="btn ghost" data-concept="${r.k}">Show ${r.L.length} on map</button></div>`).join("")}</div>`);
+   <div class="cidx">${rows.map(r=>`<div class="crow"><div><b>${esc(r.n)}</b><p>${esc(r.desc)} ${whatConcept(r.k)}</p><div class="cdish">${r.L.slice(0,14).map(d=>`<button class="kinb" data-open="${d.id}">${esc(d.name)}</button>`).join("")}${r.L.length>14?`<span class="mono" style="font-size:11px;color:var(--muted)">+${r.L.length-14} more</span>`:""}</div></div><button class="btn ghost" data-concept="${r.k}">Show ${r.L.length} on map</button></div>`).join("")}</div>`);
 }
 document.addEventListener("click",e=>{ const t=e.target.closest("[data-deeptab]"); if(t){ if(cookState) closeCook(); setTimeout(()=>{ if(!cur) return; $("#dbody").scrollTop=0; tab="cheme"; $$(".tabs button").forEach(x=>x.setAttribute("aria-selected",x.dataset.tab==="cheme")); renderPane(); },0); } });
 
@@ -7942,7 +7947,7 @@ function openPrep(){
 
 /* ---------- 11. how it works ---------- */
 function openPlanHow(){
-  openModal(`<h2>Your kitchen as a batch plant</h2>`,`<p>A chemical plant and a home kitchen share a scheduling problem: several products (dishes) each pass through a fixed sequence of operations, and they compete for limited resources. The planner treats it the way a process engineer would.</p>
+  openModal(`<h2>Your kitchen as a batch plant</h2>`,`${whatBox("Batch plant, critical path, unit operations: new terms?")}<p>A chemical plant and a home kitchen share a scheduling problem: several products (dishes) each pass through a fixed sequence of operations, and they compete for limited resources. The planner treats it the way a process engineer would.</p>
    <h3>1. Every dish is a recipe of unit operations</h3><p>Each step is an operation with a duration, taken from the times in the step or shared out from the recipe's total time. Part of it needs you (<b>hands-on</b>: chopping, tempering, rolling); part runs by itself (<b>passive</b>: simmering, pressure-cooking, baking, soaking, fermenting). Steps also hold equipment: a burner or the oven.</p>
    <h3>2. Resources are limited</h3><p>You are one operator with two hands. The stove has as many burners as you set, and there is one oven. Passive steps still hold their burner.</p>
    <h3>3. Schedule backwards from serving time</h3><p>Like a plant scheduling to a delivery date, the planner starts from the moment the food is served and works back. At each point it places the operation from the dish with the <b>longest remaining chain</b> (the critical path) first, if your hands and a burner are free. Everything finishes together, hot, and you see the latest moment to start.</p>
@@ -8065,7 +8070,7 @@ function openIngr(id){ const x=INGR_BY[id]; if(!x) return; const L=ingrDishes(id
   openModal(`<h2>${esc(x.name)}</h2>`,`<div class="icard">
    <p class="ilocal">${esc(x.local)} · <span class="tag">${INGR_TYPES[x.type]}</span></p>
    <div class="igrid"><div><h3>Where it grows</h3><p>${esc(x.grown)}</p></div>
-    <div class="ichem"><h3>⚗ The ChemE bit</h3><p>${esc(x.chem)}</p></div>
+    <div class="ichem"><h3>⚗ The ChemE bit</h3><p>${esc(x.chem)}</p><a class="clink" href="${whatURL()}"${whatTarget()}>New to chemical engineering? The basics, sketched →</a></div>
     <div><h3>Storing it</h3><p>${esc(x.keep)}</p></div>
     <div><h3>In a US kitchen</h3><p>${esc(x.sub)}</p></div></div>
    <div class="cookdone"><button class="btn ${havePantry(id)?"acc":"ghost"}" id="iHave">${havePantry(id)?"✓ In my pantry":"+ I have this"}</button></div>
@@ -8441,7 +8446,7 @@ function openKids(){ const done=Object.keys(store.kids).length;
   openModal(`<h2>Kitchen science for kids</h2>`,`<p class="lead" style="margin-top:0">Twelve experiments using things from the kitchen. Each one starts with a guess: <b>predict</b>, then <b>try</b> it, then find out <b>why</b>. They link to the dish and to the grown-up ChemE lab.</p>
    <div class="kbar"><span class="mono">${done}/${KIDS.length} done</span><span class="bar"><i style="width:${done/KIDS.length*100}%"></i></span><b>${done>=KIDS.length?"Master scientist":done>=8?"Kitchen scientist":done>=4?"Junior scientist":done>=1?"Curious cook":"Ready to start"}</b></div>
    <div class="kgrid">${KIDS.map(k=>`<button class="kcard ${store.kids[k.id]?"done":""}" data-kid="${k.id}"><span class="kmeta mono">AGE ${k.age} · ${k.time}${k.adult?" · WITH A GROWN-UP":""}</span><b>${esc(k.title)}</b><small>${esc(k.q)}</small>${store.kids[k.id]?'<span class="kstamp">done ✓</span>':""}</button>`).join("")}</div>
-   <p class="note"><b>For grown-ups:</b> experiments marked "with a grown-up" use the stove, hot liquids or a knife; an adult does those steps. Check for milk allergies before the dairy ones. Taste only the experiments meant to be eaten (paneer, dahi, kulfi, rice).</p>`);
+   <p class="note"><b>For grown-ups:</b> experiments marked "with a grown-up" use the stove, hot liquids or a knife; an adult does those steps. Check for milk allergies before the dairy ones. Taste only the experiments meant to be eaten (paneer, dahi, kulfi, rice).</p>${whatBox("Want the big ideas behind these experiments?")}`);
 }
 function openKid(id,picked){ const k=KIDS.find(x=>x.id===id); const ans=picked!==undefined;
   openModal(`<h2>${esc(k.title)}</h2>`,`<p class="kmeta mono" style="margin-top:0">AGE ${k.age} · ${k.time}${k.adult?" · WITH A GROWN-UP":""}</p>
@@ -8464,7 +8469,7 @@ const TOUR=[
   ["#q", "Search anything", "A dish, a city or an ingredient. Variants work too: “puchka” finds Golgappa."],
   ["#filters", "Filter the atlas", "Diet (veg, fish, egg, Jain, vrat), meal, region, Nutri-Score, dosha, kitchen and festival. Tap a state on the map to filter by it."],
   ["#bTrails", "Trails, thali and surprises", "Follow a food trail across India, build a balanced thali, or let the atlas pick a dish for you."],
-  ["#bLab", "The science", "ChemE opens every concept and the 17 labs; Kids lab has experiments for young cooks. How it works explains the scores and sources, and replays this tour."]
+  ["#bLab", "The science", "ChemE opens every concept and the 17 labs; new to it? ‘What is ChemE?’ is a short pencil-sketch primer. Kids lab has experiments for young cooks. How it works explains the scores and sources, and replays this tour."]
 ];
 let tourI=-1;
 function tourEl(){ let t=$("#tour"); if(!t){ t=document.createElement("div"); t.id="tour"; t.className="tour"; t.setAttribute("role","dialog"); t.setAttribute("aria-label","Atlas tour"); document.body.appendChild(t); } return t; }
@@ -8498,6 +8503,14 @@ setTimeout(()=>{
   else if(!store.toured && !byId[hh] && (store.view==="map"||store.view==="cards") && !game) startTour();
 }, 700);
 window.addEventListener("hashchange",()=>{ const hh=location.hash.slice(1); if(hh==="kids") openKids(); else if(hh==="labs") openConcepts(); });
+
+/* ---- links to the "What is chemical engineering?" primer, from anywhere in the atlas ---- */
+function whatURL(anchor){ const onSite=/\/atlas\/?$/.test(location.pathname); return (onSite?"../cheme/":"https://mboggara-personal.github.io/cheme-cooks/cheme/")+(anchor?"#"+anchor:""); }
+function whatTarget(){ return /\/atlas\/?$/.test(location.pathname)?"":' target="_blank" rel="noopener"'; }
+const WHAT_ANCHOR={fermentation:"ferment",leavening:"ferment",acidbase:"ferment",maillard:"kinetics",caramelization:"kinetics",denaturation:"kinetics",enzyme:"kinetics",crosslinking:"kinetics",gelatinization:"balance",emulsion:"emulsion",diffusion:"diffusion",heat:"heat",smoking:"heat",extraction:"separate",crystallization:"separate",pressure:"pressure",phase:"pressure"};
+function whatBox(text){ return `<div class="whatis"><span class="wq" aria-hidden="true">?</span><span>${text||"New to chemical engineering?"} <a href="${whatURL()}"${whatTarget()}>What is chemical engineering? Twelve big ideas in pencil sketches →</a></span></div>`; }
+function whatConcept(k){ const a=WHAT_ANCHOR[k]; return a?`<a class="clink" href="${whatURL(a)}"${whatTarget()}>The basics, sketched →</a>`:""; }
+(function(){ const b=$("#bWhat"); if(b){ b.href=whatURL(); if(!/\/atlas\/?$/.test(location.pathname)){ b.target="_blank"; b.rel="noopener"; } } })();
 
 const h=(location.hash||"").slice(1);
 setView(["cards","map","plan","pantry"].includes(h)?h:store.view, false);

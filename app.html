@@ -723,6 +723,10 @@ ul.tchk .linkbtn{font-size:13px}
 :root[data-theme="dark"] .themebtn .i-sun{display:none}:root[data-theme="dark"] .themebtn .i-moon{display:block}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .themebtn .i-sun{display:none}:root:not([data-theme="light"]) .themebtn .i-moon{display:block}}
 :root[data-theme="dark"] .itype{filter:brightness(.8) saturate(1.1)}
+a.tbtn{color:var(--ink);text-decoration:none}a.tbtn:hover{border-color:var(--ink)}
+.whatis{display:flex;gap:12px;align-items:center;border:1px dashed var(--rule);border-left:3px solid var(--turmeric);border-radius:10px;padding:9px 12px;margin:10px 0 14px;font-size:14px;color:var(--ink-2);background:var(--panel)}
+.whatis a{font-weight:700;color:var(--turmeric-ink)}.whatis .wq{font-family:var(--f-display);font-size:20px;color:var(--turmeric-ink);line-height:1}
+.clink{display:inline-block;font-size:13px;font-weight:700;color:var(--turmeric-ink);margin:2px 0 0 0}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -753,6 +757,7 @@ ul.tchk .linkbtn{font-size:13px}
     <div class="tools">
       <button class="tbtn play" id="bPlay" title="Guess the origin (G)"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="6.5"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r=".8" fill="currentColor"/></svg><span class="lbl">Guess origin</span></button>
       <button class="tbtn" id="bLab" title="ChemE concept index and labs"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 1.5h4M6.8 1.5v4.5L2.6 12.6A1.3 1.3 0 0 0 3.7 14.5h8.6a1.3 1.3 0 0 0 1.1-1.9L9.2 6V1.5"/><path d="M4.2 10h7.6"/></svg><span class="lbl">ChemE</span></button>
+      <a class="tbtn" id="bWhat" href="../cheme/" title="What is chemical engineering? A pencil-sketch primer"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="6.5"/><path d="M6.2 6.2a1.9 1.9 0 1 1 2.6 1.7c-.5.3-.8.7-.8 1.3v.5"/><circle cx="8" cy="11.6" r=".5" fill="currentColor"/></svg><span class="lbl">What is ChemE?</span></a>
       <button class="tbtn" id="bKids" title="Kitchen science for kids"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="2"/><ellipse cx="8" cy="8" rx="7" ry="2.8"/><ellipse cx="8" cy="8" rx="7" ry="2.8" transform="rotate(60 8 8)"/><ellipse cx="8" cy="8" rx="7" ry="2.8" transform="rotate(120 8 8)"/></svg><span class="lbl">Kids lab</span></button>
       <button class="tbtn" id="bTrails" title="Food trails"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="3.5" cy="12.5" r="1.8"/><circle cx="12.5" cy="3.5" r="1.8"/><path d="M5 11c3-1 1-5 4-6.5" stroke-dasharray="2 2"/></svg><span class="lbl">Trails</span></button>
       <button class="tbtn" id="bSurprise" title="Surprise me"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><circle cx="5" cy="5" r="1" fill="currentColor"/><circle cx="11" cy="11" r="1" fill="currentColor"/><circle cx="8" cy="8" r="1" fill="currentColor"/></svg><span class="lbl">Surprise</span></button>

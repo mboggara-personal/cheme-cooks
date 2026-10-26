@@ -4,7 +4,7 @@ const TOUR=[
   ["#q", "Search anything", "A dish, a city or an ingredient. Variants work too: “puchka” finds Golgappa."],
   ["#filters", "Filter the atlas", "Diet (veg, fish, egg, Jain, vrat), meal, region, Nutri-Score, dosha, kitchen and festival. Tap a state on the map to filter by it."],
   ["#bTrails", "Trails, thali and surprises", "Follow a food trail across India, build a balanced thali, or let the atlas pick a dish for you."],
-  ["#bLab", "The science", "ChemE opens every concept and the 17 labs; Kids lab has experiments for young cooks. How it works explains the scores and sources, and replays this tour."]
+  ["#bLab", "The science", "ChemE opens every concept and the 17 labs; new to it? ‘What is ChemE?’ is a short pencil-sketch primer. Kids lab has experiments for young cooks. How it works explains the scores and sources, and replays this tour."]
 ];
 let tourI=-1;
 function tourEl(){ let t=$("#tour"); if(!t){ t=document.createElement("div"); t.id="tour"; t.className="tour"; t.setAttribute("role","dialog"); t.setAttribute("aria-label","Atlas tour"); document.body.appendChild(t); } return t; }
@@ -38,3 +38,11 @@ setTimeout(()=>{
   else if(!store.toured && !byId[hh] && (store.view==="map"||store.view==="cards") && !game) startTour();
 }, 700);
 window.addEventListener("hashchange",()=>{ const hh=location.hash.slice(1); if(hh==="kids") openKids(); else if(hh==="labs") openConcepts(); });
+
+/* ---- links to the "What is chemical engineering?" primer, from anywhere in the atlas ---- */
+function whatURL(anchor){ const onSite=/\/atlas\/?$/.test(location.pathname); return (onSite?"../cheme/":"https://mboggara-personal.github.io/cheme-cooks/cheme/")+(anchor?"#"+anchor:""); }
+function whatTarget(){ return /\/atlas\/?$/.test(location.pathname)?"":' target="_blank" rel="noopener"'; }
+const WHAT_ANCHOR={fermentation:"ferment",leavening:"ferment",acidbase:"ferment",maillard:"kinetics",caramelization:"kinetics",denaturation:"kinetics",enzyme:"kinetics",crosslinking:"kinetics",gelatinization:"balance",emulsion:"emulsion",diffusion:"diffusion",heat:"heat",smoking:"heat",extraction:"separate",crystallization:"separate",pressure:"pressure",phase:"pressure"};
+function whatBox(text){ return `<div class="whatis"><span class="wq" aria-hidden="true">?</span><span>${text||"New to chemical engineering?"} <a href="${whatURL()}"${whatTarget()}>What is chemical engineering? Twelve big ideas in pencil sketches →</a></span></div>`; }
+function whatConcept(k){ const a=WHAT_ANCHOR[k]; return a?`<a class="clink" href="${whatURL(a)}"${whatTarget()}>The basics, sketched →</a>`:""; }
+(function(){ const b=$("#bWhat"); if(b){ b.href=whatURL(); if(!/\/atlas\/?$/.test(location.pathname)){ b.target="_blank"; b.rel="noopener"; } } })();

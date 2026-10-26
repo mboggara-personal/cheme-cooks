@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v32 | 2026-10-26 | Links to the ChemE primer from across the site: atlas toolbar button (What is ChemE?), concept index (plus per-concept "basics, sketched" links to the matching sketch), every dish's ChemE tab, How it works, Kids lab, ingredient cards, the meal-planner batch-plant view and the tour; landing page Four ways in, dosa lens and footer. In the Claude-hosted copy the links open the live site in a new tab |
 | v31 | 2026-10-26 | Dark mode is now the default (light remembered if chosen); new page /cheme/ "What is chemical engineering?" with 12 pencil-sketched concepts tied to kitchen examples and atlas dishes; landing headline now "India's food, mapped and explored through a chemical engineer's eyes"; deep-dive link and nav item on the landing page |
 | v30 | 2026-10-26 | Fix: pencil sketch drew blank on phones (Safari); simplified the pencil-grain filter |
 | v29 | 2026-10-26 | Landing page: pencil process-flow sketch (masala dosa as a chemical plant) at the top of the ChemE twist section; follows light/dark; swipeable on phones |
