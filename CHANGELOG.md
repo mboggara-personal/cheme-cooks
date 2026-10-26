@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v26 | 2026-10-26 | Dark mode: readable text in the ingredient "ChemE bit" box and the planner's "Start ahead" box |
 | v25 | 2026-10-26 | Copyright holder set to Mohan Boggara (Personal) in licences and footer |
 | v24 | 2026-10-25 | India's external boundary as per Survey of India (states clipped to it; Lakshadweep restored); licences (MIT code, CC BY-NC 4.0 content); README; GitHub Pages build in `docs/` |
 | v23 | 2026-10-25 | Quality pass: one rule for drink Nutri-Scores (2017: drinks >80% milk scored as food); fixed a script error on the Health tab of lab dishes; integrity and link checks |
