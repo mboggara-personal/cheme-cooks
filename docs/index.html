@@ -101,6 +101,34 @@ section{padding:56px 0}
 .pfd div{border:1.5px solid var(--ink);border-radius:8px;padding:6px 10px;font-size:14px;background:var(--panel)}
 .pfd em{font-style:normal;color:var(--muted)}
 /* chemE twist */
+.pfdsk{width:100%;height:auto;display:block;--pencil:var(--ink-2);--lead:var(--ink)}
+.pfdsk #pfdArt{filter:url(#pA)}
+.pfdsk .ghost{opacity:.28}
+.pfdsk .ln{fill:none;stroke:var(--lead);stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.pfdsk .ln.thin{stroke-width:1.3;stroke:var(--pencil)}
+.pfdsk .hl{stroke:var(--pencil);stroke-width:1;opacity:.55}
+.pfdsk .hfill{opacity:.7}
+.pfdsk .pipe{fill:none;stroke:var(--chili);stroke-width:2;stroke-linecap:round}
+.pfdsk .pipe.q{stroke:var(--turmeric)}
+.pfdsk .mk{fill:none;stroke:var(--chili);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pfdsk .grain *{fill:none;stroke:var(--pencil);stroke-width:1.3}
+.pfdsk .bub *{fill:none;stroke:var(--pencil);stroke-width:1.3}
+.pfdsk .hd{font-family:var(--f-hand);font-size:36px;fill:var(--lead)}
+.pfdsk .lb{font-family:var(--f-mono);font-size:14px;letter-spacing:.14em;fill:var(--lead);font-weight:500}
+.pfdsk .nt{font-family:var(--f-hand);font-size:22px;fill:var(--chili)}
+.pfdsk .nt.sm{font-size:18px;fill:var(--ink-2)}
+.pfdsk .sn{font-family:var(--f-mono);font-size:12px;fill:var(--pencil)}
+.pfdsk .tb{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;fill:var(--lead)}
+.pfdsk .tb.sm{fill:var(--muted)}
+.pfdsk .w-blue{fill:#7fb2c9;opacity:.28}
+.pfdsk .w-yel{fill:var(--turmeric);opacity:.16}
+.pfdsk .w-red{fill:none;stroke:var(--chili);stroke-width:26;opacity:.12;stroke-linecap:round}
+.pfdsk #pfdWash{filter:url(#pfdB)}
+.pfdfig{margin:14px 0 26px;padding:12px}
+.pfdscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pfdfig figcaption{font-size:14px;color:var(--muted);margin:8px 6px 2px}
+@media (max-width:760px){.pfdscroll .pfdsk{min-width:760px}.pfdfig figcaption::after{content:" Swipe sideways to see the whole plant."}}
+
 .twist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
 .lab{padding:24px}
 .lab label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px}
@@ -267,9 +295,134 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13.5px;col
 </section>
 
 <section id="twist" class="rv" aria-labelledby="h-twist">
+  <span class="kick">The ChemE twist</span>
+  <figure class="card pfdfig">
+    <div class="pfdscroll"><svg class="pfdsk" viewBox="0 0 1200 560" role="img" aria-labelledby="pfdT pfdD">
+<title id="pfdT">A dosa, drawn as a chemical plant</title>
+<desc id="pfdD">Pencil process-flow sketch: rice and urad dal are fed to a soak tank, ground in a stone grinder, fermented at about 30 degrees for 8 to 12 hours, cooked on a tawa acting as a reactor, and come out as a crisp dosa.</desc>
+<defs>
+ <filter id="pfdA" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3" result="d"/>
+  <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="9" result="g"/><feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.25" result="ga"/><feComposite in="d" in2="ga" operator="in"/></filter>
+ <filter id="pfdB" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
+ <pattern id="pfdH1" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><line x1="0" y1="0" x2="0" y2="7" class="hl"/></pattern>
+ <pattern id="pfdH2" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" class="hl"/></pattern>
+ <marker id="pfdAr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1 1.5 9 5 1 8.5" class="mk"/></marker>
+</defs>
+
+<g id="pfdWash">
+ <ellipse cx="300" cy="300" rx="70" ry="22" class="w-blue"/>
+ <path d="M690 220h120v150a20 20 0 0 1-20 20h-80a20 20 0 0 1-20-20z" class="w-yel"/>
+ <path d="M880 395q60-55 120 0" class="w-red"/>
+ <path d="M1060 330l90-30 0 40z" class="w-yel"/>
+</g>
+
+<g id="pfdArt">
+ <!-- title -->
+ <text x="40" y="58" class="hd">A dosa, drawn as a chemical plant</text>
+ <path d="M42 70q200 8 420-2" class="ln thin"/>
+
+ <!-- 1 FEED hopper -->
+ <path d="M50 180h120l-38 90h-44z" class="ln"/>
+ <path d="M88 270v26h44v-26" class="ln"/>
+ <g class="grain"><ellipse cx="80" cy="200" rx="6" ry="3"/><ellipse cx="98" cy="196" rx="6" ry="3" transform="rotate(20 98 196)"/><ellipse cx="118" cy="204" rx="6" ry="3"/><ellipse cx="138" cy="198" rx="6" ry="3" transform="rotate(-25 138 198)"/><circle cx="90" cy="214" r="3.5"/><circle cx="110" cy="220" r="3.5"/><circle cx="128" cy="216" r="3.5"/><ellipse cx="104" cy="234" rx="6" ry="3" transform="rotate(15 104 234)"/><circle cx="118" cy="244" r="3.5"/></g>
+ <text x="110" y="168" class="lb" text-anchor="middle">FEED</text>
+ <text x="110" y="330" class="nt" text-anchor="middle">rice 3 : urad 1</text>
+ <text x="110" y="352" class="nt sm" text-anchor="middle">(by volume)</text>
+
+ <!-- pipe 1 -->
+ <path d="M132 290h40q14 0 14-14v-30h44" class="pipe" marker-end="url(#pfdAr)"/>
+ <circle cx="188" cy="300" r="12" class="ln thin"/><text x="188" y="305" class="sn" text-anchor="middle">1</text>
+
+ <!-- 2 SOAK tank -->
+ <path d="M236 220v110q0 16 16 16h96q16 0 16-16V220" class="ln"/>
+ <path d="M236 256q16-8 32 0t32 0 32 0 32 0" class="ln thin"/>
+ <rect x="238" y="262" width="124" height="82" fill="url(#pfdH1)" class="hfill"/>
+ <g class="grain"><ellipse cx="268" cy="334" rx="7" ry="3.5"/><ellipse cx="288" cy="330" rx="7" ry="3.5" transform="rotate(14 288 330)"/><ellipse cx="312" cy="335" rx="7" ry="3.5"/><ellipse cx="334" cy="331" rx="7" ry="3.5" transform="rotate(-18 334 331)"/></g>
+ <path d="M300 172v40" class="pipe" marker-end="url(#pfdAr)"/><text x="308" y="186" class="nt sm">H₂O</text>
+ <text x="300" y="384" class="lb" text-anchor="middle">SOAK TANK</text>
+ <text x="300" y="408" class="nt" text-anchor="middle">6 h · grains swell</text>
+ <text x="300" y="430" class="nt sm" text-anchor="middle">water diffuses in</text>
+
+ <!-- pipe 2 -->
+ <path d="M364 300h70" class="pipe" marker-end="url(#pfdAr)"/>
+ <circle cx="398" cy="282" r="12" class="ln thin"/><text x="398" y="287" class="sn" text-anchor="middle">2</text>
+
+ <!-- 3 GRINDER -->
+ <ellipse cx="500" cy="232" rx="58" ry="14" class="ln"/>
+ <path d="M442 232v100q0 14 58 14t58-14V232" class="ln"/>
+ <ellipse cx="500" cy="290" rx="34" ry="18" class="ln" fill="url(#pfdH2)"/>
+ <path d="M500 210v-38m-10 0h20" class="ln"/>
+ <path d="M462 266a42 26 0 1 0 22-16" class="ln thin" marker-end="url(#pfdAr)"/>
+ <text x="500" y="384" class="lb" text-anchor="middle">GRINDER</text>
+ <text x="500" y="408" class="nt" text-anchor="middle">size reduction</text>
+ <text x="500" y="430" class="nt sm" text-anchor="middle">stone keeps it cool</text>
+
+ <!-- pipe 3 -->
+ <path d="M558 300h124" class="pipe" marker-end="url(#pfdAr)"/>
+ <circle cx="620" cy="282" r="12" class="ln thin"/><text x="620" y="287" class="sn" text-anchor="middle">3</text>
+
+ <!-- 4 FERMENTER -->
+ <path d="M690 220q60-46 120 0" class="ln"/>
+ <path d="M690 220v150q0 20 20 20h80q20 0 20-20V220" class="ln"/>
+ <path d="M690 262q20 10 40 0t40 0 40 0" class="ln thin"/>
+ <g class="bub"><circle cx="716" cy="300" r="5"/><circle cx="740" cy="330" r="7"/><circle cx="772" cy="296" r="4"/><circle cx="790" cy="340" r="6"/><circle cx="726" cy="356" r="4"/><circle cx="760" cy="364" r="5"/><circle cx="750" cy="280" r="3"/><circle cx="702" cy="330" r="3"/></g>
+ <path d="M750 196v-40" class="pipe" marker-end="url(#pfdAr)"/><text x="760" y="168" class="nt">CO₂</text>
+ <rect x="820" y="236" width="10" height="110" rx="5" class="ln thin"/><circle cx="825" cy="352" r="9" class="ln thin"/><path d="M825 346V286" class="ln"/>
+ <text x="750" y="424" class="lb" text-anchor="middle">FERMENTER</text>
+ <text x="750" y="448" class="nt" text-anchor="middle">30 °C · 8–12 h</text>
+ <text x="750" y="470" class="nt sm" text-anchor="middle">pH 6.5 → 4.5 · volume ×2</text>
+ <text x="848" y="262" class="nt sm">T</text>
+
+ <!-- pipe 4 -->
+ <path d="M810 330h40q14 0 14 14v20h20" class="pipe" marker-end="url(#pfdAr)"/>
+ <circle cx="846" cy="388" r="12" class="ln thin"/><text x="846" y="393" class="sn" text-anchor="middle">4</text>
+
+ <!-- 5 REACTOR tawa -->
+ <ellipse cx="940" cy="380" rx="62" ry="12" class="ln"/>
+ <path d="M1002 380h48" class="ln"/>
+ <path d="M886 382q54 16 108 0" class="ln thin"/>
+ <path d="M900 452q8-30 18-14q4-24 16-36q4 22 14 30q10-18 20-24q-2 28 6 44" class="ln"/>
+ <path d="M916 452q6-16 14-6q6-14 12-18q2 14 10 18q6-8 10-10q0 12 2 16" class="ln thin"/>
+ <path d="M886 440v-34M994 440v-34" class="pipe q" marker-end="url(#pfdAr)"/>
+ <text x="1004" y="430" class="nt">Q</text>
+ <path d="M920 360q-6-14 2-26M950 358q-6-14 2-26" class="ln thin"/>
+ <text x="940" y="320" class="nt sm" text-anchor="middle">steam flashes off</text>
+ <text x="940" y="490" class="lb" text-anchor="middle">REACTOR (tawa)</text>
+ <text x="940" y="514" class="nt" text-anchor="middle">Maillard browning &gt; 140 °C</text>
+
+ <!-- pipe 5 -->
+ <path d="M1050 380q20 0 20-24v-14" class="pipe" marker-end="url(#pfdAr)"/>
+ <circle cx="1088" cy="380" r="12" class="ln thin"/><text x="1088" y="385" class="sn" text-anchor="middle">5</text>
+
+ <!-- 6 PRODUCT -->
+ <ellipse cx="1100" cy="330" rx="80" ry="16" class="ln"/>
+ <path d="M1050 324l96-34 4 38z" class="ln"/>
+ <path d="M1060 320l80-26M1072 322l72-22" class="ln thin"/>
+ <circle cx="1166" cy="318" r="10" class="ln thin" fill="url(#pfdH2)"/><circle cx="1040" cy="334" r="8" class="ln thin"/>
+ <text x="1105" y="262" class="lb" text-anchor="middle">PRODUCT</text>
+ <text x="1105" y="216" class="nt" text-anchor="middle">crisp outside,</text>
+ <text x="1105" y="238" class="nt" text-anchor="middle">soft inside</text>
+
+ <!-- title block -->
+ <rect x="930" y="40" width="230" height="82" class="ln thin"/>
+ <path d="M930 70h230M1060 70v52" class="ln thin"/>
+ <text x="944" y="62" class="tb">CHEME COOKS · PFD-01</text>
+ <text x="944" y="92" class="tb">MASALA DOSA</text>
+ <text x="944" y="112" class="tb sm">batch, serves 4</text>
+ <text x="1070" y="92" class="tb">SHEET 1/1</text>
+ <text x="1070" y="112" class="tb sm">pencil</text>
+
+ <!-- margin note -->
+ <path d="M548 128q-30 20-44 70" class="ln thin" marker-end="url(#pfdAr)"/>
+ <text x="540" y="112" class="nt">every recipe is a process:</text>
+ <text x="540" y="136" class="nt">feed in, unit operations, product out</text>
+</g>
+<use href="#pfdArt" class="ghost" filter="url(#pfdB)"/>
+</svg></div>
+    <figcaption>To a chemical engineer, every recipe is a small plant: raw materials in, a chain of unit operations, a product out. Here is masala dosa.</figcaption>
+  </figure>
   <div class="twist">
     <div>
-      <span class="kick">The ChemE twist</span>
       <h2 id="h-twist" style="margin:10px 0 14px">How warm is your kitchen?</h2>
       <p style="color:var(--ink-2);margin:0 0 12px">Dosa and idli batter is alive. Its bacteria slow down sharply in the cold, which is why the same recipe that rises overnight in Chennai can sit flat in a winter kitchen in Chicago.</p>
       <p style="color:var(--ink-2);margin:0">The atlas uses the same model in its meal planner, so your soak-and-ferment reminders move to match your kitchen.</p>
