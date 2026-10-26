@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@600&display=swap">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='17' fill='%23a96c00'/%3E%3Cpath d='M13 9h10M15 9v6.5L9.5 25a2.5 2.5 0 0 0 2.2 3.8h12.6a2.5 2.5 0 0 0 2.2-3.8L21 15.5V9' fill='none' stroke='%231b1404' stroke-width='1.8'/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem("cc-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 <style>
 :root{
   --paper:#eef1ea; --panel:#fafbf7; --panel-2:#e3e8dd; --rule:#cfd6c8; --grid:rgba(52,92,72,.08);
@@ -141,6 +142,10 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13.5px;col
   .nav a:not(.btn){display:none}
   section{padding:40px 0}
 }
+.themebtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid var(--rule);background:var(--panel,transparent);color:var(--ink);cursor:pointer;padding:0;flex:none}
+.themebtn:hover{border-color:var(--ink)}.themebtn .i-moon{display:none}
+:root[data-theme="dark"] .themebtn .i-sun{display:none}:root[data-theme="dark"] .themebtn .i-moon{display:block}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .themebtn .i-sun{display:none}:root:not([data-theme="light"]) .themebtn .i-moon{display:block}}
 </style>
 </head>
 <body>
@@ -156,6 +161,7 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13.5px;col
     <a href="atlas/#kids">Kids lab</a>
     <a href="#about">About</a>
     <a class="btn acc" href="atlas/">Open the atlas</a>
+    <button class="themebtn" type="button"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z"/></svg></button>
   </nav>
 </header>
 
@@ -347,5 +353,10 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13.5px;col
   else els.forEach(function(e){ e.classList.add('on'); });
 })();
 </script>
+<script>(function(){var r=document.documentElement,mq=window.matchMedia("(prefers-color-scheme: dark)");
+function cur(){var t=r.getAttribute("data-theme");return t?t:(mq.matches?"dark":"light")}
+function sync(){var d=cur()==="dark";document.querySelectorAll(".themebtn").forEach(function(b){b.setAttribute("aria-pressed",d?"true":"false");b.setAttribute("aria-label",d?"Switch to light mode":"Switch to dark mode");b.title=d?"Light mode":"Dark mode"})}
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".themebtn");if(!b)return;var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("cc-theme",n)}catch(_){}sync()});
+if(mq.addEventListener)mq.addEventListener("change",sync);sync()})();</script>
 </body>
 </html>

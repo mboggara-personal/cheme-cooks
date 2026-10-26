@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v28 | 2026-10-26 | Light/dark switch on the landing page and in the atlas toolbar (remembered across both); atlas toolbar wraps on phones so every button stays reachable |
 | v27 | 2026-10-26 | Landing page (Field notebook style) at the site root with live map, five-lens dish preview, fermentation slider, navigation guide; atlas moved to /atlas/; five-step first-visit tour (replay from How it works); #kids and #labs deep links; charset and mobile viewport for the standalone page |
 | v26 | 2026-10-26 | Dark mode: readable text in the ingredient "ChemE bit" box and the planner's "Start ahead" box |
 | v25 | 2026-10-26 | Copyright holder set to Mohan Boggara (Personal) in licences and footer |
