@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v30 | 2026-10-26 | Fix: pencil sketch drew blank on phones (Safari); simplified the pencil-grain filter |
 | v29 | 2026-10-26 | Landing page: pencil process-flow sketch (masala dosa as a chemical plant) at the top of the ChemE twist section; follows light/dark; swipeable on phones |
 | v28 | 2026-10-26 | Light/dark switch on the landing page and in the atlas toolbar (remembered across both); atlas toolbar wraps on phones so every button stays reachable |
 | v27 | 2026-10-26 | Landing page (Field notebook style) at the site root with live map, five-lens dish preview, fermentation slider, navigation guide; atlas moved to /atlas/; five-step first-visit tour (replay from How it works); #kids and #labs deep links; charset and mobile viewport for the standalone page |
