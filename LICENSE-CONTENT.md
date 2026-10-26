@@ -2,7 +2,7 @@
 
 **Code** (the application, planner, labs and build scripts: `*.js`, `app.html`, `build.py`, `mkimages.py`, `prompts/*.py`) is under the [MIT License](LICENSE).
 
-**Content** is under the **Creative Commons Attribution-NonCommercial 4.0 International** licence (CC BY-NC 4.0), © 2026 mboggara-personal.
+**Content** is under the **Creative Commons Attribution-NonCommercial 4.0 International** licence (CC BY-NC 4.0), © 2026 Mohan Boggara (Personal).
 This covers the recipes written for this atlas, dish histories and place notes, ingredient cards, ChemE deep-dive text, kids' experiments, variant notes, trail descriptions, the code-drawn pencil sketches and the dish photographs in `images/`.
 
 You may share and adapt the content for non-commercial purposes, as long as you give credit ("ChemE Cooks Indian Food Atlas") with a link back, and indicate if you made changes.
