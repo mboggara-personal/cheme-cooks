@@ -796,7 +796,7 @@ function renderCook(){
 const NS_T = {energy:[335,670,1005,1340,1675,2010,2345,2680,3015,3350], sugar:[4.5,9,13.5,18,22.5,27,31,36,40,45], satfat:[1,2,3,4,5,6,7,8,9,10], sodium:[90,180,270,360,450,540,630,720,810,900], fibre:[0.7,1.4,2.1,2.8,3.5], protein:[1.6,3.2,4.8,6.4,8]};
 function openMethods(sec="nutri"){
   const tabs=[["nutri","Nutri-Score"],["ayur","Ayurveda"],["cheme","ChemE labs"],["data","Recipes & data"],["src","All sources"]];
-  openModal(`<h2>How the atlas works</h2>`,`<div class="tabs mtabs" role="tablist">${tabs.map(([k,l])=>`<button role="tab" data-ms="${k}" aria-selected="${k===sec}">${l}</button>`).join("")}</div><div id="mpane" class="mpane"></div>`);
+  openModal(`<h2>How the atlas works</h2>`,`<p style="margin:0 0 10px"><button class="btn ghost" data-tour="1">Take the five-step tour</button></p><div class="tabs mtabs" role="tablist">${tabs.map(([k,l])=>`<button role="tab" data-ms="${k}" aria-selected="${k===sec}">${l}</button>`).join("")}</div><div id="mpane" class="mpane"></div>`);
   const show=k=>{ $$("[data-ms]").forEach(b=>b.setAttribute("aria-selected",b.dataset.ms===k)); $("#mpane").innerHTML=({nutri:mNutri,ayur:mAyur,cheme:mCheme,data:mData,src:mSrc})[k](); $("#mb").scrollTop=0; const sel=$("#exDish"); if(sel) sel.onchange=()=>{ $("#ex").innerHTML=example(byId[sel.value]); }; };
   $$("[data-ms]").forEach(b=>b.onclick=()=>show(b.dataset.ms)); show(sec);
 }

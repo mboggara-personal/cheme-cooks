@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChemE Cooks: India's food, mapped and explained</title>
+<meta name="description" content="An interactive atlas of {{DISHES}} Indian dishes: recipes, Nutri-Score, Ayurveda, history, chemical-engineering labs, a meal planner and kitchen science for kids.">
+<meta property="og:title" content="ChemE Cooks: India's food, mapped and explained">
+<meta property="og:description" content="{{DISHES}} Indian dishes on a map, with recipes, history and the chemistry that makes them work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='17' fill='%23a96c00'/%3E%3Cpath d='M13 9h10M15 9v6.5L9.5 25a2.5 2.5 0 0 0 2.2 3.8h12.6a2.5 2.5 0 0 0 2.2-3.8L21 15.5V9' fill='none' stroke='%231b1404' stroke-width='1.8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#eef1ea; --panel:#fafbf7; --panel-2:#e3e8dd; --rule:#cfd6c8; --grid:rgba(52,92,72,.08);
+  --ink:#1b222a; --ink-2:#3e4852; --muted:#5d6862;
+  --turmeric:#a96c00; --turmeric-ink:#7a4d00; --turmeric-soft:#f4e2ad; --chili:#b1381d; --veg:#1d8a3a; --nonveg:#7a3b10;
+  --land:#fbfbf6; --sea:#e1e8e5; --state-line:#b8c1b4; --border:#46505b;
+  --f-display:"Gloock",Georgia,serif; --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; --f-hand:"Caveat",cursive;
+  --shadow:0 10px 30px rgba(27,34,42,.10);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#11161b; --panel:#171d23; --panel-2:#212931; --rule:#2e3842; --grid:rgba(200,225,210,.05);
+  --ink:#ebe8df; --ink-2:#bcc3bd; --muted:#9aa49d;
+  --turmeric:#ebb53e; --turmeric-ink:#f3c766; --turmeric-soft:#40330f; --chili:#ea7a5c; --veg:#4fc36e; --nonveg:#e0925a;
+  --land:#1b232b; --sea:#131a20; --state-line:#3a4652; --border:#9aa49d; --shadow:0 10px 30px rgba(0,0,0,.4);
+}}
+:root[data-theme="dark"]{
+  --paper:#11161b; --panel:#171d23; --panel-2:#212931; --rule:#2e3842; --grid:rgba(200,225,210,.05);
+  --ink:#ebe8df; --ink-2:#bcc3bd; --muted:#9aa49d;
+  --turmeric:#ebb53e; --turmeric-ink:#f3c766; --turmeric-soft:#40330f; --chili:#ea7a5c; --veg:#4fc36e; --nonveg:#e0925a;
+  --land:#1b232b; --sea:#131a20; --state-line:#3a4652; --border:#9aa49d; --shadow:0 10px 30px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55}
+a{color:var(--turmeric-ink)}a:hover{color:var(--chili)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--f-mono)}
+.kick{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--turmeric-ink);text-transform:uppercase}
+.hand{font-family:var(--f-hand);color:var(--chili)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0}
+h2{font-size:clamp(30px,4vw,42px);line-height:1.1}
+section{padding:56px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn:hover{background:var(--panel);color:var(--ink)}
+.btn.acc{background:var(--turmeric);border-color:var(--turmeric);color:#1b1404}.btn.acc:hover{filter:brightness(1.05);color:#1b1404}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px}
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:20px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand b{font-family:var(--f-display);font-weight:400;font-size:24px;line-height:1.1;display:block}
+.brand small{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-size:15px}.nav a:hover{color:var(--turmeric-ink)}
+.nav .btn{min-height:40px;font-size:15px;padding:0 16px}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding:24px 0 40px}
+.hero h1{font-size:clamp(44px,6.2vw,68px);line-height:1.02;letter-spacing:-.01em;margin:14px 0 18px}
+.hero p.lead{font-size:19px;color:var(--ink-2);max-width:560px;margin:0 0 24px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.mapcard{position:relative;padding:16px;transform:rotate(-1.2deg);box-shadow:var(--shadow)}
+.mapcard .note{position:absolute;right:6px;top:-34px;font-size:27px;transform:rotate(4deg)}
+.hmap{display:block;width:100%;height:auto;background:var(--sea);border-radius:12px}
+.hmap .hl{fill:var(--land)}.hmap .hs{fill:none;stroke:var(--state-line);stroke-width:.7}.hmap .hb{fill:none;stroke:var(--border);stroke-width:1.1}
+.hmap circle{stroke:var(--panel);stroke-width:1.4;opacity:0;animation:drop .5s cubic-bezier(.2,1.4,.4,1) forwards;transform-box:fill-box;transform-origin:center}
+@keyframes drop{from{opacity:0;transform:translateY(-14px) scale(.6)}to{opacity:1;transform:none}}
+.mapcap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 4px 0;font-size:13px;color:var(--muted)}
+.mapcap i{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 5px 0 10px;vertical-align:-1px}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:18px 0}
+.stats b{font-family:var(--f-display);font-weight:400;font-size:36px;display:block;line-height:1.1}
+.stats span{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+/* four ways */
+.shead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.shead .hand{font-size:26px}
+.ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.way{padding:22px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.way:hover{transform:translateY(-3px);box-shadow:var(--shadow);color:var(--ink)}
+.way h3{font-size:25px}.way p{margin:0;font-size:15.5px;color:var(--ink-2)}
+.way .go{margin-top:auto;font-weight:700;color:var(--turmeric-ink)}
+.way svg{stroke:var(--ink)}
+/* lenses */
+.lens{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;align-items:start}
+.dishcard{padding:22px;display:flex;flex-direction:column;gap:10px}
+.dishcard h3{font-size:32px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12.5px;border:1px solid var(--rule);border-radius:999px;padding:2px 10px;background:var(--panel-2)}
+.ns{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#85bb2f;color:#1b1404;font-weight:700;font-size:13px}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--rule);margin-bottom:16px}
+.tabs button{font:inherit;font-weight:700;font-size:15px;border:0;background:none;color:var(--muted);padding:10px 12px;border-bottom:2.5px solid transparent;cursor:pointer;min-height:44px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--turmeric)}
+.tabpanel{padding:20px 22px;min-height:230px}
+.tabpanel h4{margin:0 0 8px;font-size:16px}
+.tabpanel p{margin:0 0 10px;color:var(--ink-2)}
+.tabpanel ul{margin:0 0 10px;padding-left:20px;color:var(--ink-2)}
+.dosha{display:flex;gap:8px}.dosha span{font-family:var(--f-mono);font-size:13px;border:1px solid var(--rule);border-radius:8px;padding:4px 10px}
+.pfd{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:8px 0}
+.pfd div{border:1.5px solid var(--ink);border-radius:8px;padding:6px 10px;font-size:14px;background:var(--panel)}
+.pfd em{font-style:normal;color:var(--muted)}
+/* chemE twist */
+.twist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
+.lab{padding:24px}
+.lab label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px}
+.lab input[type=range]{width:100%;accent-color:var(--turmeric);height:32px}
+.gauge{height:14px;border-radius:7px;background:var(--panel-2);overflow:hidden;margin:16px 0 8px}
+.gauge i{display:block;height:100%;background:var(--turmeric);transition:width .25s}
+.big{font-family:var(--f-display);font-size:44px;line-height:1.1}
+.lab small{color:var(--muted)}
+/* nav guide */
+.guide{padding:22px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px;border:1px dashed var(--rule);border-radius:14px;background:var(--paper)}
+.bar span{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--rule);background:var(--panel);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:700}
+.bar .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--turmeric);color:#1b1404;font-size:12px;font-family:var(--f-mono)}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;margin-top:18px}
+.legend div{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink-2)}
+.legend .n{flex:none;display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--turmeric);color:#1b1404;font-size:12px;font-family:var(--f-mono)}
+.keys{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--ink-2)}
+kbd{font-family:var(--f-mono);font-size:12px;border:1px solid var(--rule);border-bottom-width:2px;border-radius:6px;padding:1px 7px;background:var(--panel);color:var(--ink)}
+/* families + about */
+.fam{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:24px;align-items:center;padding:26px;border:1.5px dashed var(--turmeric);border-radius:18px;background:color-mix(in srgb,var(--turmeric-soft) 45%,transparent)}
+.fam ul{margin:10px 0 0;padding-left:20px;color:var(--ink-2)}
+.about{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.about .card{padding:20px}.about h3{font-size:21px;margin-bottom:6px}.about p{margin:0;font-size:15px;color:var(--ink-2)}
+footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13.5px;color:var(--muted)}
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hmap circle{opacity:1}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media (max-width:900px){
+  .hero,.lens,.twist,.fam{grid-template-columns:1fr}
+  .ways{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mapcard{transform:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .ways,.legend{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav a:not(.btn){display:none}
+  section{padding:40px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="./">
+    <svg width="40" height="40" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="17" fill="#a96c00"/><path d="M13 9h10M15 9v6.5L9.5 25a2.5 2.5 0 0 0 2.2 3.8h12.6a2.5 2.5 0 0 0 2.2-3.8L21 15.5V9" fill="none" stroke="#1b1404" stroke-width="1.8" stroke-linejoin="round"/><path d="M11.5 22h13" stroke="#1b1404" stroke-width="1.6"/></svg>
+    <span><b>ChemE Cooks</b><small>INDIAN FOOD ATLAS</small></span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#lenses">What's inside</a>
+    <a href="#guide">How to use it</a>
+    <a href="atlas/#kids">Kids lab</a>
+    <a href="#about">About</a>
+    <a class="btn acc" href="atlas/">Open the atlas</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div>
+    <span class="kick">A cook's notebook · an engineer's lab book</span>
+    <h1 id="h1">India's food, mapped and explained.</h1>
+    <p class="lead">Every dish pinned to its place, with a recipe written for it, a health score, Ayurvedic notes, the history behind it, and the chemistry that makes it work.</p>
+    <div class="ctas">
+      <a class="btn acc" href="atlas/">Explore the map</a>
+      <a class="btn" href="atlas/#plan">Plan my week</a>
+      <a class="btn" href="atlas/#kids">Try a kitchen experiment</a>
+    </div>
+  </div>
+  <div class="card mapcard">
+    <span class="note hand" aria-hidden="true">every pin is a dish</span>
+    <a href="atlas/" aria-label="Open the atlas map">/*MAP*/</a>
+    <div class="mapcap"><span><i style="background:var(--veg)"></i>Veg<i style="background:var(--nonveg)"></i>Non-veg</span><span>Boundaries as per Survey of India · simplified</span></div>
+  </div>
+</section>
+
+<div class="stats rv" aria-label="The atlas in numbers">
+  <div><b>{{DISHES}}</b><span>dishes</span></div>
+  <div><b>{{STATES}}</b><span>states &amp; union territories</span></div>
+  <div><b>17</b><span>ChemE labs</span></div>
+  <div><b>62</b><span>ingredient cards</span></div>
+  <div><b>12</b><span>kids' experiments</span></div>
+</div>
+
+<section id="ways" class="rv" aria-labelledby="h-ways">
+  <div class="shead"><h2 id="h-ways">Four ways in</h2><span class="hand">start wherever you're hungry</span></div>
+  <div class="ways">
+    <a class="card way" href="atlas/">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg>
+      <span class="kick">01 · Explore</span><h3>Wander the map</h3>
+      <p>Tap a state, filter by veg, Jain, vrat or fish, or follow a trail down the Grand Trunk Road.</p><span class="go">Open the map →</span></a>
+    <a class="card way" href="atlas/#cards">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="M2 9h20M9 6h6"/><path d="M8 4c0-1 1-1 1-2M14 4c0-1 1-1 1-2"/></svg>
+      <span class="kick">02 · Cook</span><h3>Cook it tonight</h3>
+      <p>Recipes scaled to your table, a step-by-step cook mode and a timer for every pot.</p><span class="go">Pick a recipe →</span></a>
+    <a class="card way" href="atlas/#plan">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M7 13h3M14 13h3M7 17h3"/></svg>
+      <span class="kick">03 · Plan</span><h3>Plan the week</h3>
+      <p>Fill a week inside your cooking time; the scheduler says when to start each pot and what to buy.</p><span class="go">Plan my week →</span></a>
+    <a class="card way" href="atlas/#labs">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg>
+      <span class="kick">04 · Learn</span><h3>See the science</h3>
+      <p>Seventeen interactive labs, sixty-two ingredient cards and a pantry that says what you can cook.</p><span class="go">Open a lab →</span></a>
+  </div>
+</section>
+
+<section id="lenses" class="rv" aria-labelledby="h-lens">
+  <div class="shead"><h2 id="h-lens">One dish, five lenses</h2><span class="hand">every dish page looks like this</span></div>
+  <div class="lens">
+    <div class="card dishcard">
+      <span class="kick">Recipe · South · Karnataka</span>
+      <h3>Masala Dosa</h3>
+      <p style="margin:0;color:var(--ink-2)">Fermented rice-and-urad crêpe with a spiced potato filling. Udupi, Karnataka.</p>
+      <div class="chips"><span class="chip">Vegetarian</span><span class="chip">Breakfast</span><span class="chip">Udupi kitchens</span><span class="ns" aria-label="Nutri-Score B">B</span></div>
+      <p style="margin:6px 0 0;font-size:14px;color:var(--muted)">Also known in the atlas: Mysore masala dosa, benne dosa, set dosa, rava dosa, paper dosa.</p>
+      <a class="btn acc" href="atlas/#masala-dosa" style="align-self:flex-start;margin-top:8px">Open this dish</a>
+    </div>
+    <div class="card" style="overflow:hidden">
+      <div class="tabs" role="tablist" aria-label="Lenses">
+        <button role="tab" aria-selected="true" aria-controls="p-recipe" id="t-recipe">Recipe</button>
+        <button role="tab" aria-selected="false" aria-controls="p-health" id="t-health">Health</button>
+        <button role="tab" aria-selected="false" aria-controls="p-ayur" id="t-ayur">Ayurveda</button>
+        <button role="tab" aria-selected="false" aria-controls="p-hist" id="t-hist">History</button>
+        <button role="tab" aria-selected="false" aria-controls="p-cheme" id="t-cheme">ChemE</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-recipe" aria-labelledby="t-recipe">
+        <h4>Written for the atlas, scaled to your table</h4>
+        <ul><li>120 g rice + 40 g urad dal, soaked 6 hours and ground cold</li><li>Fermented about 10 hours, until doubled and pleasantly sour</li><li>Spread thin on a very hot tawa; fill with spiced potato</li></ul>
+        <p>Tick ingredients off as you prep, then switch to cook mode: one step at a time, with timers.</p>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-health" aria-labelledby="t-health" hidden>
+        <h4>Nutri-Score B · about 510 kcal per serving</h4>
+        <p>Every dish is scored with the 2017 Nutri-Score algorithm from its own ingredients and cooked weight, using USDA and Indian food tables, and the page shows the working.</p>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-ayur" aria-labelledby="t-ayur" hidden>
+        <h4>Heating · sour and salty</h4>
+        <div class="dosha" aria-label="Dosha effects"><span>Vata ↓</span><span>Pitta ↑</span><span>Kapha ↑</span></div>
+        <p style="margin-top:10px">Fermented and sour: warming, which Vata likes; Pitta and Kapha less so. Shown for curiosity, not as medical advice.</p>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-hist" aria-labelledby="t-hist" hidden>
+        <h4>From Tamil dosai to Udupi hotels</h4>
+        <p>K. T. Achaya traced dosai in Tamil country to around the 1st century CE; the 12th-century Manasollasa gives a recipe as dosaka; Udupi's restaurants carried the crisp, filled dosa across India.</p>
+        <p style="font-size:14px;color:var(--muted)">Every history links its sources.</p>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-cheme" aria-labelledby="t-cheme" hidden>
+        <h4>The batter is a batch bioreactor</h4>
+        <div class="pfd"><div>Soak <em>· hydration</em></div><span aria-hidden="true">→</span><div>Grind <em>· size reduction</em></div><span aria-hidden="true">→</span><div>Ferment <em>· bioreactor</em></div><span aria-hidden="true">→</span><div>Tawa <em>· heat transfer</em></div></div>
+        <p>Then a hands-on lab: change the temperature and watch the batter rise, with a challenge and a badge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="twist" class="rv" aria-labelledby="h-twist">
+  <div class="twist">
+    <div>
+      <span class="kick">The ChemE twist</span>
+      <h2 id="h-twist" style="margin:10px 0 14px">How warm is your kitchen?</h2>
+      <p style="color:var(--ink-2);margin:0 0 12px">Dosa and idli batter is alive. Its bacteria slow down sharply in the cold, which is why the same recipe that rises overnight in Chennai can sit flat in a winter kitchen in Chicago.</p>
+      <p style="color:var(--ink-2);margin:0">The atlas uses the same model in its meal planner, so your soak-and-ferment reminders move to match your kitchen.</p>
+    </div>
+    <div class="card lab">
+      <label for="kt"><span>Kitchen temperature</span><output id="kto" class="mono">24 °C · 75 °F</output></label>
+      <input id="kt" type="range" min="12" max="36" step="1" value="24">
+      <div class="gauge" aria-hidden="true"><i id="ktg"></i></div>
+      <div class="big" id="ktr">about 15 hours</div>
+      <small id="kts">until the batter doubles</small>
+      <p style="margin:14px 0 0;font-size:14px;color:var(--muted)">The recipe's 10-hour ferment assumes a warm Indian kitchen (about 28 °C); the rate scales by the square-root rule, µ ∝ (T − 5 °C)², as in the atlas planner. <a href="atlas/#idli">Try the full lab →</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="guide" class="rv" aria-labelledby="h-guide">
+  <div class="shead"><h2 id="h-guide">Finding your way</h2><span class="hand">a quick tour of the toolbar</span></div>
+  <div class="card guide">
+    <div class="bar" aria-hidden="true">
+      <span><i class="n">1</i>Map · Cards · Plan · Pantry</span>
+      <span><i class="n">2</i>Search</span>
+      <span><i class="n">3</i>Filters</span>
+      <span><i class="n">4</i>Trails · Thali · Surprise</span>
+      <span><i class="n">5</i>ChemE · Kids lab</span>
+      <span><i class="n">6</i>Passport · Guess origin</span>
+    </div>
+    <div class="legend">
+      <div><span class="n">1</span><span><b>Four views.</b> The map, a card grid, your week's meal plan, and the pantry with every ingredient.</span></div>
+      <div><span class="n">2</span><span><b>Search</b> any dish, city or ingredient; dish variants like "puchka" find their parent dish.</span></div>
+      <div><span class="n">3</span><span><b>Filters</b> for diet (veg, fish, egg, Jain, vrat), meal and snack type, region, Nutri-Score, dosha, kitchen and festival.</span></div>
+      <div><span class="n">4</span><span><b>Trails</b> walk you across India in order; <b>Thali</b> builds a balanced plate and checks it.</span></div>
+      <div><span class="n">5</span><span><b>ChemE</b> opens every concept and lab; <b>Kids lab</b> has twelve predict-try-explain experiments.</span></div>
+      <div><span class="n">6</span><span><b>Passport</b> stamps what you've tasted and cooked; <b>Guess origin</b> is a map game.</span></div>
+    </div>
+    <div class="keys"><span><kbd>/</kbd> search</span><span><kbd>M</kbd> map</span><span><kbd>C</kbd> cards</span><span><kbd>P</kbd> plan</span><span><kbd>G</kbd> game</span><span><kbd>←</kbd> <kbd>→</kbd> next dish</span><span><kbd>Esc</kbd> close</span></div>
+    <p style="margin:16px 0 0;font-size:15px;color:var(--ink-2)">First time in the atlas? A five-step tour points these out, and you can replay it any time from <b>How it works</b>.</p>
+  </div>
+</section>
+
+<section id="families" class="rv" aria-labelledby="h-fam">
+  <div class="fam">
+    <div>
+      <span class="kick">For families</span>
+      <h2 id="h-fam" style="margin:10px 0 8px">Kitchen science for young cooks</h2>
+      <p style="margin:0;color:var(--ink-2)">Twelve experiments with things already in the kitchen. Guess first, try it, then find out why.</p>
+      <ul><li>Turn turmeric red with baking soda</li><li>Blow up a balloon with lemon and soda</li><li>Make kulfi in a bag of ice and salt</li></ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+      <span class="hand" style="font-size:28px">predict → try → why</span>
+      <a class="btn acc" href="atlas/#kids">Open the Kids lab</a>
+      <span style="font-size:13.5px;color:var(--muted)">Steps that need the stove or a knife are marked for a grown-up.</span>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="rv" aria-labelledby="h-about">
+  <div class="shead"><h2 id="h-about">About the atlas</h2></div>
+  <div class="about">
+    <div class="card"><h3>How it was made</h3><p>Created by Mohan Boggara and built with AI assistance (Claude) under his direction: recipes written for the atlas, histories summarised from cited sources, and models drawn from published food-science work.</p></div>
+    <div class="card"><h3>Sources and accuracy</h3><p>Nutrition from USDA FoodData Central and IFCT 2017; histories link their sources on every dish. Ayurveda and Nutri-Score notes are for information, not medical advice. The map shows India's boundaries as per the Survey of India, simplified.</p></div>
+    <div class="card"><h3>Open code</h3><p>Code is open source under MIT; recipes, histories and sketches are CC BY-NC 4.0. Your stamps, plan and pantry stay in your own browser. <a href="https://github.com/mboggara-personal/cheme-cooks">Source on GitHub</a>.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Mohan Boggara (Personal) · Code <a href="https://github.com/mboggara-personal/cheme-cooks/blob/main/LICENSE">MIT</a> · Content <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> · Map: Survey of India data via DataMeet (CC BY-SA 2.5), state boundaries DataMeet (CC BY 2.5 IN) · <a href="atlas/">Open the atlas</a>
+</footer>
+</div>
+<script>
+(function(){
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function sel(t){ tabs.forEach(function(x){ var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1; document.getElementById(x.getAttribute('aria-controls')).hidden=!on; }); }
+  tabs.forEach(function(t,i){ t.addEventListener('click',function(){ sel(t); }); t.addEventListener('keydown',function(e){ var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0; if(d){ var n=tabs[(i+d+tabs.length)%tabs.length]; sel(n); n.focus(); e.preventDefault(); } }); });
+  // fermentation slider (same model as the atlas lab: Gompertz rise at 30 °C, time scaled by ((T-5)/25)^2; doubles at 15 h at 30 °C)
+  var r=document.getElementById('kt'), o=document.getElementById('kto'), out=document.getElementById('ktr'), sub=document.getElementById('kts'), g=document.getElementById('ktg');
+  function upd(){ var T=+r.value, h=10*Math.pow(23/(Math.min(T,38)-5),2); o.textContent=T+' °C · '+Math.round(T*9/5+32)+' °F';
+    out.textContent = h>36 ? 'well over a day' : 'about '+(h<10?h.toFixed(1):Math.round(h))+' hours';
+    sub.textContent = T>=34 ? 'until it doubles: fast, but it will turn sour quickly' : T<=16 ? 'until it doubles: try an oven with only the light on' : 'until the batter doubles';
+    g.style.width=Math.max(4,Math.min(100,h/36*100))+'%'; }
+  r.addEventListener('input',upd); upd();
+  // reveal on scroll
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'}); els.forEach(function(e){ io.observe(e); }); }
+  else els.forEach(function(e){ e.classList.add('on'); });
+})();
+</script>
+</body>
+</html>

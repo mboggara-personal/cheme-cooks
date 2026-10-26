@@ -2,7 +2,7 @@
 
 An interactive atlas of 286 Indian dishes on a map of India, each with a recipe written for the atlas, a Nutri-Score, Ayurvedic notes, a sourced history and, for many, a chemical-engineering deep dive.
 
-**Live site:** https://mboggara-personal.github.io/cheme-cooks/
+**Live site:** https://mboggara-personal.github.io/cheme-cooks/ (landing page) · the atlas itself is at https://mboggara-personal.github.io/cheme-cooks/atlas/
 
 ## What's inside
 
@@ -22,7 +22,7 @@ The site is a single HTML page assembled from the source files:
 python3 build.py
 ```
 
-This writes `docs/index.html` (served by GitHub Pages) and `cheme-cooks-atlas.html`. No dependencies beyond Python 3. Progress (passport, plan, pantry) is stored in the visitor's own browser.
+This writes `docs/index.html` (the landing page), `docs/atlas/index.html` (the atlas, served by GitHub Pages) and `cheme-cooks-atlas.html`. The landing page's map and counts come from `node mklanding.js` (re-run it after adding dishes). No dependencies beyond Python 3. Progress (passport, plan, pantry) is stored in the visitor's own browser.
 
 ## Licence
 
