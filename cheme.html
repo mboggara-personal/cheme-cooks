@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is chemical engineering? · ChemE Cooks</title>
+<meta name="description" content="Twelve big ideas of chemical engineering, drawn in pencil and explained with things you already do in an Indian kitchen.">
+<script>(function(){var t;try{t=localStorage.getItem("cc-theme")}catch(e){}document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark")})();</script>
+/*FONTS*/
+<style>
+/*TOKENS*/
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
+a{color:var(--turmeric-ink)}a:hover{color:var(--chili)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand b{display:block;font-family:var(--f-display);font-weight:400;font-size:24px;line-height:1}
+.brand small{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;color:var(--muted);margin-top:4px}
+.nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-size:15px}.nav a:hover{color:var(--turmeric-ink)}
+.btn{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+.btn.acc{background:var(--turmeric);border-color:var(--turmeric);color:#1b1404}.btn.acc:hover{color:#1b1404;filter:brightness(1.06)}
+.themebtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid var(--rule);background:var(--panel);color:var(--ink);cursor:pointer;padding:0;flex:none}
+.themebtn:hover{border-color:var(--ink)}.themebtn .i-moon{display:none}
+:root[data-theme="dark"] .themebtn .i-sun{display:none}:root[data-theme="dark"] .themebtn .i-moon{display:block}
+.kick{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--turmeric-ink);text-transform:uppercase}
+.hand{font-family:var(--f-hand);color:var(--chili)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.1;margin:0}
+.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:36px;align-items:center;padding:28px 0 18px}
+.intro h1{font-size:clamp(38px,5.4vw,60px);margin:12px 0 16px}
+.intro .lead{font-size:19px;color:var(--ink-2);margin:0 0 14px;max-width:58ch}
+.intro p{color:var(--ink-2);margin:0 0 12px;max-width:60ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px;padding:0;list-style:none}
+.toc a{display:inline-flex;gap:6px;align-items:center;padding:6px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--panel);color:var(--ink);text-decoration:none;font-size:14px}
+.toc a:hover{border-color:var(--turmeric)}
+.toc b{font-family:var(--f-mono);font-weight:500;color:var(--turmeric-ink);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:26px 0 40px}
+.concept{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:16px}
+.concept header{display:flex;gap:12px;align-items:baseline}
+.concept .no{font-family:var(--f-mono);font-size:13px;color:var(--turmeric-ink);letter-spacing:.1em}
+.concept h2{font-size:28px}
+.concept .sub{font-family:var(--f-hand);font-size:22px;color:var(--chili);line-height:1.1}
+.concept p{margin:0;color:var(--ink-2);font-size:16px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2px}
+.pair div{background:var(--panel-2);border-radius:12px;padding:10px 12px;font-size:15px;color:var(--ink-2);line-height:1.5}
+.pair b{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:3px}
+.try{font-weight:700;font-size:15px;margin-top:auto}
+.sk{width:100%;height:auto;display:block;background:var(--panel);border-radius:10px}
+.sk .art{filter:url(#ckA)}
+.sk .wash{filter:url(#ckB)}
+.sk .ln{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sk .th{fill:none;stroke:var(--ink-2);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
+.sk .dash{stroke-dasharray:4 5}
+.sk .fl{fill:none;stroke:var(--chili);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sk .ht{fill:none;stroke:var(--turmeric);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sk .dot{fill:var(--ink-2)}
+.sk .lb{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;fill:var(--ink)}
+.sk .nt{font-family:var(--f-hand);font-size:19px;fill:var(--chili)}
+.sk .nt2{font-family:var(--f-hand);font-size:17px;fill:var(--ink-2)}
+.sk .eq{font-family:var(--f-hand);font-size:24px;fill:var(--ink)}
+.sk .w-blue{fill:#7fb2c9;opacity:.3}.sk .w-yel{fill:var(--turmeric);opacity:.2}.sk .w-red{fill:var(--chili);opacity:.15}.sk .w-grn{fill:var(--veg);opacity:.16}
+:root[data-theme="dark"] .sk .w-yel,:root[data-theme="dark"] .sk .w-red{opacity:.09}:root[data-theme="dark"] .sk .w-blue{opacity:.2}
+.sk .hfill{fill:url(#ckH)}.sk .hfill2{fill:url(#ckH2)}
+.together{padding:22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;margin-bottom:28px}
+.together h2{font-size:32px;margin:6px 0 8px}.together p{margin:0;color:var(--ink-2)}
+.together .btns{display:flex;flex-direction:column;gap:10px}
+footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);font-size:14px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.intro{grid-template-columns:1fr}.together{grid-template-columns:1fr}}
+@media (max-width:520px){.pair{grid-template-columns:1fr}.nav a:not(.btn){display:none}.concept h2{font-size:25px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<!-- shared pencil defs: kept out of layout but not display:none, so every sketch can use them -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+ <filter id="ckA" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/></filter>
+ <filter id="ckB" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter>
+ <pattern id="ckH" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><line x1="0" y1="0" x2="0" y2="7" stroke="var(--ink-2)" stroke-width="1" opacity=".5"/></pattern>
+ <pattern id="ckH2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="4" stroke="var(--ink-2)" stroke-width="1" opacity=".6"/></pattern>
+ <marker id="ckR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 9 5 1 8.5" fill="none" stroke="var(--chili)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+ <marker id="ckI" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 9 5 1 8.5" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+ <marker id="ckY" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 9 5 1 8.5" fill="none" stroke="var(--turmeric)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+</svg>
+
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="../">
+    <svg width="40" height="40" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="17" fill="#a96c00"/><path d="M13 9h10M15 9v6.5L9.5 25a2.5 2.5 0 0 0 2.2 3.8h12.6a2.5 2.5 0 0 0 2.2-3.8L21 15.5V9" fill="none" stroke="#1b1404" stroke-width="1.8" stroke-linejoin="round"/><path d="M11.5 22h13" stroke="#1b1404" stroke-width="1.6"/></svg>
+    <span><b>ChemE Cooks</b><small>INDIAN FOOD ATLAS</small></span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="../">Home</a>
+    <a href="../#twist">The dosa plant</a>
+    <a class="btn acc" href="../atlas/">Open the atlas</a>
+    <button class="themebtn" type="button"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z"/></svg></button>
+  </nav>
+</header>
+
+<main>
+<section class="intro" aria-labelledby="h1">
+  <div>
+    <span class="kick">Deep dive · optional reading</span>
+    <h1 id="h1">What is chemical engineering?</h1>
+    <p class="lead">Chemical engineers design the processes that turn raw materials into useful things: milk into paneer, cane into sugar, crude oil into fuel, a few cells into a vaccine. They work out how to do it safely, reliably, at scale, and without waste.</p>
+    <p>You already practise most of it. Soaking, grinding, fermenting, frying, straining and tasting-then-adjusting are the same ideas a chemical plant runs on, just at kitchen size. Here are twelve of the big ones, each drawn in pencil and tied to something you have cooked.</p>
+    <p class="hand" style="font-size:24px;margin:0">No equations needed. Skip straight to the food any time.</p>
+  </div>
+  <div class="card" style="padding:12px">
+    <svg class="sk" viewBox="0 0 400 260" role="img" aria-labelledby="t0"><title id="t0">The big picture: raw materials go into a process and come out as products</title>
+      <g class="wash"><rect x="146" y="112" width="110" height="64" class="w-yel"/><path d="M20 176q45-10 95 0v10H20z" class="w-grn"/></g>
+      <g class="art">
+        <path d="M18 178q50-12 100 0" class="ln"/>
+        <path d="M40 178q-3-40 4-74M62 178q2-44-2-80M84 178q-2-36 6-66" class="th"/>
+        <g class="th"><ellipse cx="44" cy="100" rx="4" ry="9"/><ellipse cx="60" cy="94" rx="4" ry="9"/><ellipse cx="90" cy="108" rx="4" ry="9"/></g>
+        <path d="M122 146h22" class="fl" marker-end="url(#ckR)"/>
+        <rect x="150" y="114" width="104" height="62" class="ln"/>
+        <rect x="162" y="56" width="16" height="58" rx="7" class="ln"/><rect x="190" y="74" width="14" height="40" rx="6" class="ln"/><rect x="226" y="68" width="10" height="46" class="ln"/>
+        <path d="M231 62q-8-8 0-16t2-14M170 56v-10h28v28" class="th"/>
+        <path d="M160 140h20v20h20v-20h20v20h22" class="th dash"/>
+        <path d="M258 146h22" class="fl" marker-end="url(#ckR)"/>
+        <path d="M292 178v-38q0-8 7-12v-12h8v12q7 4 7 12v38z" class="ln"/><path d="M292 152h22" class="th"/>
+        <path d="M326 178v-44l4-4 4 4 4-4 4 4 4-4 4 4v44z" class="ln"/><path d="M332 152h16" class="th"/>
+        <rect x="360" y="160" width="28" height="14" rx="7" class="ln"/><path d="M374 160v14" class="th"/>
+        <text x="66" y="210" class="lb" text-anchor="middle">RAW MATERIALS</text>
+        <text x="202" y="210" class="lb" text-anchor="middle">PROCESS</text>
+        <text x="340" y="210" class="lb" text-anchor="middle">PRODUCTS</text>
+        <text x="200" y="244" class="nt" text-anchor="middle">change what stuff is: safely, at scale, without waste</text>
+        <text x="200" y="34" class="nt2" text-anchor="middle">grain, milk, cane, crude oil, air</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<nav aria-label="Concepts"><ul class="toc">
+  <li><a href="#balance"><b>01</b>Mass balance</a></li>
+  <li><a href="#heat"><b>02</b>Heat transfer</a></li>
+  <li><a href="#diffusion"><b>03</b>Diffusion</a></li>
+  <li><a href="#kinetics"><b>04</b>Reaction rates</a></li>
+  <li><a href="#ferment"><b>05</b>Fermentation</a></li>
+  <li><a href="#pressure"><b>06</b>Pressure &amp; boiling</a></li>
+  <li><a href="#flow"><b>07</b>Flow &amp; thickness</a></li>
+  <li><a href="#separate"><b>08</b>Separations</a></li>
+  <li><a href="#emulsion"><b>09</b>Mixing &amp; emulsions</a></li>
+  <li><a href="#unitops"><b>10</b>Unit operations</a></li>
+  <li><a href="#control"><b>11</b>Process control</a></li>
+  <li><a href="#scale"><b>12</b>Scale-up &amp; safety</a></li>
+</ul></nav>
+
+<div class="grid">
+
+<!-- 01 mass balance -->
+<article class="card concept" id="balance">
+  <header><span class="no">01</span><div><h2>Mass balance</h2><div class="sub">nothing vanishes, it only moves</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t1"><title id="t1">A pot of rice: rice and water go in, steam leaves, the rest stays in the swollen grains</title>
+    <g class="wash"><path d="M132 130h136v48q0 16-16 16H148q-16 0-16-16z" class="w-blue"/></g>
+    <g class="art">
+      <path d="M128 112h144v66q0 18-18 18H146q-18 0-18-18z" class="ln"/><path d="M118 112h164M128 124h-12M272 124h12" class="ln"/>
+      <path d="M132 136q17-7 34 0t34 0 34 0 34 0" class="th"/>
+      <g class="th"><ellipse cx="160" cy="170" rx="9" ry="4"/><ellipse cx="184" cy="178" rx="9" ry="4" transform="rotate(18 184 178)"/><ellipse cx="210" cy="168" rx="9" ry="4"/><ellipse cx="236" cy="178" rx="9" ry="4" transform="rotate(-15 236 178)"/><ellipse cx="198" cy="152" rx="9" ry="4" transform="rotate(10 198 152)"/><ellipse cx="248" cy="154" rx="9" ry="4"/></g>
+      <path d="M62 52q40 6 70 50" class="fl" marker-end="url(#ckR)"/>
+      <text x="22" y="40" class="nt">IN: 1 cup rice</text><text x="22" y="62" class="nt">+ 2 cups water</text>
+      <path d="M200 100q-10-14 0-28t0-28" class="th" marker-end="url(#ckI)"/><path d="M226 100q-10-14 0-28t0-24" class="th" marker-end="url(#ckI)"/>
+      <text x="246" y="46" class="nt">OUT: steam</text>
+      <text x="300" y="164" class="nt2">STAYS: water</text><text x="300" y="184" class="nt2">soaked into</text><text x="300" y="204" class="nt2">the grains</text>
+      <path d="M296 172q-18 0-34 2" class="th" marker-end="url(#ckI)"/>
+      <text x="200" y="230" class="eq" text-anchor="middle">in − out = what builds up inside</text>
+    </g>
+  </svg>
+  <p>Engineers keep a ledger for every kilogram that enters and leaves a process. If the numbers don't add up, something is leaking, burning or hiding where nobody looked.</p>
+  <div class="pair"><div><b>In your kitchen</b>Rice needs about twice its volume of water because some boils off as steam and the rest ends up inside the grains. Lid on means less escapes, so you need less.</div><div><b>In industry</b>A dairy knows exactly how much milk becomes paneer and how much leaves as whey, and sells the whey too.</div></div>
+  <a class="try" href="../atlas/#curd-rice">See it in curd rice →</a>
+</article>
+
+<!-- 02 heat transfer -->
+<article class="card concept" id="heat">
+  <header><span class="no">02</span><div><h2>Heat transfer</h2><div class="sub">touch, flow and glow</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t2"><title id="t2">Three ways heat moves: conduction through a tawa, convection in a boiling pot, radiation inside a tandoor</title>
+    <g class="wash"><path d="M150 96h100v62q0 12-12 12h-76q-12 0-12-12z" class="w-blue"/><path d="M300 180q38-20 76 0" class="w-red"/></g>
+    <g class="art">
+      <path d="M20 132h100" class="ln" style="stroke-width:4"/><path d="M34 126q36-12 72 0" class="ln"/>
+      <path d="M44 150v-12M70 150v-12M96 150v-12" class="ht" marker-end="url(#ckY)"/>
+      <path d="M44 184q6-22 12-10q4-18 12-26q4 16 10 22q6-12 12-16q0 18 6 30" class="fl"/>
+      <path d="M150 92v66q0 14 14 14h72q14 0 14-14V92" class="ln"/><path d="M142 92h116" class="ln"/>
+      <path d="M176 156a20 26 0 1 1 18-40" class="th" marker-end="url(#ckI)"/><path d="M224 156a20 26 0 1 0-18-40" class="th" marker-end="url(#ckI)"/>
+      <path d="M172 200q6-18 12-8q4-14 12-22q4 14 10 18q6-10 12-12q0 14 4 24" class="fl"/>
+      <path d="M296 196q-14-60 10-104h64q24 44 10 104z" class="ln"/><ellipse cx="338" cy="92" rx="32" ry="8" class="ln"/>
+      <ellipse cx="312" cy="130" rx="7" ry="16" class="th hfill"/>
+      <g class="th"><circle cx="326" cy="186" r="5"/><circle cx="340" cy="190" r="5"/><circle cx="354" cy="186" r="5"/></g>
+      <path d="M334 176q-6-10-14-30M346 176q2-16 10-34M340 176q-2-14-2-26" class="ht dash" marker-end="url(#ckY)"/>
+      <text x="70" y="214" class="lb" text-anchor="middle">CONDUCTION</text><text x="70" y="234" class="nt" text-anchor="middle">tawa → dosa</text>
+      <text x="200" y="222" class="lb" text-anchor="middle">CONVECTION</text><text x="200" y="40" class="nt" text-anchor="middle">hot water rises,</text><text x="200" y="62" class="nt" text-anchor="middle">cool water sinks</text>
+      <text x="338" y="222" class="lb" text-anchor="middle">RADIATION</text><text x="338" y="60" class="nt" text-anchor="middle">coals glow</text>
+    </g>
+  </svg>
+  <p>Heat always flows from hot to cold, by three routes: through solid contact, carried by a moving liquid or gas, or as invisible infrared light. Designing equipment is mostly about getting the right amount of heat to the right place.</p>
+  <div class="pair"><div><b>In your kitchen</b>A cast-iron tawa holds heat for a crisp dosa; stirring a pot speeds convection; a tandoor's 400 °C walls cook naan by radiation in about a minute.</div><div><b>In industry</b>Milk is pasteurised by flowing past hot steel plates in a heat exchanger: about 72 °C for 15 seconds, then cooled straight back down.</div></div>
+  <a class="try" href="../atlas/#tandoori-chicken">See it in tandoori chicken →</a>
+</article>
+
+<!-- 03 diffusion -->
+<article class="card concept" id="diffusion">
+  <header><span class="no">03</span><div><h2>Diffusion</h2><div class="sub">from crowded to empty</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t3"><title id="t3">Tea colour spreading from a tea bag, and marinade soaking into a paneer cube from the outside in</title>
+    <g class="wash"><circle cx="110" cy="128" r="34" class="w-yel"/><circle cx="110" cy="128" r="58" class="w-yel" style="opacity:.1"/><rect x="250" y="80" width="110" height="110" class="w-red"/></g>
+    <g class="art">
+      <path d="M40 70h140l-12 120q-2 14-16 14H68q-14 0-16-14z" class="ln"/><path d="M180 96q30 4 26 34t-30 30" class="ln"/>
+      <rect x="96" y="112" width="28" height="34" rx="3" class="ln"/><path d="M110 112V40h26" class="th"/><rect x="136" y="32" width="18" height="14" class="th"/>
+      <circle cx="110" cy="129" r="32" class="th dash"/><circle cx="110" cy="129" r="52" class="th dash" style="opacity:.6"/>
+      <path d="M128 129h44M110 147v34" class="fl" marker-end="url(#ckR)"/>
+      <rect x="252" y="82" width="106" height="106" class="ln"/><rect x="276" y="106" width="58" height="58" class="th dash"/>
+      <rect x="254" y="84" width="102" height="20" class="hfill"/><rect x="254" y="166" width="102" height="20" class="hfill"/><rect x="254" y="104" width="20" height="62" class="hfill"/><rect x="336" y="104" width="20" height="62" class="hfill"/>
+      <path d="M230 135h18M380 135h-18M305 60v18" class="fl" marker-end="url(#ckR)"/>
+      <text x="110" y="226" class="lb" text-anchor="middle">TEA STEEPING</text>
+      <text x="305" y="214" class="lb" text-anchor="middle">MARINADE</text>
+      <text x="305" y="234" class="nt" text-anchor="middle">2× thicker → 4× the time</text>
+    </g>
+  </svg>
+  <p>Molecules wander from where there are many to where there are few. It is slow, and it gets much slower with distance: double the thickness and it takes about four times as long.</p>
+  <div class="pair"><div><b>In your kitchen</b>Cut paneer or chicken smaller and the marinade gets in far faster. Crushed CTC tea colours water in a minute; whole leaves take longer.</div><div><b>In industry</b>Sugar mills extract sugar from shredded cane by diffusion; instant coffee and tea are made the same way, then dried.</div></div>
+  <a class="try" href="../atlas/#masala-chai">See it in masala chai →</a>
+</article>
+
+<!-- 04 kinetics -->
+<article class="card concept" id="kinetics">
+  <header><span class="no">04</span><div><h2>Reaction rates</h2><div class="sub">warmer means faster, a lot faster</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t4"><title id="t4">Reaction rate rises steeply with temperature; onions brown from pale to deep brown</title>
+    <g class="wash"></g>
+    <g class="art">
+      <path d="M50 190h300M50 190V36" class="ln" marker-end="url(#ckI)"/>
+      <path d="M60 186q120-4 190-40t90-110" class="fl"/>
+      <path d="M200 190v-62" class="th dash"/><text x="200" y="208" class="nt2" text-anchor="middle">140 °C</text>
+      <text x="206" y="118" class="nt">browning</text><text x="206" y="138" class="nt">kicks in</text>
+      <text x="56" y="30" class="lb">RATE</text><text x="352" y="208" class="lb" text-anchor="end">TEMPERATURE</text>
+      <text x="80" y="90" class="nt">≈ 2× faster</text><text x="80" y="112" class="nt">every 10 °C</text>
+      <g><circle cx="80" cy="226" r="8" class="th"/><circle cx="110" cy="226" r="8" class="th"/><circle cx="140" cy="226" r="8" class="th hfill"/><circle cx="170" cy="226" r="8" class="th hfill2"/><circle cx="200" cy="226" r="8" class="dot"/></g>
+      <text x="216" y="231" class="nt2">onions: raw → brown</text>
+    </g>
+  </svg>
+  <p>Chemical reactions speed up sharply as things heat up. That one fact decides cooking times, shelf life, and how big a reactor has to be.</p>
+  <div class="pair"><div><b>In your kitchen</b>Browning (the Maillard reaction) barely happens in boiling water at 100 °C but races in hot oil. Sugar syrup changes stage within a few degrees, which is why jalebi chashni needs watching.</div><div><b>In industry</b>Companies "age" products quickly in warm rooms to predict shelf life, and run reactors at the temperature that balances speed against unwanted side reactions.</div></div>
+  <a class="try" href="../atlas/#jalebi">Try the sugar-syrup lab in jalebi →</a>
+</article>
+
+<!-- 05 fermentation -->
+<article class="card concept" id="ferment">
+  <header><span class="no">05</span><div><h2>Fermentation</h2><div class="sub">tiny workers, big results</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t5"><title id="t5">A jar of curd full of bacteria, and their growth curve: a slow start, fast growth, then a plateau</title>
+    <g class="wash"><path d="M48 96h104v86q0 14-14 14H62q-14 0-14-14z" class="w-yel"/></g>
+    <g class="art">
+      <path d="M44 72h112v110q0 18-18 18H62q-18 0-18-18z" class="ln"/><path d="M38 72h124" class="ln"/><path d="M48 96q13-6 26 0t26 0 26 0 26 0" class="th"/>
+      <g class="th"><path d="M66 120h10M96 132h10M126 118h10M74 156h10M110 164h10M136 150h10M90 180h10M60 186h8M124 186h10"/><circle cx="84" cy="140" r="2.5"/><circle cx="118" cy="144" r="2.5"/><circle cx="66" cy="170" r="2.5"/></g>
+      <text x="100" y="46" class="nt" text-anchor="middle">milk sugar → acid</text>
+      <text x="100" y="228" class="lb" text-anchor="middle">CURD SETTING</text>
+      <path d="M210 190h170M210 190V60" class="ln" marker-end="url(#ckI)"/>
+      <path d="M214 184q30 0 44-10t30-70q14-34 40-36t48-2" class="fl"/>
+      <text x="236" y="176" class="nt2">wait</text><text x="300" y="126" class="nt2">grow</text><text x="330" y="58" class="nt2">plateau</text>
+      <text x="216" y="54" class="lb">MICROBES</text><text x="380" y="208" class="lb" text-anchor="end">TIME</text>
+      <text x="295" y="230" class="nt" text-anchor="middle">warmer → shorter wait</text>
+    </g>
+  </svg>
+  <p>Bacteria and yeast are living chemical factories. Give them food, warmth and time, and they make acid, gas, flavour and texture. A tank that runs them under control is called a bioreactor.</p>
+  <div class="pair"><div><b>In your kitchen</b>Idli batter rises from carbon dioxide; curd thickens as acid sets the milk protein. In a cold winter kitchen both can take twice as long.</div><div><b>In industry</b>The same idea, in steel tanks with sensors, makes yoghurt, bread yeast, insulin, many vaccines and ethanol fuel.</div></div>
+  <a class="try" href="../atlas/#idli">Try the fermentation lab in idli →</a>
+</article>
+
+<!-- 06 pressure -->
+<article class="card concept" id="pressure">
+  <header><span class="no">06</span><div><h2>Pressure &amp; boiling</h2><div class="sub">why the cooker whistles</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t6"><title id="t6">A pressure cooker: trapped steam raises the pressure, so water boils hotter, about 120 °C; the whistle releases extra pressure</title>
+    <g class="wash"><path d="M54 140h132v44q0 14-14 14H68q-14 0-14-14z" class="w-blue"/></g>
+    <g class="art">
+      <path d="M50 96h140v88q0 18-18 18H68q-18 0-18-18z" class="ln"/><path d="M44 96q76-22 152 0" class="ln"/><path d="M190 108h50" class="ln" style="stroke-width:4"/>
+      <rect x="112" y="64" width="16" height="16" rx="3" class="ln"/><path d="M120 64v-6" class="ln"/>
+      <path d="M114 50q-10-10 0-20M126 50q10-12 0-22" class="th"/>
+      <path d="M54 140q16-6 33 0t33 0 33 0 33 0" class="th"/>
+      <g class="th"><circle cx="80" cy="166" r="4"/><circle cx="110" cy="176" r="5"/><circle cx="146" cy="162" r="4"/><circle cx="168" cy="178" r="3"/></g>
+      <path d="M90 124v-14M150 124v-14" class="fl" marker-end="url(#ckR)"/>
+      <text x="140" y="34" class="nt">whistle = safety valve</text>
+      <text x="120" y="228" class="lb" text-anchor="middle">PRESSURE COOKER</text>
+      <path d="M262 190h120M262 190V70" class="ln" marker-end="url(#ckI)"/>
+      <path d="M268 170q40-30 104-64" class="fl"/>
+      <circle cx="282" cy="162" r="4" class="dot"/><circle cx="350" cy="118" r="4" class="dot"/>
+      <text x="290" y="182" class="nt2">100 °C open pot</text><text x="300" y="104" class="nt">≈ 120 °C</text><text x="300" y="86" class="nt2">sealed cooker</text>
+      <text x="268" y="64" class="lb">BOILING POINT</text><text x="382" y="208" class="lb" text-anchor="end">PRESSURE</text>
+    </g>
+  </svg>
+  <p>Water boils at 100 °C only at sea-level pressure. Trap the steam and the pressure rises, so the water has to get hotter before it can boil. Every pressurised vessel needs a relief valve in case the pressure climbs too far.</p>
+  <div class="pair"><div><b>In your kitchen</b>At about 120 °C, dal and rajma soften in a fraction of the open-pot time. In the mountains water boils below 100 °C, so open-pot cooking is slower there.</div><div><b>In industry</b>Canned food is sterilised in giant pressure cookers called retorts at 121 °C. Boilers and reactors carry relief valves, just like your whistle.</div></div>
+  <a class="try" href="../atlas/#dal-makhani">See it in dal makhani →</a>
+</article>
+
+<!-- 07 flow -->
+<article class="card concept" id="flow">
+  <header><span class="no">07</span><div><h2>Flow &amp; thickness</h2><div class="sub">how fast does it pour?</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t7"><title id="t7">Three ladles pouring: water in a thin fast stream, dosa batter in a ribbon, honey in a thick slow coil</title>
+    <g class="wash"><path d="M180 160q20-10 40 0v20h-40z" class="w-yel"/><path d="M300 170q24-10 50 0v14h-50z" class="w-yel" style="opacity:.32"/></g>
+    <g class="art">
+      <g class="ln"><path d="M30 60q20 26 46 0"/><path d="M76 60l40-30"/><path d="M180 60q20 26 46 0"/><path d="M226 60l40-30"/><path d="M302 60q20 26 46 0"/><path d="M348 60l40-30"/></g>
+      <path d="M50 74v80" class="th"/><g class="th"><circle cx="50" cy="166" r="2"/><circle cx="50" cy="178" r="2"/></g><path d="M30 190q20-6 40 0" class="th"/>
+      <path d="M198 74q4 40-2 86" class="ln" style="stroke-width:6;opacity:.75"/><path d="M178 172q22-14 44 0" class="th"/>
+      <path d="M324 74q-2 40 2 82" class="ln" style="stroke-width:12;opacity:.6"/><path d="M308 170q4-12 18-12t18 12q-6 8-18 8t-18-8" class="th"/><path d="M314 162q12 6 24 0" class="th"/>
+      <text x="52" y="206" class="lb" text-anchor="middle">WATER</text><text x="200" y="206" class="lb" text-anchor="middle">DOSA BATTER</text><text x="326" y="206" class="lb" text-anchor="middle">HONEY</text>
+      <path d="M40 234h300" class="fl" marker-end="url(#ckR)"/><text x="200" y="226" class="nt2" text-anchor="middle">thicker (more viscous)</text>
+    </g>
+  </svg>
+  <p>How easily a liquid flows is its viscosity. Engineers size every pipe and pump around it, and many foods are trickier still: they get thinner when you stir them and thicker when they rest.</p>
+  <div class="pair"><div><b>In your kitchen</b>Good dosa batter pours in a ribbon and spreads itself on the tawa. Too thick and it tears; too thin and it runs and won't crisp.</div><div><b>In industry</b>Ketchup, chocolate and toothpaste are pumped through pipes designed for exactly how thick and "shear-thinning" they are.</div></div>
+  <a class="try" href="../atlas/#masala-dosa">See it in masala dosa →</a>
+</article>
+
+<!-- 08 separations -->
+<article class="card concept" id="separate">
+  <header><span class="no">08</span><div><h2>Separations</h2><div class="sub">pulling one thing out of another</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t8"><title id="t8">Three separations: paneer straining in muslin, rose water distilling, butter floating while churning</title>
+    <g class="wash"><path d="M36 180q34 14 68 0v14H36z" class="w-blue"/><circle cx="246" cy="166" r="20" class="w-red"/><ellipse cx="340" cy="112" rx="34" ry="8" class="w-yel"/></g>
+    <g class="art">
+      <path d="M70 30v24" class="th"/><path d="M70 54q-34 26-24 58t24 26 24-26-24-58" class="ln"/><path d="M58 92q12 8 24 0" class="th"/>
+      <path d="M70 142v8M64 156v6M76 162v6" class="fl"/>
+      <path d="M30 172q40 30 80 0" class="ln"/>
+      <text x="70" y="214" class="lb" text-anchor="middle">STRAIN</text><text x="70" y="234" class="nt" text-anchor="middle">paneer | whey</text>
+      <path d="M150 150q0-30 28-30t28 30v30h-56z" class="ln"/><path d="M162 196q16-14 32 0" class="fl"/>
+      <path d="M200 124q20-40 60-34" class="ln"/><path d="M226 98l30 10" class="th"/>
+      <path d="M258 96v34" class="th"/><path d="M232 186a16 16 0 1 0 28 0l-8-26h-12z" class="ln"/><path d="M258 132v6M258 144v6" class="fl"/>
+      <text x="206" y="214" class="lb" text-anchor="middle">DISTIL</text><text x="206" y="234" class="nt" text-anchor="middle">rose water</text>
+      <path d="M304 110v74q0 12 12 12h48q12 0 12-12v-74" class="ln"/><path d="M340 36v130M330 166h20" class="ln"/>
+      <path d="M318 130a22 8 0 0 0 44 0" class="th" marker-end="url(#ckI)"/>
+      <g class="th"><circle cx="318" cy="112" r="5"/><circle cx="356" cy="110" r="6"/><circle cx="332" cy="104" r="4"/></g>
+      <text x="340" y="214" class="lb" text-anchor="middle">CHURN</text><text x="340" y="234" class="nt" text-anchor="middle">butter floats</text>
+    </g>
+  </svg>
+  <p>Much of a chemical plant is about separating mixtures, using differences in size, boiling point or density. Separation is often the most expensive part of the whole process.</p>
+  <div class="pair"><div><b>In your kitchen</b>Muslin catches paneer curds and lets whey through; churning buttermilk floats the lighter butterfat; making ghee drives off water and leaves the milk solids behind.</div><div><b>In industry</b>Dairies spin milk in cream separators; refineries split crude oil in tall distillation columns; Kannauj still distils attar in copper pots.</div></div>
+  <a class="try" href="../atlas/#palak-paneer">See it in palak paneer →</a>
+</article>
+
+<!-- 09 emulsions -->
+<article class="card concept" id="emulsion">
+  <header><span class="no">09</span><div><h2>Mixing &amp; emulsions</h2><div class="sub">making oil and water get along</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t9"><title id="t9">Oil and water separate into layers; whisked with an emulsifier, the oil breaks into tiny protected droplets</title>
+    <g class="wash"><rect x="58" y="70" width="84" height="40" class="w-yel"/><rect x="258" y="70" width="84" height="120" class="w-yel" style="opacity:.12"/></g>
+    <g class="art">
+      <path d="M54 50v134q0 12 12 12h68q12 0 12-12V50" class="ln"/><path d="M56 110q22-6 44 0t44 0" class="th"/>
+      <text x="100" y="94" class="nt2" text-anchor="middle">oil</text><text x="100" y="160" class="nt2" text-anchor="middle">water</text>
+      <text x="100" y="222" class="lb" text-anchor="middle">SEPARATES</text>
+      <path d="M170 124h60" class="fl" marker-end="url(#ckR)"/><text x="200" y="110" class="nt" text-anchor="middle">whisk +</text><text x="200" y="150" class="nt" text-anchor="middle">emulsifier</text>
+      <path d="M254 50v134q0 12 12 12h68q12 0 12-12V50" class="ln"/>
+      <g class="th"><circle cx="276" cy="80" r="7"/><circle cx="304" cy="96" r="6"/><circle cx="326" cy="78" r="5"/><circle cx="286" cy="122" r="6"/><circle cx="318" cy="132" r="7"/><circle cx="296" cy="160" r="5"/><circle cx="328" cy="170" r="6"/><circle cx="272" cy="176" r="5"/><circle cx="312" cy="106" r="4"/></g>
+      <g class="th dash"><circle cx="276" cy="80" r="10"/><circle cx="318" cy="132" r="10"/><circle cx="286" cy="122" r="9"/></g>
+      <text x="300" y="222" class="lb" text-anchor="middle">EMULSION</text>
+      <text x="300" y="38" class="nt2" text-anchor="middle">protein coats each drop</text>
+    </g>
+  </svg>
+  <p>Some things refuse to mix. Break one into tiny droplets and coat them with an emulsifier (often a protein), and they stay suspended. Mixing well is a whole branch of engineering on its own.</p>
+  <div class="pair"><div><b>In your kitchen</b>Kadhi can split if it boils too hard; whisking besan into the curd first protects it. Cashew paste makes a creamy korma sauce that holds together.</div><div><b>In industry</b>Ice cream, mayonnaise, milk itself, paints and many medicines are emulsions engineered to stay stable on the shelf.</div></div>
+  <a class="try" href="../atlas/#kadhi-pakora">See it in kadhi pakora →</a>
+</article>
+
+<!-- 10 unit operations -->
+<article class="card concept" id="unitops">
+  <header><span class="no">10</span><div><h2>Unit operations</h2><div class="sub">a recipe is a chain of standard steps</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t10"><title id="t10">Process-flow symbols: soak, grind, ferment, cook; each a standard unit operation joined by arrows</title>
+    <g class="wash"><rect x="214" y="78" width="58" height="80" class="w-yel"/></g>
+    <g class="art">
+      <path d="M24 90v52q0 10 10 10h44q10 0 10-10V90" class="ln"/><path d="M26 106q16-6 31 0t31 0" class="th"/>
+      <ellipse cx="148" cy="92" rx="30" ry="8" class="ln"/><path d="M118 92v52q0 8 30 8t30-8V92" class="ln"/><ellipse cx="148" cy="120" rx="16" ry="9" class="th hfill2"/>
+      <path d="M212 90q30-22 62 0v62q0 8-8 8h-46q-8 0-8-8z" class="ln"/><g class="th"><circle cx="230" cy="120" r="4"/><circle cx="250" cy="134" r="5"/><circle cx="258" cy="112" r="3"/></g>
+      <ellipse cx="342" cy="130" rx="38" ry="8" class="ln"/><path d="M322 170q6-18 12-8q4-14 10-18q4 12 10 16q4-8 8-10q0 12 2 20" class="fl"/>
+      <path d="M90 124h24M180 124h28M276 124h26" class="fl" marker-end="url(#ckR)"/>
+      <text x="56" y="186" class="lb" text-anchor="middle">SOAK</text><text x="148" y="186" class="lb" text-anchor="middle">GRIND</text><text x="243" y="186" class="lb" text-anchor="middle">FERMENT</text><text x="342" y="196" class="lb" text-anchor="middle">COOK</text>
+      <text x="200" y="40" class="nt" text-anchor="middle">same boxes, endless recipes</text>
+      <text x="200" y="226" class="nt2" text-anchor="middle">idli, dosa, appam, dhokla: different settings, same chain</text>
+    </g>
+  </svg>
+  <p>Chemical engineers break any process into standard building blocks called unit operations: mixing, grinding, heating, evaporating, filtering, drying. Learn the blocks and you can read, or design, almost any plant.</p>
+  <div class="pair"><div><b>In your kitchen</b>Idli and dosa share the same chain (soak, grind, ferment); only the last step differs: steaming versus frying on a tawa.</div><div><b>In industry</b>Engineers draw these chains as process-flow diagrams, like the dosa plant on the home page, before a single pipe is built.</div></div>
+  <a class="try" href="../#twist">See the dosa drawn as a plant →</a>
+</article>
+
+<!-- 11 control -->
+<article class="card concept" id="control">
+  <header><span class="no">11</span><div><h2>Process control</h2><div class="sub">measure, compare, adjust, repeat</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t11"><title id="t11">A feedback loop: taste the sambar, compare with how you like it, add salt or tamarind, then taste again</title>
+    <g class="wash"><circle cx="200" cy="126" r="36" class="w-red"/></g>
+    <g class="art">
+      <path d="M170 110h60v34q0 14-14 14h-32q-14 0-14-14z" class="ln"/><path d="M164 110h72" class="ln"/><path d="M176 124q12-5 24 0t24 0" class="th"/>
+      <text x="200" y="182" class="lb" text-anchor="middle">SAMBAR</text>
+      <rect x="40" y="40" width="96" height="40" rx="10" class="ln"/><text x="88" y="66" class="lb" text-anchor="middle">TASTE</text>
+      <rect x="264" y="40" width="96" height="40" rx="10" class="ln"/><text x="312" y="66" class="lb" text-anchor="middle">COMPARE</text>
+      <rect x="264" y="180" width="96" height="40" rx="10" class="ln"/><text x="312" y="206" class="lb" text-anchor="middle">ADJUST</text>
+      <path d="M160 126q-70 0-72-40" class="fl" marker-end="url(#ckR)"/>
+      <path d="M140 60h118" class="fl" marker-end="url(#ckR)"/>
+      <path d="M312 84v90" class="fl" marker-end="url(#ckR)"/>
+      <path d="M262 200q-20 0-36-36" class="fl" marker-end="url(#ckR)"/>
+      <text x="200" y="50" class="nt2" text-anchor="middle">sensor</text><text x="322" y="134" class="nt2">vs. how you</text><text x="322" y="152" class="nt2">like it</text>
+      <text x="96" y="214" class="nt">a pinch of salt,</text><text x="96" y="236" class="nt">a bit more tamarind</text>
+    </g>
+  </svg>
+  <p>No process runs perfectly by itself. A control loop measures something, compares it with a target and makes a correction, over and over. A refinery runs thousands of these loops at once, mostly automatically.</p>
+  <div class="pair"><div><b>In your kitchen</b>Tasting and adjusting salt is a feedback loop, and so is turning the flame down when the oil starts to smoke. An oven thermostat does it for you.</div><div><b>In industry</b>Sensors read temperature, pressure and flow every second, and controllers nudge valves to hold each one on target.</div></div>
+  <a class="try" href="../atlas/#sambar">See it in sambar →</a>
+</article>
+
+<!-- 12 scale-up -->
+<article class="card concept" id="scale">
+  <header><span class="no">12</span><div><h2>Scale-up &amp; safety</h2><div class="sub">cooking for 4 vs. a wedding for 400</div></div></header>
+  <svg class="sk" viewBox="0 0 400 240" role="img" aria-labelledby="t12"><title id="t12">A small pot next to a huge wedding degchi with a person for scale; heat takes much longer to reach the centre of the big one</title>
+    <g class="wash"><path d="M200 90h170v96q0 14-14 14H214q-14 0-14-14z" class="w-yel"/></g>
+    <g class="art">
+      <path d="M40 150h60v30q0 10-10 10H50q-10 0-10-10z" class="ln"/><path d="M34 150h72" class="ln"/><circle cx="70" cy="172" r="3" class="dot"/>
+      <path d="M50 206v-10M70 206v-10M90 206v-10" class="ht" marker-end="url(#ckY)"/>
+      <path d="M196 86h178v100q0 16-16 16H212q-16 0-16-16z" class="ln"/><path d="M186 86h198" class="ln"/><circle cx="285" cy="150" r="3" class="dot"/>
+      <path d="M220 222v-14M250 222v-14M285 222v-14M320 222v-14M350 222v-14" class="ht" marker-end="url(#ckY)"/>
+      <path d="M285 196v-38" class="th dash" marker-end="url(#ckI)"/>
+      <circle cx="150" cy="118" r="8" class="th"/><path d="M150 126v40M150 166l-10 32M150 166l10 32M150 140l-14 12M150 140l14 12" class="th"/>
+      <text x="70" y="136" class="nt2" text-anchor="middle">heats fast</text>
+      <text x="285" y="74" class="nt" text-anchor="middle">centre heats last</text>
+      <text x="200" y="40" class="nt" text-anchor="middle">twice as wide → ~4× longer to reach the middle</text>
+    </g>
+  </svg>
+  <p>A recipe that works for four rarely works unchanged for four hundred. Volume grows faster than surface area, so heat takes longer to reach the middle, and there is more to go wrong. Before scaling up, engineers ask "what happens if this goes wrong?", and build in the answer.</p>
+  <div class="pair"><div><b>In your kitchen</b>Wedding biryani is layered and sealed for dum so steam cooks the centre evenly, and cooks stir big kadhais constantly so nothing scorches at the bottom.</div><div><b>In industry</b>New processes go from lab flask to a small pilot plant to full scale, with safety studies at each step.</div></div>
+  <a class="try" href="../atlas/#hyderabadi-biryani">See it in Hyderabadi biryani →</a>
+</article>
+
+</div>
+
+<section class="card together" aria-labelledby="h-tog">
+  <div>
+    <span class="kick">Putting it together</span>
+    <h2 id="h-tog">Every dish in the atlas uses these ideas</h2>
+    <p>Open any dish and look for its "ChemE" tab, or open the ChemE index to see which dishes use which ideas, with hands-on labs for fermentation, frying, sugar syrup and more.</p>
+  </div>
+  <div class="btns">
+    <a class="btn acc" href="../atlas/#labs">Open the ChemE labs</a>
+    <a class="btn" href="../atlas/">Explore the map</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Mohan Boggara (Personal). Created with AI assistance (Claude). Code MIT; content CC BY-NC 4.0. Sketches are simplified for learning; figures are typical values, not lab measurements. <a href="../">Back to home</a>
+</footer>
+</div>
+/*TOGGLE*/
+</body>
+</html>

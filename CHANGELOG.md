@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v31 | 2026-10-26 | Dark mode is now the default (light remembered if chosen); new page /cheme/ "What is chemical engineering?" with 12 pencil-sketched concepts tied to kitchen examples and atlas dishes; landing headline now "India's food, mapped and explored through a chemical engineer's eyes"; deep-dive link and nav item on the landing page |
 | v30 | 2026-10-26 | Fix: pencil sketch drew blank on phones (Safari); simplified the pencil-grain filter |
 | v29 | 2026-10-26 | Landing page: pencil process-flow sketch (masala dosa as a chemical plant) at the top of the ChemE twist section; follows light/dark; swipeable on phones |
 | v28 | 2026-10-26 | Light/dark switch on the landing page and in the atlas toolbar (remembered across both); atlas toolbar wraps on phones so every button stays reachable |

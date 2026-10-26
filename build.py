@@ -22,3 +22,12 @@ n_s=st.get('states',33)
 L=L.replace('/*MAP*/',open('landing-map.svg').read()).replace('{{DISHES}}',str(n_d)).replace('{{STATES}}',str(n_s))
 open(os.path.join(here,'docs','index.html'),'w').write(L)
 print(len(h))
+# concept explainer page: shares fonts, colour tokens and the theme switch with the landing page
+C=open('cheme.html').read()
+LS=open('landing.html').read()
+fonts=re.search(r'<link rel="preconnect"[^>]*>\s*<link rel="stylesheet" href="https://fonts[^>]*>',LS).group(0)
+tokens=LS[LS.index(':root{'):LS.index('*{box-sizing')]
+i=LS.index('<script>(function(){var r=document.documentElement'); toggle=LS[i:LS.index('</script>',i)+9]
+C=C.replace('/*FONTS*/',fonts).replace('/*TOKENS*/',tokens).replace('/*TOGGLE*/',toggle)
+os.makedirs(os.path.join(here,'docs','cheme'),exist_ok=True)
+open(os.path.join(here,'docs','cheme','index.html'),'w').write(C)

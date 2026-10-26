@@ -22,7 +22,7 @@ The site is a single HTML page assembled from the source files:
 python3 build.py
 ```
 
-This writes `docs/index.html` (the landing page), `docs/atlas/index.html` (the atlas, served by GitHub Pages) and `cheme-cooks-atlas.html`. The landing page's map and counts come from `node mklanding.js` (re-run it after adding dishes). No dependencies beyond Python 3. Progress (passport, plan, pantry) is stored in the visitor's own browser.
+This writes `docs/index.html` (the landing page), `docs/cheme/index.html` (the "What is chemical engineering?" explainer, from `cheme.html`), `docs/atlas/index.html` (the atlas, served by GitHub Pages) and `cheme-cooks-atlas.html`. The landing page's map and counts come from `node mklanding.js` (re-run it after adding dishes). No dependencies beyond Python 3. Progress (passport, plan, pantry) is stored in the visitor's own browser.
 
 ## Licence
 
