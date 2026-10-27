@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v34 | 2026-10-27 | Tagline now "Exploring India's food through a chemical engineer's perspective" (headline, page title, share cards, preview image); removed the faint duplicate "ghost" layer of the dosa sketch, which Safari drew as grey boxes with stray text |
 | v33 | 2026-10-26 | Share previews: Open Graph and X card tags on the landing page, atlas and primer; preview images og-dosa.png (dosa plant sketch) and og-cheme.png, made by mkog.js |
 | v32 | 2026-10-26 | Links to the ChemE primer from across the site: atlas toolbar button (What is ChemE?), concept index (plus per-concept "basics, sketched" links to the matching sketch), every dish's ChemE tab, How it works, Kids lab, ingredient cards, the meal-planner batch-plant view and the tour; landing page Four ways in, dosa lens and footer. In the Claude-hosted copy the links open the live site in a new tab |
 | v31 | 2026-10-26 | Dark mode is now the default (light remembered if chosen); new page /cheme/ "What is chemical engineering?" with 12 pencil-sketched concepts tied to kitchen examples and atlas dishes; landing headline now "India's food, mapped and explored through a chemical engineer's eyes"; deep-dive link and nav item on the landing page |

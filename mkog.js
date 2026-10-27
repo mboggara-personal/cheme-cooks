@@ -20,7 +20,7 @@ const page=(css,body)=>`<!doctype html><html data-theme="dark"><head><meta chars
 const dosa=page(`.top{display:flex;justify-content:space-between;align-items:center;padding:26px 40px 0}
 .card{margin:12px 64px 0;background:var(--panel);border:1px solid var(--rule);border-radius:22px;padding:6px 10px}
 .pfdsk{width:100%;height:auto;display:block}${pfdCss}`,
-`<div class="top">${brand}<span class="url">India's food through a chemical engineer's eyes</span></div><div class="card">${svg}</div>`);
+`<div class="top">${brand}<span class="url">Exploring India's food through a chemical engineer's perspective</span></div><div class="card">${svg}</div>`);
 const cheme=page(`.wrap{display:grid;grid-template-columns:470px 1fr;gap:34px;align-items:center;padding:40px 44px}
 h1{font-family:var(--f-display);font-weight:400;font-size:64px;line-height:1.02;margin:34px 0 18px}
 p{font-size:24px;line-height:1.4;color:var(--ink-2);margin:0 0 22px}.hand{font-family:var(--f-hand);color:var(--chili);font-size:30px}
