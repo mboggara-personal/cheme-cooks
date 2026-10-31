@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v36 | 2026-10-30 | Atlas: Masala Dosa's Recipe and ChemE tabs end with a pencil filter-coffee card ("best with filter coffee…") that opens the Filter Coffee page |
 | v35 | 2026-10-30 | Dosa sketch: a filter coffee (tumbler and davara) beside the finished dosa; share image updated |
 | v34 | 2026-10-27 | Tagline now "Exploring India's food through a chemical engineer's perspective" (headline, page title, share cards, preview image); removed the faint duplicate "ghost" layer of the dosa sketch, which Safari drew as grey boxes with stray text |
 | v33 | 2026-10-26 | Share previews: Open Graph and X card tags on the landing page, atlas and primer; preview images og-dosa.png (dosa plant sketch) and og-cheme.png, made by mkog.js |

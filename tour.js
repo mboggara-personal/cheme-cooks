@@ -46,3 +46,16 @@ const WHAT_ANCHOR={fermentation:"ferment",leavening:"ferment",acidbase:"ferment"
 function whatBox(text){ return `<div class="whatis"><span class="wq" aria-hidden="true">?</span><span>${text||"New to chemical engineering?"} <a href="${whatURL()}"${whatTarget()}>What is chemical engineering? Twelve big ideas in pencil sketches →</a></span></div>`; }
 function whatConcept(k){ const a=WHAT_ANCHOR[k]; return a?`<a class="clink" href="${whatURL(a)}"${whatTarget()}>The basics, sketched →</a>`:""; }
 (function(){ const b=$("#bWhat"); if(b){ b.href=whatURL(); if(!/\/atlas\/?$/.test(location.pathname)){ b.target="_blank"; b.rel="noopener"; } } })();
+
+/* ---- pairing note: masala dosa → filter coffee (same pencil cup as the landing-page sketch) ---- */
+const DRINK_PAIR={"masala-dosa":["filter-coffee","best with filter coffee…"]};
+function pairCard(d){ const p=DRINK_PAIR[d.id]; if(!p||!byId[p[0]]) return ""; return `<button class="paircard" data-open="${p[0]}" aria-label="Open ${esc(byId[p[0]].name)}">
+<svg width="92" height="92" viewBox="0 0 120 130" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M42 32l6 60q1 6 20 6t20-6l6-60z" fill="#8a5a2b" fill-opacity=".28" stroke="none"/>
+ <ellipse cx="60" cy="104" rx="56" ry="10" stroke-width="2"/><path d="M4 104q4 24 56 24t56-24" stroke-width="2"/>
+ <path d="M42 32l6 62q1 6 20 6t20-6l6-62" stroke-width="2"/><ellipse cx="60" cy="32" rx="27" ry="6" stroke-width="2"/>
+ <path d="M45 48q23 5 46 0M47 80q21 5 42 0" stroke-width="1.2" opacity=".7"/>
+ <g stroke-width="1.2" opacity=".8"><circle cx="48" cy="32" r="2.5"/><circle cx="58" cy="30" r="2"/><circle cx="68" cy="33" r="2.5"/><circle cx="76" cy="31" r="1.8"/></g>
+ <path d="M52 20q-9-10 0-20M70 20q-9-10 0-18" stroke-width="1.2" opacity=".7"/>
+</svg><span><span class="phand">${esc(p[1])}</span><small>${esc(byId[p[0]].name)} · ${esc(byId[p[0]].place)} →</small></span></button>`; }
+document.addEventListener("click",e=>{ if(e.target.closest(".paircard")) setTimeout(()=>{ const b=$("#dbody"); if(b) b.scrollTop=0; },60); });

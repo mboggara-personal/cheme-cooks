@@ -605,7 +605,7 @@ function renderDetail(){
   $("#tThali").onclick=()=>{ toggleThali(d.id); renderDetail(); };
   renderPane();
 }
-function renderPane(){ const d=cur; const P=$("#pane"); P.innerHTML = ({recipe:paneRecipe,health:paneHealth,ayur:paneAyur,history:paneHistory,cheme:paneCheme})[tab](d); wirePane(d); }
+function renderPane(){ const d=cur; const P=$("#pane"); P.innerHTML = ({recipe:paneRecipe,health:paneHealth,ayur:paneAyur,history:paneHistory,cheme:paneCheme})[tab](d) + ((tab==="recipe"||tab==="cheme")?pairCard(d):""); wirePane(d); }
 /* ---------- cookbook helpers ---------- */
 const CAT = {spice:"spice",salt:"salt",soda:"salt",oil:"fat",mustardoil:"fat",sesameoil:"fat",coconutoil:"fat",ghee:"fat",butter:"fat",butterS:"fat",
   cream:"dairy",milk:"dairy",yogurt:"dairy",chhena:"dairy",sugar:"sweet",jaggery:"sweet",raisin:"sweet",
