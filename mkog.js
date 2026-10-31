@@ -18,7 +18,7 @@ const base=`*{box-sizing:border-box}html,body{margin:0}body{width:1200px;height:
 .url{font-family:var(--f-mono);font-size:15px;color:var(--turmeric-ink);letter-spacing:.04em}`;
 const page=(css,body)=>`<!doctype html><html data-theme="dark"><head><meta charset="utf-8">${fonts}<style>${tokens}${dark}${base}${css}${process.env.FONTCSS?fs.readFileSync(process.env.FONTCSS,'utf8'):''}</style></head><body>${body}</body></html>`;
 const dosa=page(`.top{display:flex;justify-content:space-between;align-items:center;padding:26px 40px 0}
-.card{margin:12px 64px 0;background:var(--panel);border:1px solid var(--rule);border-radius:22px;padding:6px 10px}
+.card{margin:10px 96px 0;background:var(--panel);border:1px solid var(--rule);border-radius:22px;padding:6px 10px}
 .pfdsk{width:100%;height:auto;display:block}${pfdCss}`,
 `<div class="top">${brand}<span class="url">Exploring India's food through a chemical engineer's perspective</span></div><div class="card">${svg}</div>`);
 const cheme=page(`.wrap{display:grid;grid-template-columns:470px 1fr;gap:34px;align-items:center;padding:40px 44px}
