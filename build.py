@@ -31,3 +31,31 @@ i=LS.index('<script>(function(){var r=document.documentElement'); toggle=LS[i:LS
 C=C.replace('/*FONTS*/',fonts).replace('/*TOKENS*/',tokens).replace('/*TOGGLE*/',toggle)
 os.makedirs(os.path.join(here,'docs','cheme'),exist_ok=True)
 open(os.path.join(here,'docs','cheme','index.html'),'w').write(C)
+# swap inline pencil SVGs for pre-rendered images (made by mksketches.js) so every browser shows them
+def swap_sketches(html, cls, name_of):
+    out=[]; pos=0
+    while True:
+        i=html.find(f'<svg class="{cls}"',pos)
+        if i<0: break
+        j=html.index('</svg>',i)+6; svg=html[i:j]
+        name=name_of(svg)
+        d=os.path.join(here,'docs','sketches')
+        if not (os.path.exists(os.path.join(d,name+'-dark.webp')) and os.path.exists(os.path.join(d,name+'-light.webp'))):
+            out.append(html[pos:j]); pos=j; continue
+        m=re.search(r'<title[^>]*>(.*?)</title>',svg,re.S); m2=re.search(r'<desc[^>]*>(.*?)</desc>',svg,re.S)
+        alt=(m2.group(1) if m2 else (m.group(1) if m else 'Pencil sketch')).replace('"','&quot;')
+        vb=re.search(r'viewBox="0 0 (\d+) (\d+)"',svg); w,h=vb.group(1),vb.group(2)
+        rel=prefix_for[0]
+        img=(f'<img class="{cls} skimg" src="{rel}sketches/{name}-dark.webp" data-dark="{rel}sketches/{name}-dark.webp" data-light="{rel}sketches/{name}-light.webp" width="{w}" height="{h}" alt="{alt}" loading="lazy" decoding="async">')
+        out.append(html[pos:i]+img); pos=j
+    out.append(html[pos:]); return ''.join(out)
+SKCSS='<style>.skimg{width:100%;height:auto;display:block}</style>\n</head>'
+SKJS='<script>(function(){var r=document.documentElement;function s(){var l=r.getAttribute("data-theme")==="light";document.querySelectorAll("img.skimg").forEach(function(i){var u=l?i.dataset.light:i.dataset.dark;if(i.getAttribute("src")!==u)i.setAttribute("src",u)})}s();new MutationObserver(s).observe(r,{attributes:true,attributeFilter:["data-theme"]})})();</script>\n</body>'
+prefix_for=['']
+if not os.environ.get('NOIMG'):
+    p=os.path.join(here,'docs','index.html'); H=open(p).read()
+    prefix_for[0]=''; H2=swap_sketches(H,'pfdsk',lambda s:'pfd-dosa')
+    if H2!=H: H2=H2.replace('</head>',SKCSS,1).replace('</body>',SKJS,1); open(p,'w').write(H2)
+    p=os.path.join(here,'docs','cheme','index.html'); H=open(p).read()
+    prefix_for[0]='../'; H2=swap_sketches(H,'sk',lambda s:'ck-'+re.search(r'<title id="([^"]+)"',s).group(1))
+    if H2!=H: H2=H2.replace('</head>',SKCSS,1).replace('</body>',SKJS,1); open(p,'w').write(H2)

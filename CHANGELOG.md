@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v37 | 2026-11-02 | Fix: pencil sketches were blank on iPhone browsers. The dosa plant and the 13 primer sketches are now pre-rendered images (dark and light, made by mksketches.js) that the theme switch swaps; inline SVG kept as the editable source |
 | v36 | 2026-10-30 | Atlas: Masala Dosa's Recipe and ChemE tabs end with a pencil filter-coffee card ("best with filter coffee…") that opens the Filter Coffee page |
 | v35 | 2026-10-30 | Dosa sketch: a filter coffee (tumbler and davara) beside the finished dosa; share image updated |
 | v34 | 2026-10-27 | Tagline now "Exploring India's food through a chemical engineer's perspective" (headline, page title, share cards, preview image); removed the faint duplicate "ghost" layer of the dosa sketch, which Safari drew as grey boxes with stray text |
