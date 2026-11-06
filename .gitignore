@@ -2,6 +2,7 @@ Admin2.*
 india_telengana.geojson
 *.tgz
 *.png
+!docs/og-*.png
 prompts/__pycache__/
 food-atlas.html
 cheme-cooks-atlas.html

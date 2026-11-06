@@ -1,4 +1,6 @@
-const SISTER = { tea:["The Tea Atlas","https://claude.ai/artifact/UswwpFZcpSd4sAcVv9ra2h"], coffee:["The Coffee Atlas","https://claude.ai/artifact/X7YoCRpGqm5S7MXijYybap"] };
+// Sister-atlas links, keyed by a dish's `link` field (tea, coffee). Add an entry, e.g. tea:["The Tea Atlas","<public URL>"],
+// only once that atlas is publicly released; dishes without an entry show no link.
+const SISTER = {};
 Object.assign(META, {
   "masala-chai":{k:["street"],link:"tea"}, "filter-coffee":{link:"coffee"}, "thandai":{f:["Holi","Shivratri"]},
   "shikanji":{k:["street"]}

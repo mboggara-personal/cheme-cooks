@@ -1,5 +1,5 @@
 // ===== Kitchen traditions, festivals and links (each tag rests on the dish's cited history) =====
-const FEST_ATLAS = "https://claude.ai/artifact/Wd5D5yZm6d5yb3FYxFyCvP";
+const FEST_ATLAS = ""; // public URL of the Hindu Festivals Atlas; leave empty until that atlas is released (no link is shown while empty)
 const KITCHENS = {
   royal:"Royal kitchens", temple:"Temple kitchens", street:"Street food",
   pandit:"Kashmiri Pandit", awadhi:"Awadhi", nizami:"Hyderabadi (Nizami)", chettiar:"Chettiar", syrian:"Syrian Christian",

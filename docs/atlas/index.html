@@ -833,7 +833,7 @@ a.tbtn{color:var(--ink);text-decoration:none}a.tbtn:hover{border-color:var(--ink
   <section id="planView" hidden></section>
   <section id="pantryView" hidden></section>
   <footer>
-    <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map: external boundaries of India as per the Survey of India (official data via DataMeet, CC BY-SA 2.5); state boundaries from DataMeet (CC BY 2.5 IN). Simplified for display, not to scale. <br><b>© 2026 Mohan Boggara (Personal).</b> Code <a href="https://github.com/mboggara-personal/cheme-cooks/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>; recipes, histories, sketches and other content <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. <a href="https://github.com/mboggara-personal/cheme-cooks" target="_blank" rel="noopener">Source on GitHub</a>.
+    <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map: external boundaries of India as per the Survey of India (official data via DataMeet, CC BY-SA 2.5); state boundaries from DataMeet (CC BY 2.5 IN). Simplified for display, not to scale. <br><b>© 2026 Mohan Boggara (Personal).</b> Code <a href="https://github.com/mboggara-personal/cheme-cooks/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>; recipes, histories, sketches and other content <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. <a href="https://github.com/mboggara-personal/cheme-cooks" target="_blank" rel="noopener">Source on GitHub</a>. Created by Mohan Boggara with AI assistance (Claude and ChatGPT).
   </footer>
 </main>
 
@@ -5712,7 +5712,7 @@ Object.assign(HIST, {
 });
 
 // ===== Kitchen traditions, festivals and links (each tag rests on the dish's cited history) =====
-const FEST_ATLAS = "https://claude.ai/artifact/Wd5D5yZm6d5yb3FYxFyCvP";
+const FEST_ATLAS = ""; // public URL of the Hindu Festivals Atlas; leave empty until that atlas is released (no link is shown while empty)
 const KITCHENS = {
   royal:"Royal kitchens", temple:"Temple kitchens", street:"Street food",
   pandit:"Kashmiri Pandit", awadhi:"Awadhi", nizami:"Hyderabadi (Nizami)", chettiar:"Chettiar", syrian:"Syrian Christian",
@@ -5748,7 +5748,9 @@ Object.assign(META, {
   "shorshe-ilish":{k:["bengali"]}, "kathi-roll":{k:["street"]}, "thekua":{f:["Chhath"]}, "til-pitha":{f:["Bihu"]}
 });
 
-const SISTER = { tea:["The Tea Atlas","https://claude.ai/artifact/UswwpFZcpSd4sAcVv9ra2h"], coffee:["The Coffee Atlas","https://claude.ai/artifact/X7YoCRpGqm5S7MXijYybap"] };
+// Sister-atlas links, keyed by a dish's `link` field (tea, coffee). Add an entry, e.g. tea:["The Tea Atlas","<public URL>"],
+// only once that atlas is publicly released; dishes without an entry show no link.
+const SISTER = {};
 Object.assign(META, {
   "masala-chai":{k:["street"],link:"tea"}, "filter-coffee":{link:"coffee"}, "thandai":{f:["Holi","Shivratri"]},
   "shikanji":{k:["street"]}
@@ -6842,7 +6844,7 @@ function paneHistory(d){
    <div class="hplace"><div class="kick mono">THE PLACE · ${esc(d.place.toUpperCase())}</div><p>${esc(h.place||"")}</p><div class="kv"><span><b>${d.lat.toFixed(2)}°N, ${d.lon.toFixed(2)}°E</b></span><button class="linkbtn" id="oMap">Show on the map →</button></div></div>
    <h3>The story <span class="conf ${d.conf}">${d.conf}</span></h3><p class="story">${esc(d.story)}</p><p class="note">${cl} The pin marks the city closest to the dish's best-known origin.</p>
    ${h.tl?`<h3>Timeline</h3><ol class="htl">${h.tl.map(([w,t])=>`<li><span class="when mono">${esc(w)}</span><span>${esc(t)}</span></li>`).join("")}</ol>`:""}
-   ${d.k.length||d.f.length?`<h3>Kitchen and festivals</h3><div class="rasa">${d.k.map(k=>`<button class="kinb" data-kit="${k}">${esc(KITCHENS[k])} · see all</button>`).join("")}${d.f.map(f=>`<button class="kinb" data-fest="${esc(f)}">${esc(f)} · see all</button>`).join("")}</div>${d.f.some(f=>HINDU_FEST.has(f))?`<p><a class="linkbtn" href="${FEST_ATLAS}" target="_blank" rel="noopener">Open the Hindu Festivals Atlas →</a></p>`:""}`:""}
+   ${d.k.length||d.f.length?`<h3>Kitchen and festivals</h3><div class="rasa">${d.k.map(k=>`<button class="kinb" data-kit="${k}">${esc(KITCHENS[k])} · see all</button>`).join("")}${d.f.map(f=>`<button class="kinb" data-fest="${esc(f)}">${esc(f)} · see all</button>`).join("")}</div>${FEST_ATLAS&&d.f.some(f=>HINDU_FEST.has(f))?`<p><a class="linkbtn" href="${FEST_ATLAS}" target="_blank" rel="noopener">Open the Hindu Festivals Atlas →</a></p>`:""}`:""}
    ${d.link&&SISTER[d.link]?`<p><a class="linkbtn" href="${SISTER[d.link][1]}" target="_blank" rel="noopener">Explore more in ${SISTER[d.link][0]} →</a></p>`:""}
    ${h.kin?`<h3>Relatives across the subcontinent</h3><div class="rasa">${h.kin.map(k=>{const m=DISHES.find(x=>k.toLowerCase().startsWith(x.name.toLowerCase()));return m&&m.id!==d.id?`<button class="kinb" data-open="${m.id}">${esc(k)} →</button>`:`<span class="on">${esc(k)}</span>`;}).join("")}</div>`:""}
    <h3>Sources</h3>${srcList(h.src||[])}</div>`;

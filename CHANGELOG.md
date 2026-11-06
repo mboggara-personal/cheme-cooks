@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v38 | 2026-11-05 | Publishing fixes: removed links to unreleased atlases (Hindu Festivals Atlas from festival tags; Tea and Coffee atlases from drink pages). They now show only when a released atlas URL is set in `meta.js` / `meta-b4.js`. AI-assistance note credits Claude and ChatGPT (landing page, primer, and new on the atlas footer). Share images `og-dosa.png` and `og-cheme.png` are now committed (they were excluded by `*.png` in `.gitignore`, so share previews had no picture) |
 | v37 | 2026-11-02 | Fix: pencil sketches were blank on iPhone browsers. The dosa plant and the 13 primer sketches are now pre-rendered images (dark and light, made by mksketches.js) that the theme switch swaps; inline SVG kept as the editable source |
 | v36 | 2026-10-30 | Atlas: Masala Dosa's Recipe and ChemE tabs end with a pencil filter-coffee card ("best with filter coffee…") that opens the Filter Coffee page |
 | v35 | 2026-10-30 | Dosa sketch: a filter coffee (tumbler and davara) beside the finished dosa; share image updated |
