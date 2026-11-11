@@ -29,3 +29,7 @@ This writes `docs/index.html` (the landing page), `docs/cheme/index.html` (the "
 Code: [MIT](LICENSE). Content: [CC BY-NC 4.0](LICENSE-CONTENT.md). Map data and libraries keep their own licences, listed in [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
 
 The map shows India's external boundaries as per the Survey of India, simplified for display and not to scale.
+
+## Visitor counts
+
+The site counts visits anonymously with [GoatCounter](https://www.goatcounter.com/) (no cookies, no personal data). Actions inside the atlas (dish opened, cook mode, views, labs, Kids lab) are sent as events through `track()` in `tour.js`. To stop counting your own visits in a browser, open the site once with `#toggle-goatcounter` at the end of the address.

@@ -445,7 +445,7 @@ function setView(v, push=true){
   if (push && !$("#drawer").classList.contains("on")) history.replaceState(null,"","#"+v);
   if (v==="map") requestAnimationFrame(updatePins);
 }
-$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan"); $("#vPantry").onclick=()=>setView("pantry");
+$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>{track("view/cards","Cards view");setView("cards")}; $("#vPlan").onclick=()=>{track("view/plan","Meal plan view");setView("plan")}; $("#vPantry").onclick=()=>{track("view/pantry","Pantry view");setView("pantry")};
 
 /* ================= map ================= */
 const svg = d3.select("#map"), W=800, H=900;
@@ -571,7 +571,7 @@ $("#rail").addEventListener("mouseleave",()=>{hotId=$("#drawer").classList.conta
 /* ================= detail drawer ================= */
 let cur=null, tab="recipe";
 function openDish(id, opts={}){
-  const d=byId[id]; if(!d || game) return; cur=d; hotId=id; hidePop(); hideTip();
+  const d=byId[id]; if(!d || game) return; track("dish/"+id,d.name); cur=d; hotId=id; hidePop(); hideTip();
   closeModal(true);
   $("#dh").innerHTML=`<button class="ibtn" id="dPrev" aria-label="Previous dish"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 2L4 7l5 5"/></svg></button><button class="ibtn" id="dNext" aria-label="Next dish"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 2l5 5-5 5"/></svg></button>
    <span class="sp mono" style="font-size:12px;color:var(--muted);padding-left:6px">${d.region.toUpperCase()} · ${esc(d.state)}</span>
@@ -765,7 +765,7 @@ $("#ktimer").addEventListener("click",e=>{ const p=e.target.closest("[data-kp]")
 document.addEventListener("click",e=>{ const t=e.target.closest("[data-timer]"); if(t){ e.preventDefault(); startTimer(+t.dataset.timer, t.dataset.tfull||`${(cookState&&cookState.d||cur)?(cookState&&cookState.d||cur).name+" · ":""}${t.dataset.tlabel||"Timer"}`); toast(timers.length>1?`${timers.length} timers running`:"Timer started"); } const hw=e.target.closest("[data-how]"); if(hw) openMethods(hw.dataset.how); });
 let cookState=null, wake=null;
 function openCook(d,i){
-  cookState={d,i}; const c=$("#cook"); c.hidden=false; document.body.style.overflow="hidden";
+  track("cook/"+d.id,"Cook mode: "+d.name); cookState={d,i}; const c=$("#cook"); c.hidden=false; document.body.style.overflow="hidden";
   try{ navigator.wakeLock && navigator.wakeLock.request("screen").then(w=>wake=w).catch(()=>{}); }catch(e){}
   renderCook();
 }
@@ -1396,7 +1396,7 @@ document.addEventListener("click",e=>{
 });
 
 /* ---------- concept index ---------- */
-function openConcepts(){
+function openConcepts(){ track("labs","ChemE concept index");
   const rows=Object.entries(CHEME).map(([k,[n,desc]])=>({k,n,desc,L:DISHES.filter(d=>d.cheme.includes(k))})).sort((a,b)=>b.L.length-a.L.length);
   openModal(`<h2>ChemE concept index</h2>`,`<p class="lead" style="font-family:var(--f-display);font-size:17px;margin:0 0 14px">Every concept, and every dish that uses it. Tap "Show on map" to light up just those dishes.</p>${whatBox()}
    <div class="deepl">${Object.entries(DEEP).map(([k,D])=>`<button class="deepc" data-open="${D.dishes[0]}" data-deeptab="1"><span class="mono">DEEP DIVE${store.labs&&store.labs[D.lab]?" · ✓":""}</span><b>${esc(D.title)}</b><span>${D.dishes.map(id=>esc(byId[id].name)).join(" · ")}</span></button>`).join("")}</div>

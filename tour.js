@@ -59,3 +59,9 @@ function pairCard(d){ const p=DRINK_PAIR[d.id]; if(!p||!byId[p[0]]) return ""; r
  <path d="M52 20q-9-10 0-20M70 20q-9-10 0-18" stroke-width="1.2" opacity=".7"/>
 </svg><span><span class="phand">${esc(p[1])}</span><small>${esc(byId[p[0]].name)} · ${esc(byId[p[0]].place)} →</small></span></button>`; }
 document.addEventListener("click",e=>{ if(e.target.closest(".paircard")) setTimeout(()=>{ const b=$("#dbody"); if(b) b.scrollTop=0; },60); });
+
+/* ---- anonymous action counts (GoatCounter events; no cookies, no personal data). Silent if the counter is blocked. ---- */
+const _tracked={};
+function track(path,title){ try{ const k=path; const now=Date.now(); if(_tracked[k]&&now-_tracked[k]<5000) return; _tracked[k]=now;
+  const g=window.goatcounter; if(g&&g.count) g.count({path:path,title:title||path,event:true}); }catch(e){} }
+document.addEventListener("click",e=>{ if(e.target.closest("#bWhat,.whatis a,.clink")) track("what-is-cheme","What is ChemE? link"); },true);

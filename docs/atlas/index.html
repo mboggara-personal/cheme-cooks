@@ -834,6 +834,7 @@ a.tbtn{color:var(--ink);text-decoration:none}a.tbtn:hover{border-color:var(--ink
   <section id="pantryView" hidden></section>
   <footer>
     <b>About the numbers.</b> Health grades use the Nutri-Score 2017 general-food algorithm (EU/WHO-Europe front-of-pack system), computed per 100 g from ingredient composition (USDA FoodData Central, IFCT 2017) and an estimated cooked yield; daily references are WHO (salt 5 g, free sugars about 50 g) and EU reference intakes. Ayurvedic notes follow the classical rasa–virya–dosha framework and are for curiosity, not medical advice. Origins are tagged documented, traditional or debated. Map: external boundaries of India as per the Survey of India (official data via DataMeet, CC BY-SA 2.5); state boundaries from DataMeet (CC BY 2.5 IN). Simplified for display, not to scale. <br><b>© 2026 Mohan Boggara (Personal).</b> Code <a href="https://github.com/mboggara-personal/cheme-cooks/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>; recipes, histories, sketches and other content <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>. <a href="https://github.com/mboggara-personal/cheme-cooks" target="_blank" rel="noopener">Source on GitHub</a>. Created by Mohan Boggara with AI assistance (Claude and ChatGPT).
+      <br><span>Visits are counted anonymously with GoatCounter: no cookies, no personal data, nothing stored on your device.</span>
   </footer>
 </main>
 
@@ -6560,7 +6561,7 @@ function setView(v, push=true){
   if (push && !$("#drawer").classList.contains("on")) history.replaceState(null,"","#"+v);
   if (v==="map") requestAnimationFrame(updatePins);
 }
-$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>setView("cards"); $("#vPlan").onclick=()=>setView("plan"); $("#vPantry").onclick=()=>setView("pantry");
+$("#vMap").onclick=()=>setView("map"); $("#vCards").onclick=()=>{track("view/cards","Cards view");setView("cards")}; $("#vPlan").onclick=()=>{track("view/plan","Meal plan view");setView("plan")}; $("#vPantry").onclick=()=>{track("view/pantry","Pantry view");setView("pantry")};
 
 /* ================= map ================= */
 const svg = d3.select("#map"), W=800, H=900;
@@ -6686,7 +6687,7 @@ $("#rail").addEventListener("mouseleave",()=>{hotId=$("#drawer").classList.conta
 /* ================= detail drawer ================= */
 let cur=null, tab="recipe";
 function openDish(id, opts={}){
-  const d=byId[id]; if(!d || game) return; cur=d; hotId=id; hidePop(); hideTip();
+  const d=byId[id]; if(!d || game) return; track("dish/"+id,d.name); cur=d; hotId=id; hidePop(); hideTip();
   closeModal(true);
   $("#dh").innerHTML=`<button class="ibtn" id="dPrev" aria-label="Previous dish"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 2L4 7l5 5"/></svg></button><button class="ibtn" id="dNext" aria-label="Next dish"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 2l5 5-5 5"/></svg></button>
    <span class="sp mono" style="font-size:12px;color:var(--muted);padding-left:6px">${d.region.toUpperCase()} · ${esc(d.state)}</span>
@@ -6880,7 +6881,7 @@ $("#ktimer").addEventListener("click",e=>{ const p=e.target.closest("[data-kp]")
 document.addEventListener("click",e=>{ const t=e.target.closest("[data-timer]"); if(t){ e.preventDefault(); startTimer(+t.dataset.timer, t.dataset.tfull||`${(cookState&&cookState.d||cur)?(cookState&&cookState.d||cur).name+" · ":""}${t.dataset.tlabel||"Timer"}`); toast(timers.length>1?`${timers.length} timers running`:"Timer started"); } const hw=e.target.closest("[data-how]"); if(hw) openMethods(hw.dataset.how); });
 let cookState=null, wake=null;
 function openCook(d,i){
-  cookState={d,i}; const c=$("#cook"); c.hidden=false; document.body.style.overflow="hidden";
+  track("cook/"+d.id,"Cook mode: "+d.name); cookState={d,i}; const c=$("#cook"); c.hidden=false; document.body.style.overflow="hidden";
   try{ navigator.wakeLock && navigator.wakeLock.request("screen").then(w=>wake=w).catch(()=>{}); }catch(e){}
   renderCook();
 }
@@ -7511,7 +7512,7 @@ document.addEventListener("click",e=>{
 });
 
 /* ---------- concept index ---------- */
-function openConcepts(){
+function openConcepts(){ track("labs","ChemE concept index");
   const rows=Object.entries(CHEME).map(([k,[n,desc]])=>({k,n,desc,L:DISHES.filter(d=>d.cheme.includes(k))})).sort((a,b)=>b.L.length-a.L.length);
   openModal(`<h2>ChemE concept index</h2>`,`<p class="lead" style="font-family:var(--f-display);font-size:17px;margin:0 0 14px">Every concept, and every dish that uses it. Tap "Show on map" to light up just those dishes.</p>${whatBox()}
    <div class="deepl">${Object.entries(DEEP).map(([k,D])=>`<button class="deepc" data-open="${D.dishes[0]}" data-deeptab="1"><span class="mono">DEEP DIVE${store.labs&&store.labs[D.lab]?" · ✓":""}</span><b>${esc(D.title)}</b><span>${D.dishes.map(id=>esc(byId[id].name)).join(" · ")}</span></button>`).join("")}</div>
@@ -8463,7 +8464,7 @@ const KIDS = [
   why:"On a really hot pan, the bottom of the drop turns to steam so fast that the drop floats on a cushion of its own vapour. Scientists call it the Leidenfrost effect. Dosa batter spreads and crisps best on a pan that hot.",src:"Leidenfrost_effect"}
 ];
 store.kids = store.kids || {};
-function openKids(){ const done=Object.keys(store.kids).length;
+function openKids(){ track("kids","Kids lab"); const done=Object.keys(store.kids).length;
   openModal(`<h2>Kitchen science for kids</h2>`,`<p class="lead" style="margin-top:0">Twelve experiments using things from the kitchen. Each one starts with a guess: <b>predict</b>, then <b>try</b> it, then find out <b>why</b>. They link to the dish and to the grown-up ChemE lab.</p>
    <div class="kbar"><span class="mono">${done}/${KIDS.length} done</span><span class="bar"><i style="width:${done/KIDS.length*100}%"></i></span><b>${done>=KIDS.length?"Master scientist":done>=8?"Kitchen scientist":done>=4?"Junior scientist":done>=1?"Curious cook":"Ready to start"}</b></div>
    <div class="kgrid">${KIDS.map(k=>`<button class="kcard ${store.kids[k.id]?"done":""}" data-kid="${k.id}"><span class="kmeta mono">AGE ${k.age} · ${k.time}${k.adult?" · WITH A GROWN-UP":""}</span><b>${esc(k.title)}</b><small>${esc(k.q)}</small>${store.kids[k.id]?'<span class="kstamp">done ✓</span>':""}</button>`).join("")}</div>
@@ -8546,6 +8547,12 @@ function pairCard(d){ const p=DRINK_PAIR[d.id]; if(!p||!byId[p[0]]) return ""; r
 </svg><span><span class="phand">${esc(p[1])}</span><small>${esc(byId[p[0]].name)} · ${esc(byId[p[0]].place)} →</small></span></button>`; }
 document.addEventListener("click",e=>{ if(e.target.closest(".paircard")) setTimeout(()=>{ const b=$("#dbody"); if(b) b.scrollTop=0; },60); });
 
+/* ---- anonymous action counts (GoatCounter events; no cookies, no personal data). Silent if the counter is blocked. ---- */
+const _tracked={};
+function track(path,title){ try{ const k=path; const now=Date.now(); if(_tracked[k]&&now-_tracked[k]<5000) return; _tracked[k]=now;
+  const g=window.goatcounter; if(g&&g.count) g.count({path:path,title:title||path,event:true}); }catch(e){} }
+document.addEventListener("click",e=>{ if(e.target.closest("#bWhat,.whatis a,.clink")) track("what-is-cheme","What is ChemE? link"); },true);
+
 const h=(location.hash||"").slice(1);
 setView(["cards","map","plan","pantry"].includes(h)?h:store.view, false);
 applyFilters(); drawGratLabels();
@@ -8559,3 +8566,4 @@ function cur(){var t=r.getAttribute("data-theme");return t?t:(mq.matches?"dark":
 function sync(){var d=cur()==="dark";document.querySelectorAll(".themebtn").forEach(function(b){b.setAttribute("aria-pressed",d?"true":"false");b.setAttribute("aria-label",d?"Switch to light mode":"Switch to dark mode");b.title=d?"Light mode":"Dark mode"})}
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".themebtn");if(!b)return;var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("cc-theme",n)}catch(_){}sync()});
 if(mq.addEventListener)mq.addEventListener("change",sync);sync()})();</script>
+<script data-goatcounter="https://chemecooks.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>

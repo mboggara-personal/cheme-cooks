@@ -63,7 +63,7 @@ const KIDS = [
   why:"On a really hot pan, the bottom of the drop turns to steam so fast that the drop floats on a cushion of its own vapour. Scientists call it the Leidenfrost effect. Dosa batter spreads and crisps best on a pan that hot.",src:"Leidenfrost_effect"}
 ];
 store.kids = store.kids || {};
-function openKids(){ const done=Object.keys(store.kids).length;
+function openKids(){ track("kids","Kids lab"); const done=Object.keys(store.kids).length;
   openModal(`<h2>Kitchen science for kids</h2>`,`<p class="lead" style="margin-top:0">Twelve experiments using things from the kitchen. Each one starts with a guess: <b>predict</b>, then <b>try</b> it, then find out <b>why</b>. They link to the dish and to the grown-up ChemE lab.</p>
    <div class="kbar"><span class="mono">${done}/${KIDS.length} done</span><span class="bar"><i style="width:${done/KIDS.length*100}%"></i></span><b>${done>=KIDS.length?"Master scientist":done>=8?"Kitchen scientist":done>=4?"Junior scientist":done>=1?"Curious cook":"Ready to start"}</b></div>
    <div class="kgrid">${KIDS.map(k=>`<button class="kcard ${store.kids[k.id]?"done":""}" data-kid="${k.id}"><span class="kmeta mono">AGE ${k.age} · ${k.time}${k.adult?" · WITH A GROWN-UP":""}</span><b>${esc(k.title)}</b><small>${esc(k.q)}</small>${store.kids[k.id]?'<span class="kstamp">done ✓</span>':""}</button>`).join("")}</div>

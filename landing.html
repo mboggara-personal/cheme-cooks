@@ -515,6 +515,7 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13.5px;col
 
 <footer>
   © 2026 Mohan Boggara (Personal) · Code <a href="https://github.com/mboggara-personal/cheme-cooks/blob/main/LICENSE">MIT</a> · Content <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> · Map: Survey of India data via DataMeet (CC BY-SA 2.5), state boundaries DataMeet (CC BY 2.5 IN) · <a href="atlas/">Open the atlas</a> · <a href="cheme/">What is chemical engineering?</a>
+<br><span class="privacy">Visits are counted anonymously with GoatCounter: no cookies, no personal data, nothing stored on your device.</span>
 </footer>
 </div>
 <script>
@@ -541,5 +542,6 @@ function cur(){var t=r.getAttribute("data-theme");return t?t:(mq.matches?"dark":
 function sync(){var d=cur()==="dark";document.querySelectorAll(".themebtn").forEach(function(b){b.setAttribute("aria-pressed",d?"true":"false");b.setAttribute("aria-label",d?"Switch to light mode":"Switch to dark mode");b.title=d?"Light mode":"Dark mode"})}
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".themebtn");if(!b)return;var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("cc-theme",n)}catch(_){}sync()});
 if(mq.addEventListener)mq.addEventListener("change",sync);sync()})();</script>
+<script data-goatcounter="https://chemecooks.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

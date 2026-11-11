@@ -294,6 +294,7 @@ footer{border-top:1px solid var(--rule);padding:22px 0 40px;color:var(--muted);f
 
 <footer>
   © 2026 Mohan Boggara (Personal). Created with AI assistance (Claude and ChatGPT). Code MIT; content CC BY-NC 4.0. Sketches are simplified for learning; figures are typical values, not lab measurements. <a href="../">Back to home</a>
+ Visits are counted anonymously with GoatCounter: no cookies, no personal data, nothing stored on your device.
 </footer>
 </div>
 <script>(function(){var r=document.documentElement,mq=window.matchMedia("(prefers-color-scheme: dark)");
@@ -301,6 +302,7 @@ function cur(){var t=r.getAttribute("data-theme");return t?t:(mq.matches?"dark":
 function sync(){var d=cur()==="dark";document.querySelectorAll(".themebtn").forEach(function(b){b.setAttribute("aria-pressed",d?"true":"false");b.setAttribute("aria-label",d?"Switch to light mode":"Switch to dark mode");b.title=d?"Light mode":"Dark mode"})}
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".themebtn");if(!b)return;var n=cur()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("cc-theme",n)}catch(_){}sync()});
 if(mq.addEventListener)mq.addEventListener("change",sync);sync()})();</script>
+<script data-goatcounter="https://chemecooks.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script>(function(){var r=document.documentElement;function s(){var l=r.getAttribute("data-theme")==="light";document.querySelectorAll("img.skimg").forEach(function(i){var u=l?i.dataset.light:i.dataset.dark;if(i.getAttribute("src")!==u)i.setAttribute("src",u)})}s();new MutationObserver(s).observe(r,{attributes:true,attributeFilter:["data-theme"]})})();</script>
 </body>
 </html>
