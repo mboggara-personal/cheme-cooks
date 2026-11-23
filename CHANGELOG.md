@@ -4,6 +4,7 @@ Version numbers match the published claude.ai artifact versions.
 
 | Version | Date | Changes |
 |---|---|---|
+| v40 | 2026-11-23 | New home: https://cheme-cooks.ekaneka.org/ (Cloudflare Pages); GitHub Pages copy kept in parallel for now. Official (canonical) and share-preview addresses moved to the new domain. No links to GitHub on any page: licence links now go to opensource.org and creativecommons.org |
 | v39 | 2026-11-11 | Anonymous visit counting with GoatCounter (chemecooks.goatcounter.com) on the landing page, atlas and primer; action counts for dishes opened, cook mode, Cards/Plan/Pantry views, ChemE index, Kids lab and What-is-ChemE links; privacy note in all footers |
 | v38 | 2026-11-05 | Publishing fixes: removed links to unreleased atlases (Hindu Festivals Atlas from festival tags; Tea and Coffee atlases from drink pages). They now show only when a released atlas URL is set in `meta.js` / `meta-b4.js`. AI-assistance note credits Claude and ChatGPT (landing page, primer, and new on the atlas footer). Share images `og-dosa.png` and `og-cheme.png` are now committed (they were excluded by `*.png` in `.gitignore`, so share previews had no picture) |
 | v37 | 2026-11-02 | Fix: pencil sketches were blank on iPhone browsers. The dosa plant and the 13 primer sketches are now pre-rendered images (dark and light, made by mksketches.js) that the theme switch swaps; inline SVG kept as the editable source |

@@ -40,7 +40,7 @@ setTimeout(()=>{
 window.addEventListener("hashchange",()=>{ const hh=location.hash.slice(1); if(hh==="kids") openKids(); else if(hh==="labs") openConcepts(); });
 
 /* ---- links to the "What is chemical engineering?" primer, from anywhere in the atlas ---- */
-function whatURL(anchor){ const onSite=/\/atlas\/?$/.test(location.pathname); return (onSite?"../cheme/":"https://mboggara-personal.github.io/cheme-cooks/cheme/")+(anchor?"#"+anchor:""); }
+function whatURL(anchor){ const onSite=/\/atlas\/?$/.test(location.pathname); return (onSite?"../cheme/":"https://cheme-cooks.ekaneka.org/cheme/")+(anchor?"#"+anchor:""); }
 function whatTarget(){ return /\/atlas\/?$/.test(location.pathname)?"":' target="_blank" rel="noopener"'; }
 const WHAT_ANCHOR={fermentation:"ferment",leavening:"ferment",acidbase:"ferment",maillard:"kinetics",caramelization:"kinetics",denaturation:"kinetics",enzyme:"kinetics",crosslinking:"kinetics",gelatinization:"balance",emulsion:"emulsion",diffusion:"diffusion",heat:"heat",smoking:"heat",extraction:"separate",crystallization:"separate",pressure:"pressure",phase:"pressure"};
 function whatBox(text){ return `<div class="whatis"><span class="wq" aria-hidden="true">?</span><span>${text||"New to chemical engineering?"} <a href="${whatURL()}"${whatTarget()}>What is chemical engineering? Twelve big ideas in pencil sketches →</a></span></div>`; }

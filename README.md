@@ -2,7 +2,7 @@
 
 An interactive atlas of 286 Indian dishes on a map of India, each with a recipe written for the atlas, a Nutri-Score, Ayurvedic notes, a sourced history and, for many, a chemical-engineering deep dive.
 
-**Live site:** https://mboggara-personal.github.io/cheme-cooks/ (landing page) · the atlas itself is at https://mboggara-personal.github.io/cheme-cooks/atlas/
+**Live site:** https://cheme-cooks.ekaneka.org/ (landing page) · the atlas itself is at https://cheme-cooks.ekaneka.org/atlas/ · served by Cloudflare Pages from this repo's `docs/`; the GitHub Pages address serves the same site for now
 
 ## What's inside
 
